@@ -6,7 +6,7 @@
 loi · ordonnance · décret · arrêté · article de code
 
 [![Version](https://img.shields.io/github/v/release/kilianvivien/skill-legistique-fr?label=version&color=1f3a93)](https://github.com/kilianvivien/skill-legistique-fr/releases/latest)
-[![Licence](https://img.shields.io/badge/licence-Apache%202.0-2e7d32)](LICENSE)
+[![Licence](https://img.shields.io/badge/licence-MIT-2e7d32)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-8250df)](https://agentskills.io)
 [![Compatible](https://img.shields.io/badge/compatible-Claude%20%C2%B7%20Codex%20%C2%B7%20Mistral%20Vibe%20%C2%B7%20Cursor%20%C2%B7%20Gemini%20CLI%20%C2%B7%20Copilot-d97757)](#-installation)
 [![Guide de légistique](https://img.shields.io/badge/r%C3%A9f%C3%A9rence-Guide%20de%20l%C3%A9gistique%202026-6c757d)](https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/guide-de-legistique)
@@ -390,4 +390,10 @@ Les documents sources ne sont pas redistribués dans ce dépôt.
 
 ## Licence
 
-[Apache 2.0](LICENSE)
+Copyright 2026 Kilian Vivien — distribué sous licence [MIT](LICENSE).
+
+La licence couvre uniquement le contenu original de ce dépôt (la skill, ses fiches, les exemples,
+les scripts et la documentation). Elle ne s'étend pas au *Guide de légistique*, qui reste la propriété
+de ses auteurs (Conseil d'Etat et secrétariat général du Gouvernement), ni au cours de légistique
+ayant servi de source : ces documents ne sont pas redistribués ici et restent soumis à leurs propres
+conditions d'utilisation. Les règles qu'ils énoncent sont reformulées et citées à titre de référence.

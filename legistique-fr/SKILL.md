@@ -10,6 +10,7 @@ description: >-
   rédiger, relire, corriger ou « mettre en forme juridique » un projet de loi, de décret, d'arrêté, un
   amendement, un article de code, un texte modificatif, des visas ou une entrée en vigueur, même sans
   le mot « légistique ». French legislative and regulatory drafting (legistics).
+license: MIT
 ---
 
 # Légistique française
