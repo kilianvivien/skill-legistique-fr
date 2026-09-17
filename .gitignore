@@ -1,0 +1,12 @@
+# Sources (cours et guide PDF) : non redistribuées
+Source/
+
+# Archives construites : publiées en release GitHub, pas dans le dépôt
+*.zip
+*.skill
+
+# Espace de travail des tests (les sorties utiles sont copiées dans exemples/)
+legistique-fr-workspace/
+
+# macOS
+.DS_Store
