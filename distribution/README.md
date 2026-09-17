@@ -12,8 +12,12 @@ Cette archive contient :
 README.md            ← ce fichier
 legistique-fr/       ← la skill (c'est ce dossier qu'il faut installer)
 ├── SKILL.md
-└── references/
+└── references/      ← fiches de synthèse
+    └── guide/       ← texte intégral du Guide de légistique (101 fiches + index)
 ```
+
+Le dossier `references/guide/` reproduit le Guide de légistique publié sur Légifrance (licence
+etalab-2.0), converti automatiquement : seule la version publiée sur Légifrance fait foi.
 
 ## Principe
 

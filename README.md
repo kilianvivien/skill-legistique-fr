@@ -272,7 +272,7 @@ Claude Code ou Cursor.
 
 ## 📚 Exemples
 
-Deux sorties complètes, produites par la skill, sont disponibles dans [`exemples/`](exemples/).
+Trois sorties complètes, produites par la skill, sont disponibles dans [`exemples/`](exemples/).
 
 ### Rédaction : d'une note de cabinet à un projet de décret
 
@@ -305,6 +305,20 @@ Extrait du tableau de commentaires :
 
 ➡️ [Voir la sortie complète](exemples/2-correction-decret.md)
 
+### Question pointue : étendre un décret à Wallis-et-Futuna
+
+> *« Je prépare un décret en Conseil d'Etat qui modifie plusieurs articles réglementaires du code de
+> l'environnement. Le ministère veut que ces modifications s'appliquent aussi à Wallis-et-Futuna.
+> Comment dois-je rédiger ça ? »*
+
+Les fiches de synthèse ne traitent pas de l'outre-mer : la skill consulte le guide complet (fiches
+3.6.1, 3.6.2 et 3.6.9, lues par section). Elle écarte la mention « le présent décret est applicable à
+Wallis-et-Futuna » au profit d'un « compteur Lifou » inscrit dans le code, propose l'article pour les
+trois situations possibles du code, et signale en premier point à arbitrer que plusieurs matières
+environnementales relèvent de la compétence de la collectivité.
+
+➡️ [Voir la sortie complète](exemples/3-extension-wallis-et-futuna.md)
+
 ---
 
 ## 🧠 Comment ça marche
@@ -336,6 +350,12 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté ; visas ; entrée en vigueur ; notice |
 | [`typographie.md`](legistique-fr/references/typographie.md) | Règles typographiques du Journal officiel |
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
+| [`guide/`](legistique-fr/references/guide/index.md) | **Texte intégral du guide**, une fiche par fichier, avec un index : source subsidiaire |
+
+Ces fiches de synthèse suffisent dans la plupart des cas. Pour un point qu'elles ne couvrent pas
+(procédure d'élaboration, outre-mer, lois de finances, nominations, cas pratiques de la partie 5…),
+l'agent consulte le guide complet : il repère la fiche dans l'index, n'en lit que la section utile et
+la cite.
 
 ---
 
@@ -362,10 +382,13 @@ skill-legistique-fr/
 ├── legistique-fr/            la skill
 │   ├── SKILL.md
 │   ├── references/           fiches thématiques chargées à la demande
+│   │   └── guide/            texte intégral du guide (101 fiches + index)
 │   └── evals/evals.json      cas de test
 ├── exemples/                 sorties complètes produites par la skill
 ├── distribution/README.md    README d'installation inclus dans l'archive
-└── scripts/build-zip.sh      construit legistique-fr.zip
+└── scripts/
+    ├── build-zip.sh          construit legistique-fr.zip
+    └── convert-guide.py      régénère references/guide/ depuis le PDF du guide
 ```
 
 ## 🤝 Contribuer
@@ -380,20 +403,43 @@ Pour reconstruire l'archive après une modification :
 ./scripts/build-zip.sh
 ```
 
+À chaque nouvelle version du guide, téléchargez le PDF depuis
+[Légifrance](https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/guide-de-legistique) dans
+`Source/guide_legistique_2026.pdf` (ou passez son chemin en argument), puis régénérez les fiches.
+Le script demande Python 3.9 ou plus et [PyMuPDF](https://pypi.org/project/PyMuPDF/) :
+
+```bash
+pip install pymupdf
+```
+
+```bash
+python3 scripts/convert-guide.py
+```
+
+Relisez ensuite les fiches à tableaux (1.3.2, 2.1.4, 3.6.1, 4.1.3, 4.2.4) et l'annexe typographique.
+
 ## 📖 Sources
 
 - [*Guide de légistique*](https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/guide-de-legistique), Conseil d'Etat et secrétariat général du Gouvernement, 4e édition, mise à
   jour 2026.
 - Un cours de légistique reprenant l'essentiel du guide.
 
-Les documents sources ne sont pas redistribués dans ce dépôt.
+Les fichiers PDF sources ne sont pas redistribués dans ce dépôt. Le texte du guide est repris sous
+forme Markdown dans `legistique-fr/references/guide/` (voir ci-dessous).
 
 ## Licence
 
 Copyright 2026 Kilian Vivien — distribué sous licence [MIT](LICENSE).
 
-La licence couvre uniquement le contenu original de ce dépôt (la skill, ses fiches, les exemples,
-les scripts et la documentation). Elle ne s'étend pas au *Guide de légistique*, qui reste la propriété
-de ses auteurs (Conseil d'Etat et secrétariat général du Gouvernement), ni au cours de légistique
-ayant servi de source : ces documents ne sont pas redistribués ici et restent soumis à leurs propres
-conditions d'utilisation. Les règles qu'ils énoncent sont reformulées et citées à titre de référence.
+La licence couvre uniquement le contenu original de ce dépôt : la skill, ses fiches de synthèse, les
+exemples, les scripts et la documentation.
+
+Elle ne couvre pas le dossier `legistique-fr/references/guide/`. Ce dossier reproduit le texte du
+*Guide de légistique* (Conseil d'Etat et secrétariat général du Gouvernement, 4e édition, mise à jour
+2026), converti automatiquement depuis le PDF publié sur Légifrance, dont les contenus sont diffusés
+sous [licence etalab-2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/) sauf mention
+contraire. La conversion peut comporter des erreurs, notamment dans les tableaux : seule la version
+publiée sur Légifrance fait foi.
+
+Le cours de légistique ayant servi de source n'est pas redistribué ; ses règles sont reformulées et
+citées à titre de référence.

@@ -203,7 +203,8 @@ chaque commentaire. Ne jamais livrer les commentaires sans le texte corrigé, ni
 
 ## Références
 
-Lire le fichier utile au moment utile ; ils sont conçus pour être lus indépendamment.
+Lire le fichier utile au moment utile ; ils sont conçus pour être lus indépendamment. Commencer
+toujours par ces fiches de synthèse.
 
 | Fichier | Contenu | Quand le lire |
 |---|---|---|
@@ -213,6 +214,34 @@ Lire le fichier utile au moment utile ; ils sont conçus pour être lus indépen
 | `references/formules-et-modeles.md` | Intitulé, squelettes complets de loi, ordonnance, décret, arrêté ; visas (quoi viser, ordre, rédaction) ; article d'exécution ; entrée en vigueur ; situations en cours ; abrogations ; renvois au règlement ; notice explicative | Fonction A étape 3, fonction B points 3 et 5 |
 | `references/typographie.md` | Règles typographiques du Journal officiel | Mise au propre finale, fonction B point 7 |
 | `references/grille-de-relecture.md` | Liste de contrôle ordonnée avec niveaux de gravité | Fonction B, et autocontrôle en fin de fonction A |
+
+### Guide complet : source subsidiaire
+
+`references/guide/` contient le texte intégral du Guide de légistique, une fiche par fichier
+(101 fichiers, environ 360 000 mots), avec un index `references/guide/index.md`. Les fiches ci-dessus
+en sont la synthèse et suffisent dans la plupart des cas : le guide complet ne sert qu'à **préciser**.
+
+Le consulter seulement quand :
+
+- une question sort du champ des fiches de synthèse : procédure d'élaboration (quelles consultations
+  sont obligatoires, saisine du Conseil d'Etat, contreseings, signature, publication), application
+  outre-mer, Alsace-Moselle, Corse, lois de finances et de financement de la sécurité sociale, textes
+  internationaux et européens, mesures individuelles et nominations ;
+- le texte relève d'un cas pratique du guide (partie 5 : services de l'Etat, organisme consultatif,
+  établissement public, GIP, régime d'autorisation, sanctions, prélèvement fiscal, redevance, statuts
+  des personnels, expérimentation), qui fournit des modèles de rédaction ;
+- une fiche de synthèse renvoie à une fiche du guide sans en donner le détail, ou l'utilisateur
+  demande ce que dit exactement le guide.
+
+Méthode, pour ne pas saturer le contexte :
+
+1. Repérer la fiche dans `references/guide/index.md` ou chercher un mot-clé dans le dossier.
+2. Lister les titres de la fiche (lignes commençant par `#`) et ne lire que la section utile. Une
+   fiche de plus de 5 000 mots ne se lit jamais en entier ; une ou deux fiches par question suffisent.
+3. Citer la fiche (« fiche 3.6.1 ») et, si la règle vient du guide complet, le dire.
+4. Les fichiers sont extraits automatiquement du PDF : si un tableau paraît incohérent, ne pas s'y
+   fier et renvoyer au guide sur Légifrance. Chaque fiche porte sa date de mise à jour ; le droit
+   positif cité en exemple a pu évoluer depuis.
 
 ## Garde-fous
 
