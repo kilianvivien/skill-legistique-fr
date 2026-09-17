@@ -272,7 +272,7 @@ Claude Code ou Cursor.
 
 ## 📚 Exemples
 
-Trois sorties complètes, produites par la skill, sont disponibles dans [`exemples/`](exemples/).
+Quatre sorties complètes, produites par la skill, sont disponibles dans [`exemples/`](exemples/).
 
 ### Rédaction : d'une note de cabinet à un projet de décret
 
@@ -319,6 +319,20 @@ environnementales relèvent de la compétence de la collectivité.
 
 ➡️ [Voir la sortie complète](exemples/3-extension-wallis-et-futuna.md)
 
+### Vérification sur Légifrance : relecture d'un décret modificatif
+
+Un projet de décret de quelques lignes modifie l'article R. 421-1 du CESEDA. La skill ouvre Légifrance
+avec le navigateur intégré de l'agent et relève ce qu'aucune relecture « à l'aveugle » ne pouvait voir :
+
+| Référence | Constat sur Légifrance | Niveau |
+|---|---|---|
+| « deuxième alinéa » de l'article R. 421-1 | l'article n'a qu'un alinéa | 🔴 Bloquant |
+| « dans les conditions prévues aux articles R. 5221-1 et suivants » | le texte en vigueur dit « définies » | 🔴 Bloquant |
+| « R. 5221-50 » du code du travail | le chapitre s'arrête à R. 5221-48 | 🔴 Bloquant |
+| visa du décret n° 2020-1734 | intitulé inexact, visa inutile | 🟠 Recommandé |
+
+➡️ [Voir la sortie complète](exemples/4-verification-legifrance.md)
+
 ---
 
 ## 🧠 Comment ça marche
@@ -350,6 +364,7 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté ; visas ; entrée en vigueur ; notice |
 | [`typographie.md`](legistique-fr/references/typographie.md) | Règles typographiques du Journal officiel |
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
+| [`legifrance.md`](legistique-fr/references/legifrance.md) | Option : vérification du droit en vigueur, si l'agent a accès à Légifrance |
 | [`guide/`](legistique-fr/references/guide/index.md) | **Texte intégral du guide**, une fiche par fichier, avec un index : source subsidiaire |
 
 Ces fiches de synthèse suffisent dans la plupart des cas. Pour un point qu'elles ne couvrent pas
@@ -367,11 +382,53 @@ du Conseil d'Etat. Elle est réglée pour **signaler plutôt qu'inventer** :
 - ❌ Pas de numéro d'article de code inventé : elle écrit « l'article L. … » et le signale.
 - ❌ Pas de numéro NOR, de numéro de décret, de date de signature ni de nom de ministre fabriqués.
 - ❌ Pas de choix de fond tranché à votre place : les propositions sont entre crochets et listées.
-- ⚠️ Pas d'accès au droit en vigueur : vérifiez toujours les textes cités sur
+- ⚠️ Pas d'accès au droit en vigueur si votre agent ne peut pas consulter Légifrance (voir
+  l'[option Légifrance](#-option--vérifier-sur-légifrance)) : vérifiez toujours les textes cités sur
   [Légifrance](https://www.legifrance.gouv.fr).
 
 > [!WARNING]
 > Relisez toujours le résultat. Un texte normatif engage ceux qui l'appliquent.
+
+### 🔌 Option : vérifier sur Légifrance
+
+Quand votre agent peut consulter Légifrance, la skill s'en sert pour lire la rédaction en vigueur des
+articles qu'un texte modifie, vérifier les visas et les renvois, contrôler les références d'un projet
+relu ou éclaircir un point précis. Elle ajoute alors un tableau « Vérifications sur Légifrance » à sa
+réponse. Sans accès, elle fonctionne comme avant. Les consignes sont dans
+[`legifrance.md`](legistique-fr/references/legifrance.md) ; la skill n'installe rien.
+
+La skill utilise le premier accès disponible, dans cet ordre :
+
+| Accès | Ce qu'il faut | Pour quoi |
+|---|---|---|
+| **1. Navigateur de l'agent** (à privilégier) | Un agent qui pilote un navigateur : navigateur intégré de Claude Desktop ou de Codex, extension de navigateur | Lire le texte intégral d'un article ou d'un décret, y compris sa version à une date |
+| **2. Recherche web** | Un agent qui fait des recherches web (limitées à `site:legifrance.gouv.fr`) | Retrouver un intitulé, une date, une adresse |
+| **3. API Légifrance** (facultatif) | Un serveur MCP Légifrance déjà configuré | Nombreuses références, ou agent sans navigateur ni accès web |
+
+Les deux premiers accès ne demandent aucune installation : il suffit que votre agent dispose de ces
+outils et que vous l'autorisiez à consulter legifrance.gouv.fr.
+
+<details>
+<summary><b>Brancher l'API Légifrance (facultatif)</b></summary>
+
+<br>
+
+1. Créez un compte sur [PISTE](https://piste.gouv.fr) et abonnez-vous à l'API Légifrance (gratuit) pour
+   obtenir un identifiant et un secret.
+2. Installez un serveur MCP Légifrance, par exemple
+   [mcp-legifrance](https://github.com/Ktulu-Analog/mcp-legifrance) (Python ou Docker), en suivant sa
+   documentation. D'autres serveurs existent ; la skill n'en impose aucun.
+3. Déclarez le serveur dans votre agent. Pour Claude Code, avec le serveur lancé en local :
+
+```bash
+claude mcp add --transport http legifrance http://localhost:6502/mcp
+```
+
+> [!NOTE]
+> Ces serveurs sont des projets tiers, non officiels, soumis à leur propre licence et aux conditions
+> d'utilisation de l'API Légifrance. Un serveur local n'est pas joignable depuis Claude.ai sur le web.
+
+</details>
 
 ---
 

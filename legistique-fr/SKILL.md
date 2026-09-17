@@ -214,6 +214,7 @@ toujours par ces fiches de synthèse.
 | `references/formules-et-modeles.md` | Intitulé, squelettes complets de loi, ordonnance, décret, arrêté ; visas (quoi viser, ordre, rédaction) ; article d'exécution ; entrée en vigueur ; situations en cours ; abrogations ; renvois au règlement ; notice explicative | Fonction A étape 3, fonction B points 3 et 5 |
 | `references/typographie.md` | Règles typographiques du Journal officiel | Mise au propre finale, fonction B point 7 |
 | `references/grille-de-relecture.md` | Liste de contrôle ordonnée avec niveaux de gravité | Fonction B, et autocontrôle en fin de fonction A |
+| `references/legifrance.md` | Vérification du droit en vigueur sur Légifrance : API (serveur MCP), navigateur piloté par l'agent ou recherche web limitée au site | **Seulement si l'agent dispose de l'un de ces accès** : texte modificatif, visas, renvois, point précis à éclaircir |
 
 ### Guide complet : source subsidiaire
 
@@ -247,12 +248,13 @@ Méthode, pour ne pas saturer le contexte :
 
 - Ne pas inventer de droit positif : si un renvoi à un article de code est nécessaire et que le numéro
   n'est pas connu avec certitude, écrire « l'article L. … du code … » et le signaler dans les points à
-  arbitrer. Un numéro plausible mais faux est pire qu'un blanc.
+  arbitrer. Un numéro plausible mais faux est pire qu'un blanc. Si l'agent peut consulter Légifrance (API,
+  navigateur ou recherche web), vérifier plutôt que laisser un blanc (`references/legifrance.md`).
 - Ne pas fabriquer de numéro NOR, de numéro de décret, de date de signature, de nom de ministre.
 - Ne pas trancher les questions de fond (seuils, montants, autorité compétente, sanctions) à la place
   du rédacteur : proposer, marquer entre crochets, lister dans les points à arbitrer.
 - Le guide distingue lois et règlements sur plusieurs formules ; quand la nature du texte est
   incertaine, donner la formule des deux régimes plutôt que d'en choisir une au hasard.
 - Un texte modificatif se rédige par rapport au texte **en vigueur** et consolidé ; si l'utilisateur ne
-  fournit pas le texte modifié, le demander ou signaler que les désignations d'alinéas n'ont pas pu
-  être vérifiées.
+  fournit pas le texte modifié, le lire sur Légifrance si l'agent y a accès, sinon le demander ou
+  signaler que les désignations d'alinéas n'ont pas pu être vérifiées.

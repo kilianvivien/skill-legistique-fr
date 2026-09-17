@@ -16,6 +16,11 @@ legistique-fr/       ← la skill (c'est ce dossier qu'il faut installer)
     └── guide/       ← texte intégral du Guide de légistique (101 fiches + index)
 ```
 
+Option : si votre agent peut consulter Légifrance, de préférence avec son navigateur intégré (Claude
+Desktop, Codex), sinon par recherche web ou par un serveur MCP Légifrance déjà configuré, la skill
+vérifie le droit en vigueur (articles modifiés, visas, renvois). Voir la section « Option : vérifier
+sur Légifrance » de la documentation complète.
+
 Le dossier `references/guide/` reproduit le Guide de légistique publié sur Légifrance (licence
 etalab-2.0), converti automatiquement : seule la version publiée sur Légifrance fait foi.
 
