@@ -2,12 +2,13 @@
 
 # ⚖️ legistique-fr
 
-**Une skill pour Claude qui rédige et corrige les textes normatifs français**<br>
+**Une skill pour agents IA qui rédige et corrige les textes normatifs français**<br>
 loi · ordonnance · décret · arrêté · article de code
 
 [![Version](https://img.shields.io/github/v/release/kilianvivien/skill-legistique-fr?label=version&color=1f3a93)](https://github.com/kilianvivien/skill-legistique-fr/releases/latest)
 [![Licence](https://img.shields.io/badge/licence-Apache%202.0-2e7d32)](LICENSE)
-[![Claude](https://img.shields.io/badge/Claude-Skill-d97757)](https://docs.claude.com/fr/docs/agents-and-tools/agent-skills/overview)
+[![Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-8250df)](https://agentskills.io)
+[![Compatible](https://img.shields.io/badge/compatible-Claude%20%C2%B7%20Codex%20%C2%B7%20Mistral%20Vibe%20%C2%B7%20Cursor%20%C2%B7%20Gemini%20CLI%20%C2%B7%20Copilot-d97757)](#-installation)
 [![Guide de légistique](https://img.shields.io/badge/r%C3%A9f%C3%A9rence-Guide%20de%20l%C3%A9gistique%202026-6c757d)](https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/guide-de-legistique)
 
 [Installation](#-installation) · [Utilisation](#-utilisation) · [Exemples](#-exemples) · [Fonctionnement](#-comment-ça-marche) · [Limites](#-limites-et-garde-fous)
@@ -18,8 +19,8 @@ loi · ordonnance · décret · arrêté · article de code
 
 ## En bref
 
-`legistique-fr` apprend à Claude les règles d'écriture du **Guide de légistique** (Conseil d'Etat et
-secrétariat général du Gouvernement, 4e édition mise à jour en 2026). La skill fait deux choses :
+`legistique-fr` apprend à un agent IA les règles d'écriture du **Guide de légistique** (Conseil d'Etat
+et secrétariat général du Gouvernement, 4e édition mise à jour en 2026). La skill fait deux choses :
 
 <table>
 <tr>
@@ -50,6 +51,13 @@ numérotés**, classés *Bloquant*, *Recommandé* ou *Style*, avec le renvoi à 
 > Chaque correction cite sa source (« fiche 3.3.1 », « fiche 3.5.3 ») : vous pouvez vérifier dans le
 > guide et apprendre la règle au passage.
 
+> [!IMPORTANT]
+> **Pas seulement pour Claude.** La skill suit le standard ouvert [Agent Skills](https://agentskills.io) :
+> un dossier avec un fichier `SKILL.md` et des fiches de référence en Markdown, sans code ni
+> dépendance. Elle fonctionne avec tous les agents compatibles : Claude, Codex (OpenAI), Mistral Vibe,
+> Cursor, Gemini CLI, GitHub Copilot, OpenCode, Goose, Junie et
+> [bien d'autres](https://agentskills.io/clients).
+
 ---
 
 ## 📦 Installation
@@ -58,7 +66,109 @@ Téléchargez **`legistique-fr.zip`** depuis la
 [dernière release](https://github.com/kilianvivien/skill-legistique-fr/releases/latest). L'archive
 contient le dossier de la skill et un `README.md` d'installation.
 
+Installer la skill, c'est **copier le dossier `legistique-fr/` dans le dossier de skills de votre
+agent**. Le résultat attendu est toujours le même : `<dossier de skills>/legistique-fr/SKILL.md`.
+
+| Agent | Pour tous vos projets | Pour un seul projet |
+|---|---|---|
+| **Codex** (OpenAI) | `~/.agents/skills/` | `.agents/skills/` |
+| **Mistral Vibe** | `~/.vibe/skills/` ou `~/.agents/skills/` | `.vibe/skills/` ou `.agents/skills/` |
+| **Claude Code** | `~/.claude/skills/` | `.claude/skills/` |
+| **Cursor** | `~/.cursor/skills/` ou `~/.agents/skills/` | `.cursor/skills/` ou `.agents/skills/` |
+| **Gemini CLI** | `~/.gemini/skills/` ou `~/.agents/skills/` | `.gemini/skills/` ou `.agents/skills/` |
+| **GitHub Copilot** | `~/.copilot/skills/` ou `~/.agents/skills/` | `.github/skills/` ou `.agents/skills/` |
+| **Claude.ai** | import de l'archive dans les paramètres | — |
+
+> [!TIP]
+> **`~/.agents/skills/` est le dossier commun** du standard : une seule installation y sert à la fois
+> Codex, Mistral Vibe, Cursor, Gemini CLI et GitHub Copilot.
+
 <details open>
+<summary><b>Codex (OpenAI)</b></summary>
+
+<br>
+
+Pour tous vos projets :
+
+```bash
+mkdir -p ~/.agents/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d ~/.agents/skills/
+```
+
+Pour un seul projet, depuis la racine du dépôt :
+
+```bash
+mkdir -p .agents/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d .agents/skills/
+```
+
+Redémarrez Codex. La skill se déclenche d'elle-même ; pour l'appeler explicitement, tapez
+`$legistique-fr` dans votre message ou listez les skills avec `/skills`.
+([Documentation Codex](https://developers.openai.com/codex/skills/))
+
+</details>
+
+<details open>
+<summary><b>Mistral Vibe</b></summary>
+
+<br>
+
+Pour tous vos projets :
+
+```bash
+mkdir -p ~/.vibe/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d ~/.vibe/skills/
+```
+
+Pour un seul projet, depuis sa racine :
+
+```bash
+mkdir -p .vibe/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d .vibe/skills/
+```
+
+> [!NOTE]
+> Vibe ne charge les skills d'un projet (`.vibe/skills/` ou `.agents/skills/`) que si le dossier du
+> projet est marqué comme **dossier de confiance**. Les skills globales n'ont pas cette contrainte.
+
+Relancez `vibe` : la skill se déclenche dès que votre demande porte sur un texte normatif.
+([Documentation Mistral Vibe](https://github.com/mistralai/mistral-vibe#skills-system))
+
+</details>
+
+<details>
+<summary><b>Claude Code</b></summary>
+
+<br>
+
+Pour tous vos projets :
+
+```bash
+mkdir -p ~/.claude/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d ~/.claude/skills/
+```
+
+Pour un seul projet, remplacez `~/.claude/skills/` par `.claude/skills/`. Redémarrez Claude Code ; la
+skill peut aussi être appelée avec `/legistique-fr`.
+
+</details>
+
+<details>
 <summary><b>Claude.ai et application Claude (web, bureau)</b></summary>
 
 <br>
@@ -74,33 +184,30 @@ contient le dossier de la skill et un `README.md` d'installation.
 </details>
 
 <details>
-<summary><b>Claude Code</b></summary>
+<summary><b>Autres agents (Cursor, Gemini CLI, GitHub Copilot, OpenCode…)</b></summary>
 
 <br>
 
-Pour tous vos projets :
+Décompressez le dossier dans le dossier de skills indiqué par la documentation de votre agent (voir le
+tableau ci-dessus, ou la [liste des agents compatibles](https://agentskills.io/clients)). Dans le doute,
+`~/.agents/skills/` est reconnu par la plupart d'entre eux.
 
-```bash
-unzip legistique-fr.zip 'legistique-fr/*' -d ~/.claude/skills/
-```
+</details>
 
-Pour un seul projet, depuis sa racine :
+<details>
+<summary><b>Sans l'archive, depuis ce dépôt</b></summary>
 
-```bash
-unzip legistique-fr.zip 'legistique-fr/*' -d .claude/skills/
-```
-
-Ou directement depuis ce dépôt, sans passer par l'archive :
+<br>
 
 ```bash
 git clone https://github.com/kilianvivien/skill-legistique-fr.git
 ```
 
-```bash
-cp -R skill-legistique-fr/legistique-fr ~/.claude/skills/
-```
+Puis copiez `skill-legistique-fr/legistique-fr/` dans le dossier de skills de votre agent, par exemple :
 
-Redémarrez Claude Code : la skill apparaît dans la liste des skills disponibles.
+```bash
+cp -R skill-legistique-fr/legistique-fr ~/.agents/skills/
+```
 
 </details>
 
@@ -110,7 +217,8 @@ Redémarrez Claude Code : la skill apparaît dans la liste des skills disponible
 
 **Pas de commande à retenir.** La skill se déclenche dès que vous demandez de rédiger, relire,
 corriger ou « mettre en forme juridique » un texte normatif, même sans prononcer le mot
-« légistique ». Dans Claude Code, vous pouvez aussi l'appeler directement avec `/legistique-fr`.
+« légistique ». Pour l'appeler explicitement : `$legistique-fr` dans Codex, `/legistique-fr` dans
+Claude Code ou Cursor.
 
 ### Ce que vous pouvez demander
 
@@ -217,7 +325,7 @@ La skill suit la méthode du guide : **on qualifie d'abord le texte**, car presq
 dépendent. Une loi n'a ni visas ni article d'exécution. Les assemblées écrivent « est ainsi rédigé »
 là où le règlement écrit « est remplacé par les dispositions suivantes ».
 
-Claude ne charge pas tout le guide d'un coup. Il lit la fiche de référence utile au moment utile :
+L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence utile au moment utile :
 
 | Fichier | Contenu |
 |---|---|

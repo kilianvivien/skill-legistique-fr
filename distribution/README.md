@@ -1,7 +1,10 @@
 # legistique-fr : installation
 
-Skill pour Claude : rédaction et correction de textes normatifs français (loi, ordonnance, décret,
+Skill pour agents IA : rédaction et correction de textes normatifs français (loi, ordonnance, décret,
 arrêté, article de code) selon le Guide de légistique du Conseil d'Etat et du SGG.
+
+La skill suit le standard ouvert Agent Skills (https://agentskills.io) : elle fonctionne avec Claude,
+Codex, Mistral Vibe, Cursor, Gemini CLI, GitHub Copilot et tout agent compatible.
 
 Cette archive contient :
 
@@ -11,6 +14,60 @@ legistique-fr/       ← la skill (c'est ce dossier qu'il faut installer)
 ├── SKILL.md
 └── references/
 ```
+
+## Principe
+
+Installer la skill, c'est copier le dossier `legistique-fr/` dans le dossier de skills de votre agent.
+Le résultat attendu : `<dossier de skills>/legistique-fr/SKILL.md`.
+
+| Agent | Pour tous vos projets | Pour un seul projet |
+|---|---|---|
+| Codex (OpenAI) | `~/.agents/skills/` | `.agents/skills/` |
+| Mistral Vibe | `~/.vibe/skills/` ou `~/.agents/skills/` | `.vibe/skills/` ou `.agents/skills/` |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
+| Cursor | `~/.cursor/skills/` ou `~/.agents/skills/` | `.cursor/skills/` ou `.agents/skills/` |
+| Gemini CLI | `~/.gemini/skills/` ou `~/.agents/skills/` | `.gemini/skills/` ou `.agents/skills/` |
+| GitHub Copilot | `~/.copilot/skills/` ou `~/.agents/skills/` | `.github/skills/` ou `.agents/skills/` |
+
+`~/.agents/skills/` est le dossier commun : une seule installation y sert à Codex, Mistral Vibe,
+Cursor, Gemini CLI et GitHub Copilot.
+
+## Codex (OpenAI)
+
+```bash
+mkdir -p ~/.agents/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d ~/.agents/skills/
+```
+
+Redémarrez Codex. Appel explicite : `$legistique-fr` dans un message, ou `/skills` pour la liste.
+
+## Mistral Vibe
+
+```bash
+mkdir -p ~/.vibe/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d ~/.vibe/skills/
+```
+
+Relancez `vibe`. Les skills d'un projet (`.vibe/skills/` ou `.agents/skills/`) ne sont chargées que
+si le dossier du projet est un dossier de confiance.
+
+## Claude Code
+
+```bash
+mkdir -p ~/.claude/skills
+```
+
+```bash
+unzip legistique-fr.zip 'legistique-fr/*' -d ~/.claude/skills/
+```
+
+Redémarrez Claude Code. Appel explicite : `/legistique-fr`.
 
 ## Claude.ai et application Claude (bureau, web)
 
@@ -22,22 +79,11 @@ legistique-fr/       ← la skill (c'est ce dossier qu'il faut installer)
 Si l'import refuse l'archive, décompressez-la, puis compressez **uniquement le dossier
 `legistique-fr/`** et importez ce nouveau fichier.
 
-## Claude Code
+## Autres agents
 
-Pour tous vos projets :
-
-```bash
-unzip legistique-fr.zip 'legistique-fr/*' -d ~/.claude/skills/
-```
-
-Pour un seul projet (à lancer à la racine du projet) :
-
-```bash
-unzip legistique-fr.zip 'legistique-fr/*' -d .claude/skills/
-```
-
-Vérification : le fichier `~/.claude/skills/legistique-fr/SKILL.md` (ou
-`.claude/skills/legistique-fr/SKILL.md`) doit exister. Redémarrez Claude Code.
+Décompressez le dossier `legistique-fr/` dans le dossier de skills indiqué par la documentation de
+votre agent (liste des agents compatibles : https://agentskills.io/clients). Dans le doute,
+`~/.agents/skills/` est reconnu par la plupart d'entre eux.
 
 ## Utilisation
 
@@ -47,7 +93,5 @@ normatif. Exemples :
 - « Fais un projet de décret à partir de cette note : … »
 - « Relis ce projet d'arrêté et dis-moi ce qui ne va pas : … »
 - « Comment rédiger l'abrogation d'un alinéa dans un code ? »
-
-Dans Claude Code, on peut aussi l'appeler explicitement avec `/legistique-fr`.
 
 Documentation complète et exemples : https://github.com/kilianvivien/skill-legistique-fr
