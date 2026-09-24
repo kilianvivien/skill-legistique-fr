@@ -71,15 +71,20 @@ demande n'appelle pas.
 
 ## Comment le dire dans la réponse
 
-Ajouter une section courte à la fin de la réponse :
+Rendre compte des vérifications dans la section « Références citées » qui clôt la réponse (SKILL.md),
+en précisant dans la colonne « Statut » le résultat, la version lue et le mode d'accès :
 
 ```
-## Vérifications sur Légifrance
-| Référence | Résultat | Version lue | Accès |
-|---|---|---|---|
-| article L. 123-4 du code de … | en vigueur ; deuxième alinéa cité à l'identique | en vigueur depuis le 25/08/2021 | navigateur |
-| décret n° 2015-1689 du 17 décembre 2015 | intitulé exact repris dans les visas | JORF | recherche web |
+## Références citées
+| Référence | Origine | Statut |
+|---|---|---|
+| article L. 123-4 du code de … | demande | vérifiée : en vigueur, deuxième alinéa cité à l'identique (version en vigueur depuis le 25/08/2021, navigateur) |
+| décret n° 2015-1689 du 17 décembre 2015 | ajoutée | vérifiée : intitulé exact repris dans les visas (JORF, recherche web) |
+| article R. 5221-50 du code du travail | demande | **inexistant** : le chapitre s'arrête à R. 5221-48 (navigateur) |
 ```
+
+Un constat de vérification qui change le texte (alinéa inexistant, mots cités introuvables, article
+abrogé) figure aussi, au niveau Bloquant, dans le tableau des commentaires.
 
 Les versions consolidées de Légifrance servent à travailler, mais seule la publication au Journal
 officiel fait foi : le rappeler une fois si une vérification porte sur un point décisif.

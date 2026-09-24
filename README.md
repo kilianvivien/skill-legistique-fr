@@ -255,6 +255,7 @@ Claude Code ou Cursor.
 3. **Tableau des transformations**
 4. **Points à arbitrer**
 5. **Contenu écarté du dispositif** (et proposition de notice)
+6. **Références citées** : ce qui a été vérifié, ce qui reste à vérifier
 
 </td>
 <td valign="top">
@@ -263,6 +264,7 @@ Claude Code ou Cursor.
 2. **Texte corrigé** en entier
 3. **Commentaires** numérotés avec niveau et fiche
 4. **Questions au rédacteur**
+5. **Références citées** : ce qui a été vérifié, ce qui reste à vérifier
 
 </td>
 </tr>
@@ -366,11 +368,18 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
 | [`legifrance.md`](legistique-fr/references/legifrance.md) | Option : vérification du droit en vigueur, si l'agent a accès à Légifrance |
 | [`guide/`](legistique-fr/references/guide/index.md) | **Texte intégral du guide**, une fiche par fichier, avec un index : source subsidiaire |
+| [`lint_legistique.py`](legistique-fr/scripts/lint_legistique.py) | Script : repère les fautes mécaniques (futur, « doit », sigles, « Article 1 »…) et liste les références citées |
+| [`redline_docx.py`](legistique-fr/scripts/redline_docx.py) | Script : produit un fichier Word, avec marques de révision pour une correction |
 
 Ces fiches de synthèse suffisent dans la plupart des cas. Pour un point qu'elles ne couvrent pas
 (procédure d'élaboration, outre-mer, lois de finances, nominations, cas pratiques de la partie 5…),
 l'agent consulte le guide complet : il repère la fiche dans l'index, n'en lit que la section utile et
 la cite.
+
+Si l'agent peut exécuter Python, deux scripts sans dépendance l'épaulent : un **contrôle
+automatique** des fautes mécaniques, passé sur le texte à relire et sur chaque projet avant livraison
+(les constats sont des candidats, relus dans leur contexte), et la **production du fichier Word**.
+Sans Python, la skill fonctionne comme avant, avec la grille de relecture.
 
 ---
 
@@ -379,7 +388,9 @@ la cite.
 La skill est un **assistant de rédaction**, pas un substitut à l'expertise d'un légiste ni à l'examen
 du Conseil d'Etat. Elle est réglée pour **signaler plutôt qu'inventer** :
 
-- ❌ Pas de numéro d'article de code inventé : elle écrit « l'article L. … » et le signale.
+- ❌ Pas de référence devinée : tout article, texte ou décision qu'elle ajoute est vérifié sur
+  Légifrance, ou laissé en blanc (« l'article L. … »), ou marqué « [à vérifier] ». La section
+  « Références citées » récapitule le statut de chacun.
 - ❌ Pas de numéro NOR, de numéro de décret, de date de signature ni de nom de ministre fabriqués.
 - ❌ Pas de choix de fond tranché à votre place : les propositions sont entre crochets et listées.
 - ⚠️ Pas d'accès au droit en vigueur si votre agent ne peut pas consulter Légifrance (voir
@@ -440,7 +451,8 @@ skill-legistique-fr/
 │   ├── SKILL.md
 │   ├── references/           fiches thématiques chargées à la demande
 │   │   └── guide/            texte intégral du guide (101 fiches + index)
-│   └── evals/evals.json      cas de test
+│   ├── scripts/              contrôle automatique et fichier Word (Python, sans dépendance)
+│   └── evals/evals.json      cas de test, avec leurs critères de réussite
 ├── exemples/                 sorties complètes produites par la skill
 ├── distribution/README.md    README d'installation inclus dans l'archive
 └── scripts/

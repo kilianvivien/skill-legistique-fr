@@ -11,6 +11,8 @@ description: >-
   amendement, un article de code, un texte modificatif, des visas ou une entrée en vigueur, même sans
   le mot « légistique ». French legislative and regulatory drafting (legistics).
 license: MIT
+metadata:
+  version: "0.3.0"
 ---
 
 # Légistique française
@@ -112,7 +114,9 @@ rentables :
 
 ### Étape 4 : livrer
 
-Structure de réponse à respecter, dans cet ordre :
+Avant de livrer, relire le projet avec `references/grille-de-relecture.md` et, si l'agent peut exécuter
+Python, le passer au contrôle automatique (voir plus bas) : corriger ce qui doit l'être, puis dresser
+la liste des références ajoutées. Structure de réponse à respecter, dans cet ordre :
 
 ```
 ## Hypothèses retenues
@@ -132,6 +136,9 @@ Structure de réponse à respecter, dans cet ordre :
 ## Contenu écarté du dispositif
 (ce qui relève de l'exposé des motifs ou de la notice, avec une proposition de notice si le texte
 est un décret : Publics concernés / Objet / Entrée en vigueur / Application)
+
+## Références citées
+(voir « Références citées » ci-dessous)
 ```
 
 Le tableau des transformations est la partie pédagogique demandée : il doit permettre à un lecteur de
@@ -143,8 +150,10 @@ occurrences ») plutôt que de les lister un par un.
 
 ### Étape 1 : lire en légiste
 
-Passer le texte au crible de `references/grille-de-relecture.md`, dans cet ordre, car les erreurs de
-structure se corrigent avant celles de langue :
+Si l'agent peut exécuter Python, commencer par le contrôle automatique (voir plus bas) sur le texte
+relu : il relève en quelques secondes les fautes mécaniques qu'une lecture attentive laisse passer sur
+un texte long. Puis passer le texte au crible de `references/grille-de-relecture.md`, dans cet ordre,
+car les erreurs de structure se corrigent avant celles de langue :
 
 1. **Qualification et compétence** : nature du texte, niveau de norme cohérent avec le contenu (une
    loi qui fixe l'organisation d'une commission empiète sur le règlement ; un décret qui crée une
@@ -196,10 +205,88 @@ en gras si l'utilisateur travaille en Markdown, sinon texte propre)
 
 ## Questions au rédacteur
 (choix de fond à confirmer, informations manquantes : dates, consultations, ministres rapporteurs)
+
+## Références citées
+(voir ci-dessous)
 ```
 
 Si le texte est long, on peut placer un renvoi numéroté « [3] » dans le texte corrigé à l'endroit de
 chaque commentaire. Ne jamais livrer les commentaires sans le texte corrigé, ni l'inverse.
+
+## Références citées (fonctions A et B)
+
+Dernière section de toute réponse qui rédige ou corrige un texte. Elle dit au lecteur ce qu'il peut
+recopier en confiance et ce qu'il doit contrôler :
+
+```
+## Références citées
+| Référence | Origine | Statut |
+|---|---|---|
+| code de la santé publique, article L. 5125-22 | ajoutée | vérifiée sur Légifrance (en vigueur depuis le …, navigateur) |
+| décret n° 2015-1689 du 17 décembre 2015 | demande | intitulé vérifié (JORF, recherche web) |
+| article R. … du code de … (article d'insertion) | ajoutée | laissée en blanc : à compléter |
+| code pénal, article R. 610-1 | ajoutée | non vérifiée : [à vérifier] |
+```
+
+- Une ligne par référence **ajoutée** (absente de la demande) et par référence **vérifiée** ; les
+  références de la demande reprises sans contrôle n'ont pas à y figurer.
+- Statut : « vérifiée » seulement après lecture effective sur Légifrance, avec la version lue et le mode
+  d'accès ; « citée par la fiche … du guide » si elle vient des fichiers de la skill (le droit a pu
+  évoluer depuis) ; sinon « non vérifiée » ou « laissée en blanc ». Une référence connue de mémoire
+  n'est pas vérifiée, même si elle paraît certaine : jurisprudence, actes européens et articles voisins
+  du code sont les erreurs les plus fréquentes. Les articles de la Constitution n'ont pas à y figurer.
+- Chaque référence « non vérifiée » porte aussi « [à vérifier] » dans le texte lui-même, pour que la
+  marque survive au copier-coller du projet sans le tableau.
+- Si aucune référence n'a été ajoutée ni vérifiée, écrire une ligne : « Aucune référence ajoutée. »
+- Le script `scripts/lint_legistique.py --refs --source <demande>` liste les références du projet et
+  signale celles qui ne figurent pas dans la demande (voir « Contrôle automatique »).
+
+## Livrables complémentaires
+
+Les rédacteurs travaillent sous Word et montrent au cabinet ce qui change. Proposer ces livrables
+quand ils servent, sans les imposer :
+
+- **Tableau comparatif** : pour un texte modificatif dont la rédaction en vigueur est connue (fournie
+  ou lue sur Légifrance), ou quand l'utilisateur veut « voir ce que ça change ». Deux colonnes,
+  « Rédaction en vigueur » / « Rédaction résultant du projet », un article par ligne, passages
+  modifiés en gras. La rédaction de droite doit être exactement celle que produisent les formules du
+  projet, ponctuation des énumérations comprise : la construire en appliquant les formules une à une,
+  pas en réécrivant l'intention. Un écart entre le tableau et le dispositif révèle une formule fausse.
+- **Fichier Word** : sur demande (« en Word », « en mode révision », « suivi des modifications »),
+  avec `scripts/redline_docx.py` si l'agent peut exécuter Python. En fonction B, enregistrer le texte
+  d'origine et le texte corrigé en texte brut (une ligne par alinéa, sans Markdown), puis :
+
+  ```
+  python3 <dossier de la skill>/scripts/redline_docx.py --original origine.txt --revise corrige.txt --sortie projet-corrige.docx
+  ```
+
+  Chaque écart devient une vraie marque de révision Word (refuser tout redonne l'origine, accepter
+  tout le texte corrigé). En fonction A, `--revise projet.txt` seul produit un document propre. Les
+  commentaires restent dans la réponse, avec le tableau habituel. Sans Python, livrer le texte corrigé
+  et le tableau des commentaires, et le dire.
+
+## Contrôle automatique (si l'agent peut exécuter Python)
+
+`scripts/lint_legistique.py` (Python 3, sans dépendance) repère les fautes mécaniques d'un texte
+normatif : futur, « doit », « et/ou », « le ou les », « ledit », « visé » hors des visas, « en charge
+de », anglicismes et latin, « notamment » (bloquant près d'une sanction), sigles, parenthèses,
+guillemets droits, « Article 1 », « alinéa 2 », durées en chiffres, « JORF », « etc. », renvois
+relatifs, « toutes dispositions contraires », renvoi « des modalités d'application » à un arrêté,
+entrée en vigueur fixée par un autre texte sans borne. Chaque constat donne la ligne, la fiche du guide
+et une gravité par défaut.
+
+```
+python3 <dossier de la skill>/scripts/lint_legistique.py texte.txt
+python3 <dossier de la skill>/scripts/lint_legistique.py projet.txt --refs --source demande.txt
+```
+
+Enregistrer d'abord le texte (projet rédigé, ou texte à relire) dans un fichier temporaire, en texte
+brut. Le script ne signale que des **candidats** : il ignore déjà les mots cités du texte en vigueur
+(« les mots : « … » »), la formule de publication au futur et les visas, mais chaque constat se relit
+dans son contexte. Il ne voit ni la compétence, ni le plan, ni les visas manquants, ni l'entrée en
+vigueur absente, ni les incohérences entre articles : la grille de relecture reste indispensable. Ne pas
+coller sa sortie brute dans la réponse ; en reprendre les constats retenus dans le tableau des
+commentaires ou des transformations. Sans Python, appliquer la grille à la main, comme avant.
 
 ## Références
 
@@ -215,6 +302,8 @@ toujours par ces fiches de synthèse.
 | `references/typographie.md` | Règles typographiques du Journal officiel | Mise au propre finale, fonction B point 7 |
 | `references/grille-de-relecture.md` | Liste de contrôle ordonnée avec niveaux de gravité | Fonction B, et autocontrôle en fin de fonction A |
 | `references/legifrance.md` | Vérification du droit en vigueur sur Légifrance : API (serveur MCP), navigateur piloté par l'agent ou recherche web limitée au site | **Seulement si l'agent dispose de l'un de ces accès** : texte modificatif, visas, renvois, point précis à éclaircir |
+| `scripts/lint_legistique.py` | Contrôle automatique des fautes mécaniques ; liste des références citées (`--refs`) | Fonction B étape 1, fin de fonction A, section « Références citées » |
+| `scripts/redline_docx.py` | Fichier Word avec marques de révision (ou document propre) | Quand l'utilisateur demande un fichier Word |
 
 ### Guide complet : source subsidiaire
 
@@ -246,10 +335,14 @@ Méthode, pour ne pas saturer le contexte :
 
 ## Garde-fous
 
-- Ne pas inventer de droit positif : si un renvoi à un article de code est nécessaire et que le numéro
-  n'est pas connu avec certitude, écrire « l'article L. … du code … » et le signaler dans les points à
-  arbitrer. Un numéro plausible mais faux est pire qu'un blanc. Si l'agent peut consulter Légifrance (API,
-  navigateur ou recherche web), vérifier plutôt que laisser un blanc (`references/legifrance.md`).
+- **Références vérifiées ou signalées, jamais devinées.** Distinguer les références fournies par
+  l'utilisateur de celles que l'on ajoute soi-même : article de code, « notamment son article … » dans
+  un visa, numéro, date ou intitulé d'un texte, décision de justice. Toute référence ajoutée est soit
+  vérifiée sur Légifrance (`references/legifrance.md`), soit laissée en blanc (« l'article R. … du
+  code … ») ou suivie de « [à vérifier] ». Un numéro plausible mais faux est pire qu'un blanc : le
+  rédacteur le recopiera sans se méfier. La règle vaut surtout pour les ajouts spontanés que personne
+  n'a demandés (préciser un article dans un visa, citer un arrêt) : sans vérification, viser le code
+  seul ou omettre la précision. Chaque réponse se termine par la section « Références citées ».
 - Ne pas fabriquer de numéro NOR, de numéro de décret, de date de signature, de nom de ministre.
 - Ne pas trancher les questions de fond (seuils, montants, autorité compétente, sanctions) à la place
   du rédacteur : proposer, marquer entre crochets, lister dans les points à arbitrer.

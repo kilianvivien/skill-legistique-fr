@@ -16,6 +16,7 @@ sanctionnée).
 | Une loi ne désigne pas un ministre pour une décision non réglementaire (« l'autorité administrative ») | R | 3.3.2 |
 | Sanctions : contraventions seulement par décret (et visa de l'article R. 610-1 du code pénal) ; délits par la loi ; éléments constitutifs énoncés sans « notamment » | B | 3.3.2, 5.6 |
 | Le texte modifié fourni est bien la version consolidée en vigueur | B | 3.4.1 |
+| Toute référence précise (article, numéro, date, intitulé de texte) ajoutée par le rédacteur ou le relecteur est vérifiée ou marquée « [à vérifier] » ; aucune n'est complétée de mémoire | B | SKILL.md, legifrance.md |
 
 ## 2. Structure
 
