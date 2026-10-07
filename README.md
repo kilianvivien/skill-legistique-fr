@@ -551,6 +551,9 @@ qu'ils passent sur `main` avant de pousser l'étiquette.
 git tag vX.Y.Z && git push origin vX.Y.Z
 ```
 
+Sans pousser d'étiquette, lancez le workflow à la main (onglet Actions, « Release », « Run workflow »
+sur `main`) : il crée l'étiquette d'après la version de `SKILL.md` et refuse une version déjà publiée.
+
 À chaque nouvelle version du guide, téléchargez le PDF depuis
 [Légifrance](https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/guide-de-legistique) dans
 `Source/guide_legistique_2026.pdf` (ou passez son chemin en argument), puis régénérez les fiches.
