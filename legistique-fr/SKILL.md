@@ -252,13 +252,18 @@ ordre, parce que chacune conditionne la suivante :
    renvois exacts, sanctions rattachées à des obligations).
 5. **Nécessité et proportionnalité** (fiches 1.1.1, 1.1.2) : problème identifié, droit existant
    insuffisant, absence de solution non normative, contrainte proportionnée, effectivité.
-6. **Opportunité** : jugement motivé sur le choix d'adopter ce texte, sous cette forme et maintenant
-   (adéquation au but, coûts et avantages, moment, effectivité, lisibilité, acceptabilité, meilleure
-   option), avec un verdict : *Opportun*, *Opportun sous réserves*, *Discutable* ou *Inopportun en
-   l'état*. Le texte est jugé au regard de son objectif ; l'objectif lui-même, choix politique de
-   l'autorité, n'est pas jugé : l'analyse en expose les implications et les arguments en présence. Pas
-   de chiffre inventé : les données manquantes deviennent des hypothèses, et le verdict dit ce qui le
-   ferait changer.
+6. **Opportunité**, sur trois plans, chacun avec un verdict motivé (*Opportun*, *Opportun sous
+   réserves*, *Discutable*, *Inopportun en l'état*), puis un verdict d'ensemble :
+   - **juridique** : caractère dérogatoire (écart au droit commun ou à un principe justifié, limité,
+     encadré ? exceptions qui vident la règle ? régime spécial de trop ?), stabilité, risque
+     contentieux, lisibilité, précédent ;
+   - **matérielle** : moyens, coûts et charges, faisabilité et calendrier, effectivité, effets pervers ;
+   - **politique** : adéquation à l'objectif affiché, cohérence avec l'action de l'autorité, gagnants
+     et perdants, acceptabilité, signal et précédent, moment, réversibilité.
+
+   Le jugement politique se fonde sur ces critères, non sur une préférence partisane : il éclaire
+   l'autorité, qui décide. Pas de chiffre ni de fait inventé : les données manquantes deviennent des
+   hypothèses, et le verdict dit ce qui le ferait changer.
 
 Chaque conclusion porte un **statut** : *Établi* (se lit dans le texte ou découle d'une fiche citée),
 *Vérifié* (texte en vigueur effectivement lu), *Risque* (appréciation dont le raisonnement est exposé),

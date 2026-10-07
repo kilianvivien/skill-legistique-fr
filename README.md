@@ -52,8 +52,9 @@ Vous donnez **un projet ou un texte en vigueur** et demandez un avis.
 
 Vous recevez **une analyse en six questions** : le texte est-il **normatif**, au **bon niveau de
 norme** (loi ou règlement), **conforme** aux normes supérieures, **cohérent** avec le droit existant,
-**nécessaire**, **opportun** ? Chaque conclusion dit si elle est établie, vérifiée, un risque ou à
-vérifier ; l'opportunité reçoit un verdict motivé.
+**nécessaire**, **opportun** juridiquement (le texte est-il trop dérogatoire ?), matériellement et
+politiquement ? Chaque conclusion dit si elle est établie, vérifiée, un risque ou à vérifier ;
+l'opportunité reçoit un verdict motivé sur chaque plan.
 
 </td>
 </tr>
@@ -293,7 +294,7 @@ Pour un amendement : l'amendement et son exposé sommaire, puis une section **Re
 4. **Conformité aux normes supérieures**
 5. **Cohérence**
 6. **Nécessité et proportionnalité**
-7. **Opportunité** : verdict motivé
+7. **Opportunité** juridique, matérielle et politique : verdicts motivés
 8. **Recommandations** et **points à vérifier**
 9. **Références citées**
 

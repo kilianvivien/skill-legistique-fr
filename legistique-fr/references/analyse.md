@@ -16,8 +16,8 @@ parce que chacune conditionne la suivante :
 3. **Est-il conforme aux normes supérieures ?**
 4. **Est-il cohérent avec le droit existant, et cohérent en lui-même ?**
 5. **Est-il nécessaire et proportionné ?**
-6. **Est-il opportun ?** Un texte légal et nécessaire peut rester un mauvais choix : mauvais moyen,
-   mauvais moment, coût excessif.
+6. **Est-il opportun**, juridiquement, matériellement et politiquement ? Un texte légal et
+   nécessaire peut rester un mauvais choix : trop dérogatoire, inapplicable, coûteux, mal venu.
 
 Les défauts de rédaction relevés au passage (temps, vocabulaire, typographie) ne sont pas l'objet de
 l'analyse : les signaler en une ligne et proposer la fonction B.
@@ -183,53 +183,77 @@ fait revient à la section 6.
 ## 6. Opportunité (fiches 1.1.1, 1.1.2, 1.2.1, 3.8.1)
 
 La question n'est plus « le texte est-il permis ? » mais « est-ce une bonne décision de l'adopter, sous
-cette forme et maintenant ? ». L'analyse rend sur ce point un **jugement motivé**, explicitement
-présenté comme une appréciation.
+cette forme et maintenant ? ». Un texte légal et nécessaire peut rester un mauvais choix. L'analyse
+rend un **jugement motivé** sur trois plans, puis un verdict d'ensemble.
 
-**Deux plans à séparer.**
+Partir de l'**objectif** du texte : exposé des motifs, notice, demande. S'il n'est écrit nulle part,
+le déduire, le dire, et juger par rapport à cette hypothèse.
 
-- **Le texte au regard de son objectif** : le moyen choisi est-il bon ? Ici, l'analyse **tranche**.
-  L'objectif se lit dans l'exposé des motifs, la notice ou la demande ; s'il n'est écrit nulle part, le
-  déduire, le dire, et juger par rapport à cette hypothèse.
-- **L'objectif lui-même**, c'est-à-dire le choix politique (protéger tel public, imposer telle charge,
-  arbitrer entre deux intérêts) : il appartient à l'autorité qui édicte le texte. L'analyse n'y prend
-  pas parti ; elle expose ce que ce choix implique, ses coûts et ses risques, et les arguments en
-  présence, de façon équilibrée. Elle peut en revanche dire qu'un texte ne sert pas son propre objectif,
-  ou qu'il en poursuit un autre.
+### 6.1 Opportunité juridique
 
-**Critères.** Les passer en revue ; ne développer que ceux qui pèsent.
+Le texte est-il un bon choix pour l'ordre juridique, au-delà de sa simple légalité ?
 
 | Critère | Questions |
 |---|---|
-| Adéquation au but | Le dispositif produit-il l'effet recherché ? Peut-il être contourné ? Risque-t-il des effets indésirables (report vers d'autres publics, effets de seuil, renoncement aux droits) ? |
-| Bilan coûts et avantages | Charge pour les destinataires (formalités, coûts de mise en conformité), pour l'administration (instruction, contrôle) et pour les collectivités, au regard du gain attendu ; la fiche ou l'étude d'impact doit le montrer (fiche 1.1.2) |
-| Moment | Une réforme voisine en cours, un texte européen en négociation, une évaluation à venir ? Le droit en cause a-t-il été modifié récemment (la modification incessante des normes nuit à leur efficacité, fiches 1.1.1 et 1.2.1) ? Le délai laissé aux destinataires pour s'adapter est-il suffisant (fiche 3.8.1) ? |
-| Effectivité | Services, moyens, contrôles, sanctions et textes d'application prévus (section 5) ; un texte inappliqué affaiblit la norme |
-| Lisibilité et qualité du droit | Le texte simplifie-t-il ou ajoute-t-il une couche ? Disperse-t-il une matière qu'un code rassemble ? |
-| Acceptabilité et concertation | Les intéressés ont-ils été consultés ; le texte est-il compréhensible par ceux qui l'appliquent ; quel risque de contentieux ? |
-| Meilleure option | Une modification ciblée d'un texte existant, une expérimentation, une incitation, du droit souple atteindraient-elles mieux l'objectif (fiche 1.1.1) ? |
+| **Caractère dérogatoire** | Le texte s'écarte-t-il du droit commun ou d'un principe (égalité de traitement, liberté, non-rétroactivité, règles générales de procédure, compétence de droit commun) ? La dérogation est-elle justifiée par une situation particulière, limitée dans son champ et dans le temps, encadrée par des conditions précises ? Les exceptions finissent-elles par vider la règle (régime de principe devenu résiduel, exceptions en cascade, « par dérogation » à répétition) ? Un régime spécial de plus était-il nécessaire, ou le droit commun pouvait-il être adapté ? |
+| Stabilité et sécurité juridique | Modifie-t-il un droit récemment réformé, avant toute évaluation ? Laisse-t-il le temps de s'adapter (fiche 3.8.1) ? |
+| Risque contentieux | Même légal, le texte expose-t-il à des recours probables (notions floues, différences de traitement à justifier, atteinte à des situations en cours) ? |
+| Place dans l'ordonnancement | Simplifie-t-il ou ajoute-t-il une couche ? Disperse-t-il une matière qu'un code rassemble ? |
+| Précédent juridique | Crée-t-il un modèle que d'autres régimes voudront reprendre (dérogation demandée ensuite par d'autres catégories) ? |
+| Trajectoire européenne | Anticipe-t-il ou contrarie-t-il un texte de l'Union en préparation ? |
 
-**Verdict**, sur une échelle à quatre degrés :
+### 6.2 Opportunité matérielle
+
+Le texte peut-il être appliqué, à un coût raisonnable ?
+
+| Critère | Questions |
+|---|---|
+| Moyens | Quel service l'applique, avec quels effectifs, outils, systèmes d'information ? Existent-ils ou faut-il les créer ? |
+| Coûts et charges | Coût pour l'administration, les collectivités, les destinataires (formalités, mise en conformité), au regard du gain attendu (fiche 1.1.2) ; contrainte nouvelle sans compensation (fiche 1.1.2) |
+| Faisabilité et calendrier | Délais réalistes pour les destinataires et pour l'administration ; textes d'application prêts ; entrée en vigueur compatible avec les outils (fiche 3.8.1) |
+| Effectivité | Contrôle possible, sanction applicable, information des usagers (fiches 1.1.1, 1.2.1) |
+| Effets pervers | Contournement, effets de seuil, report de la charge sur d'autres, renoncement aux droits |
+
+### 6.3 Opportunité politique
+
+Le texte est-il un bon choix pour l'autorité qui l'adopte ? L'analyse **tranche** sur ce plan aussi,
+mais par des critères explicites, pas par une préférence partisane : elle ne dit pas quelle valeur doit
+l'emporter, elle dit si le texte sert bien le choix de l'autorité et à quel prix.
+
+| Critère | Questions |
+|---|---|
+| Adéquation à l'objectif affiché | Le dispositif produit-il l'effet annoncé ? Poursuit-il en réalité un autre objectif ? |
+| Cohérence avec l'action de l'autorité | Contredit-il d'autres politiques ou engagements de la même autorité (simplification annoncée, trajectoire budgétaire, réforme concurrente) ? |
+| Gagnants et perdants | Qui y gagne, qui supporte la charge ? La répartition est-elle défendable et assumée ? Une catégorie est-elle avantagée sans raison exposable (rejoint le caractère dérogatoire) ? |
+| Acceptabilité | Les intéressés ont-ils été consultés ? Quelle réaction prévisible des destinataires, des élus, des partenaires sociaux, des collectivités ? |
+| Signal et précédent | Quel message le texte envoie-t-il ? Ouvre-t-il la voie à des demandes comparables difficiles à refuser ? |
+| Moment | Calendrier politique, débat public en cours, concertation annoncée, texte européen attendu |
+| Réversibilité | Pourra-t-on revenir en arrière si l'effet n'est pas au rendez-vous ? Une expérimentation ou une clause de revoyure serait-elle plus prudente (fiche 5.10) ? |
+
+### Verdicts
+
+Un verdict par plan, puis un verdict d'ensemble, sur la même échelle :
 
 | Verdict | Sens |
 |---|---|
-| **Opportun** | Bon moyen pour l'objectif, au bon moment, à un coût proportionné |
-| **Opportun sous réserves** | Le principe est bon ; des ajustements précis (calendrier, champ, charge, effectivité) le rendraient pleinement opportun |
+| **Opportun** | Bon choix sur ce plan, au bon moment, à un coût proportionné |
+| **Opportun sous réserves** | Le principe est bon ; des ajustements précis (champ, durée, conditions, calendrier, charge) le rendraient pleinement opportun |
 | **Discutable** | Les inconvénients balancent les avantages, ou une autre option paraît meilleure ; dire laquelle |
-| **Inopportun en l'état** | Le texte ne sert pas son objectif, arrive au mauvais moment ou coûte manifestement plus qu'il ne rapporte |
+| **Inopportun en l'état** | Le texte ne sert pas son objectif, déroge sans justification suffisante, arrive au mauvais moment ou coûte manifestement plus qu'il ne rapporte |
 
 Règles du jugement :
 
-- Le motiver par les critères ci-dessus, en citant les articles en cause ; un verdict sans raisons
-  n'aide personne.
-- Fonder les faits sur le texte et la demande. Aucun chiffre inventé : un coût, un nombre de
-  destinataires ou un effet attendu qui n'est pas fourni devient une **hypothèse** énoncée comme
-  telle, et le verdict dit ce qui le ferait changer (« discutable si le nombre d'entreprises
-  concernées dépasse … »).
-- Un texte illégal ou non normatif (sections 1 à 3) n'est pas « opportun » en l'état : le verdict
-  porte alors sur le texte une fois corrigé, et le dit.
-- Ne pas substituer ses préférences à l'objectif de l'autorité : « inopportun » vise le moyen, le
-  moment ou le coût, pas la valeur politique de l'objectif.
+- Motiver chaque verdict par les critères qui pèsent, en citant les articles en cause ; ne pas remplir
+  les critères sans enjeu.
+- Fonder les faits sur le texte et la demande. Aucun chiffre ni fait inventé : un coût, un nombre de
+  destinataires, une réaction prévisible qui n'est pas documentée devient une **hypothèse** énoncée
+  comme telle, et le verdict dit ce qui le ferait changer (« inopportun si les services ne disposent
+  pas de … »).
+- Un texte illégal ou non normatif (sections 1 à 3) n'est pas opportun en l'état : le verdict porte
+  alors sur le texte une fois corrigé, et le dit.
+- Le jugement politique reste celui d'un conseiller, pas d'un militant : il éclaire la décision de
+  l'autorité, qui garde le dernier mot. Présenter, quand l'enjeu est disputé, l'argument principal en
+  faveur du texte avant de conclure.
 
 ## 7. Livrer
 
@@ -243,7 +267,10 @@ Règles du jugement :
 | Conformité aux normes supérieures | … | … |
 | Cohérence | … | … |
 | Nécessité et proportionnalité | … | … |
-| Opportunité | Opportun / Opportun sous réserves / Discutable / Inopportun en l'état | … |
+| Opportunité juridique | Opportun / Opportun sous réserves / Discutable / Inopportun en l'état | … |
+| Opportunité matérielle | … | … |
+| Opportunité politique | … | … |
+| **Opportunité d'ensemble** | … | … |
 
 ## 1. Caractère normatif
 ## 2. Niveau de norme et compétence
@@ -251,7 +278,8 @@ Règles du jugement :
 ## 4. Cohérence
 ## 5. Nécessité et proportionnalité
 ## 6. Opportunité
-(objectif retenu et sa source ; critères qui pèsent ; verdict motivé ; ce qui le ferait changer)
+(objectif retenu et sa source ; pour chaque plan, juridique, matériel et politique, les critères qui
+pèsent et un verdict motivé ; verdict d'ensemble ; ce qui le ferait changer)
 (dans les sections 1 à 5, constats numérotés :
 | N° | Article | Constat | Fondement (fiche) | Statut | Gravité | Recommandation |
 Statut = Établi / Vérifié / Risque / À vérifier ; Gravité = Bloquant / Recommandé / Style)
