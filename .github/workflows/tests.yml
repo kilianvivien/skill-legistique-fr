@@ -1,0 +1,45 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Tests (Python ${{ matrix.python }})
+    # ubuntu-22.04 : dernière image qui fournit encore Python 3.8, version minimale annoncée par les scripts
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.8", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: SDK Anthropic (tests du juge des evals, Python 3.10 et plus)
+        if: matrix.python != '3.8'
+        run: pip install anthropic
+      - name: Tests
+        run: python -m unittest discover -v tests
+      - name: Les evals se préparent sans appel payant
+        run: python scripts/run_evals.py --simulation --sortie "$RUNNER_TEMP/evals"
+
+  archive:
+    name: Archive de la skill
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construire legistique-fr.zip
+        run: bash scripts/build-zip.sh
+      - name: Vérifier le contenu
+        run: |
+          unzip -l legistique-fr.zip > contenu.txt
+          grep -q "legistique-fr/SKILL.md" contenu.txt
+          grep -q "legistique-fr/references/amendements.md" contenu.txt
+          ! grep -E "evals/|__pycache__|\.pyc" contenu.txt

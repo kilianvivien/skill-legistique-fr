@@ -1,0 +1,44 @@
+{
+  "decret-erreurs-mecaniques.txt": [
+    "10:article-1",
+    "11:abroge-et-remplace",
+    "11:concerne",
+    "11:duree-chiffres",
+    "11:futur",
+    "11:futur",
+    "11:ledit",
+    "14:alinea-chiffre",
+    "14:en-charge",
+    "17:notamment",
+    "17:structure-double-modification",
+    "20:dispositions-contraires",
+    "23:date-par-arrete",
+    "23:en-charge",
+    "23:futur",
+    "26:jorf",
+    "5:structure-ordre-visas",
+    "7:structure-ordre-visas"
+  ],
+  "decret-propre.txt": [],
+  "decret-structure.txt": [
+    "18:structure-susvise-code",
+    "24:structure-double-modification",
+    "26:structure-numerotation",
+    "28:structure-susvise-absent",
+    "30:structure-execution-place",
+    "34:structure-vigueur-apres-execution",
+    "5:structure-ordre-visas",
+    "6:structure-ordre-visas",
+    "7:structure-ordre-visas",
+    "9:structure-ordre-visas"
+  ],
+  "loi-structure.txt": [
+    "13:structure-susvise-loi",
+    "19:structure-loi-execution",
+    "3:structure-loi-visas"
+  ],
+  "reponse.md": [
+    "19:futur",
+    "19:sigle"
+  ]
+}

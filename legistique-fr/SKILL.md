@@ -1,25 +1,27 @@
 ---
 name: legistique-fr
 description: >-
-  Légistique française : rédige ou corrige des textes législatifs et réglementaires (loi, ordonnance,
-  décret, arrêté, article de code) selon le Guide de légistique du Conseil d'Etat et du SGG. Deux
-  fonctions : (1) transformer une description en prose (note, idée de réforme, mesure en langage
-  courant) en projet de texte normatif en articles, avec un tableau expliquant chaque transformation ;
-  (2) relire un projet de texte normatif et le corriger avec commentaires (structure, formules de
-  modification, visas, entrée en vigueur, vocabulaire, typographie). À utiliser dès qu'on demande de
-  rédiger, relire, corriger ou « mettre en forme juridique » un projet de loi, de décret, d'arrêté, un
-  amendement, un article de code, un texte modificatif, des visas ou une entrée en vigueur, même sans
-  le mot « légistique ». French legislative and regulatory drafting (legistics).
+  Légistique française : rédige, corrige ou analyse des textes législatifs et réglementaires (loi,
+  ordonnance, décret, arrêté, amendement, article de code) selon le Guide de légistique du Conseil
+  d'Etat et du SGG. Trois fonctions : (1) transformer une description en prose en projet de texte en
+  articles, avec un tableau expliquant chaque transformation ; (2) relire un projet et le corriger avec
+  commentaires (structure, formules de modification, visas, entrée en vigueur, vocabulaire,
+  typographie) ; (3) analyser un texte : caractère normatif, niveau de norme (loi ou règlement),
+  conformité au droit, cohérence avec le droit existant, nécessité, opportunité. Couvre aussi l'exposé des motifs,
+  les études et fiches d'impact et les consultations obligatoires. À utiliser dès qu'on demande de
+  rédiger, relire, corriger, analyser ou « mettre en forme juridique » un texte normatif, même sans le
+  mot « légistique ». French legislative and regulatory drafting and review (legistics).
 license: MIT
 metadata:
-  version: "0.3.0"
+  version: "0.5.0"
 ---
 
 # Légistique française
 
 Cette skill fait d'un agent un légiste : il transforme une intention en prose en texte normatif
-français conforme aux usages du Journal officiel, ou il relit un projet de texte et le corrige en
-expliquant chaque correction. Les règles viennent du Guide de légistique (4e édition, mise à jour 2026,
+français conforme aux usages du Journal officiel, il relit un projet de texte et le corrige en
+expliquant chaque correction, ou il analyse un texte pour dire s'il est normatif, au bon niveau de
+norme, conforme au droit, cohérent, nécessaire et opportun. Les règles viennent du Guide de légistique (4e édition, mise à jour 2026,
 Conseil d'Etat et secrétariat général du Gouvernement) et d'un cours de légistique qui en reprend
 l'essentiel. Les fiches du guide sont citées sous la forme « fiche 3.4.1 » pour que le lecteur puisse
 vérifier.
@@ -36,9 +38,13 @@ modifier sans le casser. Chaque règle ci-dessous protège l'un de ces trois lec
 | L'utilisateur fournit de la prose (note, description, liste de mesures, idée) et veut un texte normatif | **A. Rédaction** |
 | L'utilisateur fournit un projet déjà rédigé en articles et veut une relecture, une correction, un avis | **B. Correction** |
 | L'utilisateur fournit un texte déjà rédigé mais demande de le « réécrire » ou « refaire » | B, puis A pour les parties à reprendre entièrement |
+| L'utilisateur demande un **avis** sur un texte (projet ou texte en vigueur) : est-il légal, conforme, nécessaire, opportun, au bon niveau (loi ou règlement), cohérent avec le droit existant, vraiment normatif ? | **C. Analyse** |
+| L'utilisateur demande à la fois un avis et une correction | C, puis B si l'analyse ne conclut pas à abandonner ou à changer de niveau de norme |
+| L'utilisateur veut un **amendement** ou un sous-amendement (ou en fait relire un) | A ou B, avec `references/amendements.md` : chapeau, recevabilité, exposé sommaire |
+| L'utilisateur demande l'exposé des motifs, l'étude ou la fiche d'impact, ou « quelles consultations » | `references/procedure-et-documents.md`, en complément de A ou seul |
 | Question ponctuelle (comment formuler une abrogation, quel ordre pour les visas) | Répondre directement en s'appuyant sur les références |
 
-Dans les deux fonctions, commencer par qualifier le texte, car presque toutes les règles en dépendent :
+Dans toutes les fonctions, commencer par qualifier le texte, car presque toutes les règles en dépendent :
 
 1. **Nature** : loi, ordonnance, décret (simple, en Conseil d'Etat, en conseil des ministres), arrêté,
    ou article destiné à un code. Si l'utilisateur ne le dit pas, déduire de la matière (article 34 de la
@@ -130,6 +136,11 @@ la liste des références ajoutées. Structure de réponse à respecter, dans ce
 | Passage de la prose | Devenu | Règle appliquée | Pourquoi |
 (une ligne par règle ou passage notable ; citer la fiche du guide dans la colonne « Règle »)
 
+## Procédure et consultations
+(projet de loi, d'ordonnance ou de décret nouveau seulement : Conseil d'Etat, consultations
+obligatoires repérées, notification européenne, documents d'accompagnement ; voir
+`references/procedure-et-documents.md`)
+
 ## Points à arbitrer
 (liste numérotée : chaque choix que le rédacteur doit confirmer ou compléter)
 
@@ -140,6 +151,12 @@ est un décret : Publics concernés / Objet / Entrée en vigueur / Application)
 ## Références citées
 (voir « Références citées » ci-dessous)
 ```
+
+Pour un **amendement**, la structure est celle de `references/amendements.md` (section 6) : le projet
+de texte devient l'amendement (en-tête, chapeau, texte proposé, exposé sommaire) et une section
+« Recevabilité » s'ajoute (articles 40 et 45 de la Constitution au moins). Si l'utilisateur demande
+aussi l'exposé des motifs, l'étude d'impact ou la fiche d'impact, les rédiger en sections distinctes
+selon les trames de `references/procedure-et-documents.md`, sans inventer de chiffre.
 
 Le tableau des transformations est la partie pédagogique demandée : il doit permettre à un lecteur de
 comprendre pourquoi « les entreprises devront obligatoirement déclarer » est devenu « Les entreprises
@@ -213,9 +230,56 @@ en gras si l'utilisateur travaille en Markdown, sinon texte propre)
 Si le texte est long, on peut placer un renvoi numéroté « [3] » dans le texte corrigé à l'endroit de
 chaque commentaire. Ne jamais livrer les commentaires sans le texte corrigé, ni l'inverse.
 
-## Références citées (fonctions A et B)
+## Fonction C : analyse d'un texte normatif
 
-Dernière section de toute réponse qui rédige ou corrige un texte. Elle dit au lecteur ce qu'il peut
+Lire `references/analyse.md`, qui détaille la méthode, les signes d'alerte et le format de sortie.
+L'analyse rend un **avis** ; elle ne réécrit pas le texte. Elle répond à six questions, dans cet
+ordre, parce que chacune conditionne la suivante :
+
+1. **Caractère normatif** (fiche 1.2.1) : chaque disposition crée-t-elle une obligation, une
+   interdiction, un droit, une compétence, une procédure ou une sanction ? Objectifs, proclamations,
+   « l'Etat favorise », facultés qui existaient déjà, renvoi à une loi ultérieure et paraphrases d'une
+   norme existante n'en ont pas ; dans une loi, ils encourent la censure.
+2. **Niveau de norme et compétence** (fiches 1.3.2, 1.3.3, 1.3.6) : loi ou règlement (articles 34 et
+   37 de la Constitution, dérogation à un principe général du droit) ; loi organique ou ordinaire ;
+   décret en Conseil d'Etat, simple, en conseil des ministres ; arrêté fondé sur une délégation
+   encadrée ; ordonnance dans le champ de l'habilitation.
+3. **Conformité aux normes supérieures** (fiche 1.3.1) : base légale, Constitution et droits
+   fondamentaux, droit de l'Union, légalité des délits et des peines, non-rétroactivité et sécurité
+   juridique, intelligibilité, procédure (consultations).
+4. **Cohérence** : avec le droit existant (contradiction, doublon, mauvais support, notions définies
+   autrement, renvois morts, abrogations oubliées) et en interne (mêmes mots pour les mêmes notions,
+   renvois exacts, sanctions rattachées à des obligations).
+5. **Nécessité et proportionnalité** (fiches 1.1.1, 1.1.2) : problème identifié, droit existant
+   insuffisant, absence de solution non normative, contrainte proportionnée, effectivité.
+6. **Opportunité**, sur trois plans, chacun avec un verdict motivé (*Opportun*, *Opportun sous
+   réserves*, *Discutable*, *Inopportun en l'état*), puis un verdict d'ensemble :
+   - **juridique** : caractère dérogatoire (écart au droit commun ou à un principe justifié, limité,
+     encadré ? exceptions qui vident la règle ? régime spécial de trop ?), stabilité, risque
+     contentieux, lisibilité, précédent ;
+   - **matérielle** : moyens, coûts et charges, faisabilité et calendrier, effectivité, effets pervers ;
+   - **politique** : adéquation à l'objectif affiché, cohérence avec l'action de l'autorité, gagnants
+     et perdants, acceptabilité, signal et précédent, moment, réversibilité.
+
+   Le jugement politique se fonde sur ces critères, non sur une préférence partisane : il éclaire
+   l'autorité, qui décide. Pas de chiffre ni de fait inventé : les données manquantes deviennent des
+   hypothèses, et le verdict dit ce qui le ferait changer.
+
+Chaque conclusion porte un **statut** : *Établi* (se lit dans le texte ou découle d'une fiche citée),
+*Vérifié* (texte en vigueur effectivement lu), *Risque* (appréciation dont le raisonnement est exposé),
+*À vérifier* (dépend d'un texte ou d'une jurisprudence non lus). Une conformité n'est jamais affirmée
+sans vérification : « aucun motif d'illégalité relevé dans les éléments examinés » n'est pas « conforme ».
+Si l'agent peut exécuter Python, le contrôle automatique repère les formules sans portée normative
+probable et les incohérences de structure ; ses constats se reprennent dans l'analyse.
+
+Structure de réponse : Synthèse (avec un tableau d'appréciation par question et le verdict
+d'opportunité), une section par question avec des constats numérotés (article, constat, fondement,
+statut, gravité, recommandation), la section Opportunité avec son verdict motivé, Recommandations,
+Points à vérifier, Références citées.
+
+## Références citées (fonctions A, B et C)
+
+Dernière section de toute réponse qui rédige, corrige ou analyse un texte. Elle dit au lecteur ce qu'il peut
 recopier en confiance et ce qu'il doit contrôler :
 
 ```
@@ -267,24 +331,38 @@ quand ils servent, sans les imposer :
 
 ## Contrôle automatique (si l'agent peut exécuter Python)
 
-`scripts/lint_legistique.py` (Python 3, sans dépendance) repère les fautes mécaniques d'un texte
-normatif : futur, « doit », « et/ou », « le ou les », « ledit », « visé » hors des visas, « en charge
-de », anglicismes et latin, « notamment » (bloquant près d'une sanction), sigles, parenthèses,
-guillemets droits, « Article 1 », « alinéa 2 », durées en chiffres, « JORF », « etc. », renvois
-relatifs, « toutes dispositions contraires », renvoi « des modalités d'application » à un arrêté,
-entrée en vigueur fixée par un autre texte sans borne. Chaque constat donne la ligne, la fiche du guide
-et une gravité par défaut.
+`scripts/lint_legistique.py` (Python 3, sans dépendance) repère deux familles de fautes :
+
+- **ligne à ligne** : futur, « doit », « et/ou », « le ou les », « ledit », « visé » hors des visas,
+  « en charge de », anglicismes et latin, « notamment » (bloquant près d'une sanction), sigles,
+  parenthèses, guillemets droits, « Article 1 », « alinéa 2 » (sauf dans le chapeau d'un amendement),
+  durées en chiffres, « JORF », « etc. », renvois relatifs, « toutes dispositions contraires », renvoi
+  « des modalités d'application » à un arrêté, entrée en vigueur fixée par un autre texte sans borne,
+  formules sans portée normative probable (« a pour objectif », « favorise », « s'efforce », « une loi
+  ultérieure »…) ;
+- **structure** (règles « structure-… ») : numérotation des articles, article d'exécution absent ou mal
+  placé, entrée en vigueur après l'article d'exécution, visas ou article d'exécution dans une loi,
+  ordre des visas, « susvisé » fautif (code, loi, texte absent des visas, disposition insérée), même
+  article du texte modifié touché par plusieurs dispositions du projet.
+
+Chaque constat donne la ligne, la fiche du guide et une gravité par défaut.
 
 ```
 python3 <dossier de la skill>/scripts/lint_legistique.py texte.txt
+python3 <dossier de la skill>/scripts/lint_legistique.py reponse.md
 python3 <dossier de la skill>/scripts/lint_legistique.py projet.txt --refs --source demande.txt
 ```
+
+Un fichier `.md` (ou l'option `--markdown`) n'est contrôlé que dans ses blocs ```, à défaut dans ses
+lignes citées « > », à défaut hors titres et tableaux : on peut donc passer au script une réponse
+entière sans que les commentaires soient signalés.
 
 Enregistrer d'abord le texte (projet rédigé, ou texte à relire) dans un fichier temporaire, en texte
 brut. Le script ne signale que des **candidats** : il ignore déjà les mots cités du texte en vigueur
 (« les mots : « … » »), la formule de publication au futur et les visas, mais chaque constat se relit
-dans son contexte. Il ne voit ni la compétence, ni le plan, ni les visas manquants, ni l'entrée en
-vigueur absente, ni les incohérences entre articles : la grille de relecture reste indispensable. Ne pas
+dans son contexte. Il ne voit ni la compétence, ni le plan, ni les visas manquants, ni les
+consultations omises, ni les incohérences de fond entre articles : la grille de relecture reste
+indispensable. Ne pas
 coller sa sortie brute dans la réponse ; en reprendre les constats retenus dans le tableau des
 commentaires ou des transformations. Sans Python, appliquer la grille à la main, comme avant.
 
@@ -301,8 +379,11 @@ toujours par ces fiches de synthèse.
 | `references/formules-et-modeles.md` | Intitulé, squelettes complets de loi, ordonnance, décret, arrêté ; visas (quoi viser, ordre, rédaction) ; article d'exécution ; entrée en vigueur ; situations en cours ; abrogations ; renvois au règlement ; notice explicative | Fonction A étape 3, fonction B points 3 et 5 |
 | `references/typographie.md` | Règles typographiques du Journal officiel | Mise au propre finale, fonction B point 7 |
 | `references/grille-de-relecture.md` | Liste de contrôle ordonnée avec niveaux de gravité | Fonction B, et autocontrôle en fin de fonction A |
+| `references/analyse.md` | Analyse d'un texte : caractère normatif, niveau de norme et compétence, conformité aux normes supérieures, cohérence, nécessité, opportunité (critères et verdict) ; statuts des conclusions ; format de l'avis | Fonction C |
+| `references/amendements.md` | Amendements et sous-amendements : qualification, chapeau (formules Assemblée et Sénat, pastillage), texte proposé, recevabilité (articles 38, 40, 41, 45, 46), exposé sommaire, gage | Toute demande d'amendement |
+| `references/procedure-et-documents.md` | Parcours selon la nature du texte, repérage des consultations obligatoires, trames d'étude d'impact, de fiche d'impact, d'exposé des motifs et de rapport de présentation | Texte nouveau (fin de fonction A) ; demande de document d'accompagnement ou de procédure |
 | `references/legifrance.md` | Vérification du droit en vigueur sur Légifrance : API (serveur MCP), navigateur piloté par l'agent ou recherche web limitée au site | **Seulement si l'agent dispose de l'un de ces accès** : texte modificatif, visas, renvois, point précis à éclaircir |
-| `scripts/lint_legistique.py` | Contrôle automatique des fautes mécaniques ; liste des références citées (`--refs`) | Fonction B étape 1, fin de fonction A, section « Références citées » |
+| `scripts/lint_legistique.py` | Contrôle automatique des fautes mécaniques et de structure ; liste des références citées (`--refs`) | Fonction B étape 1, fin de fonction A, section « Références citées » |
 | `scripts/redline_docx.py` | Fichier Word avec marques de révision (ou document propre) | Quand l'utilisateur demande un fichier Word |
 
 ### Guide complet : source subsidiaire
@@ -313,8 +394,9 @@ en sont la synthèse et suffisent dans la plupart des cas : le guide complet ne 
 
 Le consulter seulement quand :
 
-- une question sort du champ des fiches de synthèse : procédure d'élaboration (quelles consultations
-  sont obligatoires, saisine du Conseil d'Etat, contreseings, signature, publication), application
+- une question sort du champ des fiches de synthèse : détail d'une procédure d'élaboration (régime
+  précis d'une consultation repérée dans `procedure-et-documents.md`, contreseings, signature,
+  publication), application
   outre-mer, Alsace-Moselle, Corse, lois de finances et de financement de la sécurité sociale, textes
   internationaux et européens, mesures individuelles et nominations ;
 - le texte relève d'un cas pratique du guide (partie 5 : services de l'Etat, organisme consultatif,
