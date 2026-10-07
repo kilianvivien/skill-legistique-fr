@@ -12,6 +12,6 @@ rm -rf "$tmp/legistique-fr/evals"
 cp "$root/distribution/README.md" "$tmp/README.md"
 
 rm -f "$out"
-(cd "$tmp" && zip -rqX "$out" README.md legistique-fr -x '*.DS_Store')
+(cd "$tmp" && zip -rqX "$out" README.md legistique-fr -x '*.DS_Store' -x '*__pycache__*' -x '*.pyc')
 unzip -tq "$out"
 echo "Archive : $out"

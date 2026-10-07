@@ -225,7 +225,8 @@ Claude Code ou Cursor.
 | Vous écrivez… | La skill… |
 |---|---|
 | « Voici la note du cabinet, fais-en un projet de décret : … » | **rédige** (fonction A) |
-| « Rédige-moi un amendement qui insère un article après l'article L. 731-1 du code de l'éducation » | **rédige** un article modificatif |
+| « Rédige-moi un amendement qui insère un article après l'article L. 731-1 du code de l'éducation » | **rédige** l'amendement (chapeau, texte, exposé sommaire) et en contrôle la **recevabilité** (articles 40 et 45 de la Constitution) |
+| « Quelles consultations pour ce projet de décret ? » · « Fais la trame de l'étude d'impact » | **repère** les consultations obligatoires et **rédige** exposé des motifs, étude ou fiche d'impact |
 | « Relis ce projet d'arrêté et dis-moi ce qui ne va pas : … » | **corrige** (fonction B) |
 | « Réécris proprement ce décret » | **corrige**, puis **rédige** les parties à reprendre |
 | « Dans quel ordre mettre les visas ? » · « Comment abroger un alinéa ? » | **répond** directement |
@@ -253,9 +254,12 @@ Claude Code ou Cursor.
 1. **Hypothèses retenues**
 2. **Projet de texte**
 3. **Tableau des transformations**
-4. **Points à arbitrer**
-5. **Contenu écarté du dispositif** (et proposition de notice)
-6. **Références citées** : ce qui a été vérifié, ce qui reste à vérifier
+4. **Procédure et consultations** (texte nouveau)
+5. **Points à arbitrer**
+6. **Contenu écarté du dispositif** (et proposition de notice)
+7. **Références citées** : ce qui a été vérifié, ce qui reste à vérifier
+
+Pour un amendement : l'amendement et son exposé sommaire, puis une section **Recevabilité**.
 
 </td>
 <td valign="top">
@@ -366,18 +370,20 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté ; visas ; entrée en vigueur ; notice |
 | [`typographie.md`](legistique-fr/references/typographie.md) | Règles typographiques du Journal officiel |
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
+| [`amendements.md`](legistique-fr/references/amendements.md) | Amendements : chapeau (Assemblée, Sénat), pastillage, recevabilité, exposé sommaire, gage |
+| [`procedure-et-documents.md`](legistique-fr/references/procedure-et-documents.md) | Parcours selon la nature du texte, consultations obligatoires, trames d'étude et de fiche d'impact, exposé des motifs |
 | [`legifrance.md`](legistique-fr/references/legifrance.md) | Option : vérification du droit en vigueur, si l'agent a accès à Légifrance |
 | [`guide/`](legistique-fr/references/guide/index.md) | **Texte intégral du guide**, une fiche par fichier, avec un index : source subsidiaire |
-| [`lint_legistique.py`](legistique-fr/scripts/lint_legistique.py) | Script : repère les fautes mécaniques (futur, « doit », sigles, « Article 1 »…) et liste les références citées |
+| [`lint_legistique.py`](legistique-fr/scripts/lint_legistique.py) | Script : repère les fautes mécaniques (futur, « doit », sigles, « Article 1 »…) et de structure (numérotation, article d'exécution, ordre des visas, « susvisé », article modifié deux fois) ; liste les références citées |
 | [`redline_docx.py`](legistique-fr/scripts/redline_docx.py) | Script : produit un fichier Word, avec marques de révision pour une correction |
 
 Ces fiches de synthèse suffisent dans la plupart des cas. Pour un point qu'elles ne couvrent pas
-(procédure d'élaboration, outre-mer, lois de finances, nominations, cas pratiques de la partie 5…),
+(détail d'une procédure ou d'une consultation, outre-mer, lois de finances, nominations, cas pratiques de la partie 5…),
 l'agent consulte le guide complet : il repère la fiche dans l'index, n'en lit que la section utile et
 la cite.
 
 Si l'agent peut exécuter Python, deux scripts sans dépendance l'épaulent : un **contrôle
-automatique** des fautes mécaniques, passé sur le texte à relire et sur chaque projet avant livraison
+automatique** des fautes mécaniques et de structure, passé sur le texte à relire et sur chaque projet avant livraison
 (les constats sont des candidats, relus dans leur contexte), et la **production du fichier Word**.
 Sans Python, la skill fonctionne comme avant, avec la grille de relecture.
 
@@ -452,11 +458,16 @@ skill-legistique-fr/
 │   ├── references/           fiches thématiques chargées à la demande
 │   │   └── guide/            texte intégral du guide (101 fiches + index)
 │   ├── scripts/              contrôle automatique et fichier Word (Python, sans dépendance)
-│   └── evals/evals.json      cas de test, avec leurs critères de réussite
+│   └── evals/
+│       ├── evals.json        cas de test, avec leurs critères de réussite
+│       └── declenchement.json  requêtes qui doivent (ou non) déclencher la skill
+├── tests/                    tests des scripts et de la cohérence de la skill
 ├── exemples/                 sorties complètes produites par la skill
 ├── distribution/README.md    README d'installation inclus dans l'archive
+├── .github/workflows/        intégration continue (tests, archive)
 └── scripts/
     ├── build-zip.sh          construit legistique-fr.zip
+    ├── run_evals.py          lance les evals et les fait noter par un juge
     └── convert-guide.py      régénère references/guide/ depuis le PDF du guide
 ```
 
@@ -465,6 +476,32 @@ skill-legistique-fr/
 Les retours de légistes et de rédacteurs sont les bienvenus : ouvrez une
 [issue](https://github.com/kilianvivien/skill-legistique-fr/issues) avec le texte soumis, la réponse
 obtenue et la règle qui n'a pas été respectée (avec la fiche du guide si possible).
+
+Avant de proposer une modification, lancez les tests (Python 3.8 ou plus, sans dépendance ; ils
+tournent aussi à chaque push) :
+
+```bash
+python3 -m unittest discover tests
+```
+
+Une règle du contrôle automatique se teste sur un texte de `tests/fixtures/` : les constats attendus,
+relus un par un, sont consignés dans `tests/fixtures/attendu.json`.
+
+Pour mesurer l'effet d'une modification de `SKILL.md` ou des fiches, lancez les evals. Chacune exécute
+un prompt dans Claude Code (`claude -p`) avec la skill installée, puis un juge (Claude Opus 5.5, via
+l'API Anthropic) note chaque critère. Les campagnes sont payantes : le script annonce le nombre
+d'appels et demande confirmation.
+
+```bash
+pip install anthropic                                   # pour le juge
+python3 scripts/run_evals.py --simulation               # vérifie la mécanique, sans appel payant
+python3 scripts/run_evals.py --ids 2,10                 # quelques evals
+python3 scripts/run_evals.py                            # toutes, puis comparer avec --reference
+python3 scripts/run_evals.py --sans-skill               # même prompts sans la skill
+python3 scripts/run_evals.py --declenchement            # la skill se déclenche-t-elle à bon escient ?
+```
+
+Résultats et rapport dans `legistique-fr-workspace/evals/<horodatage>/` (non versionné).
 
 Pour reconstruire l'archive après une modification :
 
