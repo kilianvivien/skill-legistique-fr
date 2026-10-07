@@ -5,7 +5,7 @@
 **Une skill pour agents IA qui rédige et corrige les textes normatifs français**<br>
 loi · ordonnance · décret · arrêté · article de code
 
-[![Version](https://img.shields.io/github/v/release/kilianvivien/skill-legistique-fr?label=version&color=1f3a93)](https://github.com/kilianvivien/skill-legistique-fr/releases/latest)
+[![Version](https://img.shields.io/badge/version-0.5.0-1f3a93)](legistique-fr/SKILL.md)
 [![Licence](https://img.shields.io/badge/licence-MIT-2e7d32)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-8250df)](https://agentskills.io)
 [![Compatible](https://img.shields.io/badge/compatible-Claude%20%C2%B7%20Codex%20%C2%B7%20Mistral%20Vibe%20%C2%B7%20Cursor%20%C2%B7%20Gemini%20CLI%20%C2%B7%20Copilot-d97757)](#-installation)
@@ -494,10 +494,12 @@ skill-legistique-fr/
 │       └── declenchement.json  requêtes qui doivent (ou non) déclencher la skill
 ├── tests/                    tests des scripts et de la cohérence de la skill
 ├── exemples/                 sorties complètes produites par la skill
-├── distribution/README.md    README d'installation inclus dans l'archive
-├── .github/workflows/        intégration continue (tests, archive)
+├── distribution/
+│   ├── README.md             README d'installation inclus dans l'archive
+│   └── notes/                notes de chaque release (vX.Y.Z.md)
+├── .github/workflows/        intégration continue (tests, archive) et publication des releases
 └── scripts/
-    ├── build-zip.sh          construit legistique-fr.zip
+    ├── build-zip.sh          construit legistique-fr.zip et legistique-fr.skill
     ├── run_evals.py          lance les evals et les fait noter par un juge
     └── convert-guide.py      régénère references/guide/ depuis le PDF du guide
 ```
@@ -509,7 +511,7 @@ Les retours de légistes et de rédacteurs sont les bienvenus : ouvrez une
 obtenue et la règle qui n'a pas été respectée (avec la fiche du guide si possible).
 
 Avant de proposer une modification, lancez les tests (Python 3.8 ou plus, sans dépendance ; ils
-tournent aussi à chaque push) :
+tournent aussi à chaque push qui ne modifie pas que la documentation) :
 
 ```bash
 python3 -m unittest discover tests
@@ -534,10 +536,20 @@ python3 scripts/run_evals.py --declenchement            # la skill se déclenche
 
 Résultats et rapport dans `legistique-fr-workspace/evals/<horodatage>/` (non versionné).
 
-Pour reconstruire l'archive après une modification :
+Pour reconstruire les archives après une modification :
 
 ```bash
 ./scripts/build-zip.sh
+```
+
+Pour publier une version : mettez à jour `version` dans `legistique-fr/SKILL.md`, rédigez
+`distribution/notes/vX.Y.Z.md` (première ligne `# titre de la release`, puis les notes), fusionnez dans
+`main`, puis poussez l'étiquette. Le workflow `release.yml` vérifie que l'étiquette correspond à la
+version, construit les deux archives et publie la release. Il ne relance pas les tests : attendez
+qu'ils passent sur `main` avant de pousser l'étiquette.
+
+```bash
+git tag vX.Y.Z && git push origin vX.Y.Z
 ```
 
 À chaque nouvelle version du guide, téléchargez le PDF depuis

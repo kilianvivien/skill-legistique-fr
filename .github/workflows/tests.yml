@@ -3,18 +3,35 @@ name: Tests
 on:
   push:
     branches: [main]
+    # Documentation seule : pas de tests (la skill, ses fiches et ses scripts restent couverts)
+    paths-ignore:
+      - "README.md"
+      - "exemples/**"
+      - "distribution/notes/**"
+      - "LICENSE"
   pull_request:
+    paths-ignore:
+      - "README.md"
+      - "exemples/**"
+      - "distribution/notes/**"
+      - "LICENSE"
 
 permissions:
   contents: read
+
+# Un seul passage par branche : une nouvelle poussée annule le précédent
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   tests:
     name: Tests (Python ${{ matrix.python }})
     # ubuntu-22.04 : dernière image qui fournit encore Python 3.8, version minimale annoncée par les scripts
     runs-on: ubuntu-22.04
+    timeout-minutes: 10
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         python: ["3.8", "3.13"]
     steps:
@@ -24,21 +41,17 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: SDK Anthropic (tests du juge des evals, Python 3.10 et plus)
         if: matrix.python != '3.8'
-        run: pip install anthropic
+        run: pip install --disable-pip-version-check -q anthropic
       - name: Tests
         run: python -m unittest discover -v tests
       - name: Les evals se préparent sans appel payant
+        if: matrix.python != '3.8'
         run: python scripts/run_evals.py --simulation --sortie "$RUNNER_TEMP/evals"
-
-  archive:
-    name: Archive de la skill
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Construire legistique-fr.zip
-        run: bash scripts/build-zip.sh
-      - name: Vérifier le contenu
+      # Contrôle de l'archive dans la même tâche, pour ne pas démarrer une machine de plus
+      - name: Archive de la skill
+        if: matrix.python != '3.8'
         run: |
+          bash scripts/build-zip.sh
           unzip -l legistique-fr.zip > contenu.txt
           grep -q "legistique-fr/SKILL.md" contenu.txt
           grep -q "legistique-fr/references/amendements.md" contenu.txt
