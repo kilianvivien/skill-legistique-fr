@@ -5,7 +5,7 @@
 **Une skill pour agents IA qui rédige et corrige les textes normatifs français**<br>
 loi · ordonnance · décret · arrêté · article de code
 
-[![Version](https://img.shields.io/badge/version-0.5.0-1f3a93)](legistique-fr/SKILL.md)
+[![Version](https://img.shields.io/github/v/release/kilianvivien/skill-legistique-fr?label=version&color=1f3a93)](https://github.com/kilianvivien/skill-legistique-fr/releases/latest)
 [![Licence](https://img.shields.io/badge/licence-MIT-2e7d32)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-8250df)](https://agentskills.io)
 [![Compatible](https://img.shields.io/badge/compatible-Claude%20%C2%B7%20Codex%20%C2%B7%20Mistral%20Vibe%20%C2%B7%20Cursor%20%C2%B7%20Gemini%20CLI%20%C2%B7%20Copilot-d97757)](#-installation)
