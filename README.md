@@ -494,10 +494,12 @@ skill-legistique-fr/
 │       └── declenchement.json  requêtes qui doivent (ou non) déclencher la skill
 ├── tests/                    tests des scripts et de la cohérence de la skill
 ├── exemples/                 sorties complètes produites par la skill
-├── distribution/README.md    README d'installation inclus dans l'archive
-├── .github/workflows/        intégration continue (tests, archive)
+├── distribution/
+│   ├── README.md             README d'installation inclus dans l'archive
+│   └── notes/                notes de chaque release (vX.Y.Z.md)
+├── .github/workflows/        intégration continue (tests, archive) et publication des releases
 └── scripts/
-    ├── build-zip.sh          construit legistique-fr.zip
+    ├── build-zip.sh          construit legistique-fr.zip et legistique-fr.skill
     ├── run_evals.py          lance les evals et les fait noter par un juge
     └── convert-guide.py      régénère references/guide/ depuis le PDF du guide
 ```
@@ -534,10 +536,19 @@ python3 scripts/run_evals.py --declenchement            # la skill se déclenche
 
 Résultats et rapport dans `legistique-fr-workspace/evals/<horodatage>/` (non versionné).
 
-Pour reconstruire l'archive après une modification :
+Pour reconstruire les archives après une modification :
 
 ```bash
 ./scripts/build-zip.sh
+```
+
+Pour publier une version : mettez à jour `version` dans `legistique-fr/SKILL.md`, rédigez
+`distribution/notes/vX.Y.Z.md` (première ligne `# titre de la release`, puis les notes), fusionnez dans
+`main`, puis poussez l'étiquette. Le workflow `release.yml` vérifie que l'étiquette correspond à la
+version, lance les tests, construit les deux archives et publie la release.
+
+```bash
+git tag vX.Y.Z && git push origin vX.Y.Z
 ```
 
 À chaque nouvelle version du guide, téléchargez le PDF depuis

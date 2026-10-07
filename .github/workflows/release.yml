@@ -1,0 +1,46 @@
+name: Release
+
+# Publier une version : mettre à jour la version dans legistique-fr/SKILL.md, écrire
+# distribution/notes/vX.Y.Z.md (première ligne « # titre », puis les notes), fusionner dans main,
+# puis pousser l'étiquette : git tag vX.Y.Z && git push origin vX.Y.Z
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publier la release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: L'étiquette correspond à la version de la skill
+        run: |
+          version="$(sed -n 's/^ *version: "\(.*\)"$/\1/p' legistique-fr/SKILL.md | head -1)"
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Étiquette $GITHUB_REF_NAME, mais SKILL.md annonce la version $version"
+            exit 1
+          fi
+      - name: Tests
+        run: python -m unittest discover -v tests
+      - name: Construire les archives
+        run: bash scripts/build-zip.sh
+      - name: Publier
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes="distribution/notes/$GITHUB_REF_NAME.md"
+          if [ -f "$notes" ]; then
+            titre="$(head -1 "$notes" | sed 's/^# *//')"
+            tail -n +2 "$notes" | sed '/./,$!d' > corps.md
+            gh release create "$GITHUB_REF_NAME" legistique-fr.zip legistique-fr.skill \
+              --title "$titre" --notes-file corps.md --verify-tag
+          else
+            gh release create "$GITHUB_REF_NAME" legistique-fr.zip legistique-fr.skill \
+              --title "$GITHUB_REF_NAME" --generate-notes --verify-tag
+          fi
