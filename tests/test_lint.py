@@ -3,6 +3,7 @@
 Lancer depuis la racine du dépôt : python3 -m unittest discover tests
 """
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -147,6 +148,7 @@ class Structure(unittest.TestCase):
     EXEC = "Le ministre de l'intérieur est chargé de l'exécution du présent décret."
 
     def decret(self, articles, visas="Vu la Constitution ;"):
+        visas = re.sub(r";\s*$", ",", visas)  # la dernière ligne avant « Décrète : » finit par une virgule
         body = "\n\n".join(f"Article {'1er' if i == 1 else i}\n\n{a}" for i, a in enumerate(articles, 1))
         return self.DECRET.format(visas=visas, articles=body)
 
@@ -233,6 +235,69 @@ class Structure(unittest.TestCase):
                 "entre en vigueur le 1er janvier 2027.\n\nArticle 2\n\nLe ministre est chargé de l'exécution "
                 "de la présente loi.")
         self.assertEqual(sorted(regles(text)), ["structure-loi-execution", "structure-loi-visas"])
+
+
+class Encadrement(unittest.TestCase):
+    """Formule d'ouverture, dernière ligne avant « Décrète : », formules finales admises."""
+
+    def test_dernier_visa_termine_par_un_point_virgule(self):
+        text = "Le Premier ministre,\nVu le code pénal ;\nDécrète :\n\nArticle 1er\n\nA.\n\nArticle 2\n\n" + Structure.EXEC
+        self.assertIn("structure-visa-final", regles(text))
+
+    def test_conseil_d_etat_entendu_avant_decrete(self):
+        text = ("Le Premier ministre,\nVu le code pénal ;\nLe Conseil d'Etat (section de l'intérieur) entendu,\n"
+                "Décrète :\n\nArticle 1er\n\nA.\n\nArticle 2\n\n" + Structure.EXEC)
+        self.assertEqual(L.structure(text), [])
+
+    def test_decret_sans_ouverture_ni_visas(self):
+        text = "Décret n° … du … relatif aux pilotes\n\nArticle 1er\n\nA.\n\nArticle 2\n\n" + Structure.EXEC
+        self.assertIn("structure-ouverture-absente", regles(text))
+
+    def test_arrete_termine_par_la_formule_de_publication(self):
+        text = ("Le ministre de l'intérieur,\nVu le décret n° 2010-12 du 5 janvier 2010 relatif aux pilotes,\nArrête :\n\n"
+                "Article 1er\n\nA.\n\nArticle 2\n\nLe présent arrêté sera publié au Journal officiel de la République française.")
+        self.assertEqual(L.lint(text) + L.structure(text), [])
+
+    def test_article_final_d_une_ordonnance(self):
+        text = ("Le Président de la République,\nVu la Constitution, notamment son article 38 ;\n"
+                "Le Conseil d'Etat entendu ;\nLe conseil des ministres entendu,\nOrdonne :\n\nArticle 1er\n\nA.\n\n"
+                "Article 2\n\nLe Premier ministre et le ministre de l'intérieur sont responsables, chacun en ce qui le "
+                "concerne, de l'application de la présente ordonnance, qui sera publiée au Journal officiel de la "
+                "République française.")
+        self.assertEqual(L.lint(text) + L.structure(text), [])
+
+    def test_extrait_qui_commence_a_l_article_2(self):
+        text = "Article 2\n\nLe troisième alinéa de l'article R. 123-4 du code de la route est supprimé.\n\nArticle 3\n\nB."
+        self.assertEqual(L.structure(text), [])
+
+    def test_tete_d_article_suivie_d_un_renvoi_de_commentaire(self):
+        text = "Le Premier ministre,\nDécrète :\n\nArticle 1er [5]\n\nA.\n\nArticle 2 [6]\n\n" + Structure.EXEC
+        self.assertEqual(L.structure(text), [])
+
+
+class FormulesDeModification(unittest.TestCase):
+
+    def test_mots_cites_sans_deux_points(self):
+        found = regles("Au deuxième alinéa de l'article 5, les mots « le préfet » sont remplacés par « le maire ».", False)
+        self.assertIn("mots-sans-deux-points", found)
+        self.assertIn("remplace-sans-annonce", found)
+
+    def test_formule_correcte(self):
+        text = ("Au deuxième alinéa de l'article 5, les mots : « le préfet » sont remplacés par les mots : « le maire ».\n"
+                "L'article 7 est remplacé par les dispositions suivantes :\n« Art. 7. – Le maire statue. »")
+        self.assertEqual(L.lint(text), [])
+
+    def test_il_est_ajoute_les_mots_suivants(self):
+        self.assertIn("ajoute-mots-suivants", regles("Au 3° de l'article 3, il est ajouté les mots suivants : « agréées ».", False))
+
+
+class Amendement(unittest.TestCase):
+
+    def test_squelette_d_amendement_sans_faux_positif(self):
+        text = ("PROJET DE LOI relatif à l'alimentation durable (n° 1234)\n\nAMENDEMENT n° …\nprésenté par Mme …\n\n"
+                "ARTICLE ADDITIONNEL APRÈS L'ARTICLE 5\n\nAprès l'article 5, insérer l'article suivant :\n"
+                "« Un repas végétarien est proposé chaque jour. ».\n\nEXPOSÉ SOMMAIRE\nCet amendement généralise l'offre.")
+        self.assertEqual(L.lint(text) + L.structure(text), [])
 
 
 class Markdown(unittest.TestCase):

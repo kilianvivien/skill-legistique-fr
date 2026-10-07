@@ -187,6 +187,10 @@ Règles du jugement :
   l'arrêté et que l'arrêté reste dans ce que le renvoi autorise (fiche 3.5.3).
 - **Renvois** : une loi ne désigne pas le ministre compétent pour prendre un règlement ; un décret ne
   renvoie pas à un arrêté « les modalités d'application » (fiches 3.5.1, 3.5.3).
+- **Articles de code cités ou modifiés** : le préfixe donne le niveau requis, « R. » décret en Conseil
+  d'Etat, « R*. » décret en Conseil d'Etat délibéré en conseil des ministres, « D. » décret simple
+  (fiche 3.6.1). Le relever sur Légifrance quand l'accès existe : un projet écrit souvent « R. » pour
+  un article « R*. ». Une contravention ne se crée que par décret en Conseil d'Etat (fiche 5.6).
 
 ### 2.2 Conformité aux normes supérieures (fiche 1.3.1)
 

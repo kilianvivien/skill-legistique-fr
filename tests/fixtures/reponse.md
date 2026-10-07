@@ -11,7 +11,7 @@
 Décret n° … du … relatif au bilan des émissions
 
 Le Premier ministre,
-Vu le code de l'environnement ;
+Vu le code de l'environnement,
 Décrète :
 
 Article 1er
