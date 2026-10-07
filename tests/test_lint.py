@@ -99,6 +99,7 @@ class Detections(unittest.TestCase):
         "jorf": "Il est publié au JORF.",
         "renvoi-relatif": "Les dispositions de l'alinéa précédent sont applicables.",
         "article-1": "Article 1\n\nLe bilan est publié.",
+        "non-normatif": "L'Etat favorise le développement des infrastructures portuaires.",
     }
 
     def test_detections(self):
@@ -121,6 +122,19 @@ class Detections(unittest.TestCase):
                 "supprimé. »\n\nEXPOSÉ SOMMAIRE\nCet amendement précise l'alinéa 2 de l'article.")
         found = [(f["ligne"], f["regle"]) for f in L.lint(text) if f["regle"] == "alinea-chiffre"]
         self.assertEqual(found, [(13, "alinea-chiffre")])
+
+    def test_enonces_censures_pour_defaut_de_portee_normative(self):
+        for text in ["L'objectif de l'école est la réussite de tous les élèves. L'école a pour objectif de les "
+                     "faire réussir.",
+                     "La Nation reconnaît le droit de chaque jeune à une expérience à l'étranger.",
+                     "Une loi ultérieure fixe les conditions de ce droit."]:
+            with self.subTest(text=text):
+                self.assertIn("non-normatif", regles(text, structure=False))
+
+    def test_non_normatif_ignore_dans_la_notice_et_les_mots_cites(self):
+        text = ("Objet : le décret a pour objectif de simplifier la déclaration.\n"
+                "Au premier alinéa, les mots : « favorise le » sont supprimés.")
+        self.assertNotIn("non-normatif", regles(text, structure=False))
 
     def test_date_bornee_acceptee(self):
         self.assertNotIn("date-par-arrete", regles(

@@ -54,6 +54,13 @@ RULES = [
     ("jorf", r"\bJORF\b|\bJ\.\s?O\.",
      "écrire « Journal officiel de la République française »", "annexe typo", "R", {}),
 
+    ("non-normatif",
+     r"\b(?:a|ont) pour (?:objectifs?|ambition|vocation|finalité)\b|\bvisent? à\b|\bs'efforcen?t?\b"
+     r"|\bencouragen?t?\b|\bfavorisen?t?\b|\bpromeu(?:t|vent)\b|\breconna(?:ît|issent)\b|\bLa Nation\b"
+     r"|\bil (?:est|serait) souhaitable\b|\bdans (?:toute )?la mesure du possible\b|\b(?:une|par la) loi ultérieure\b",
+     "formule sans portée normative probable : dire qui doit, peut ou ne peut pas faire quoi, ou reporter "
+     "dans l'exposé des motifs ou la notice", "1.2.1", "S", {"skip_visas": True, "skip_notice": True}),
+
     # --- Temps, mode, renfort ---
     ("doit", r"\b(?:doit|doivent)\b", "« doit » : le présent de l'indicatif suffit à obliger", "3.3.1", "R", {}),
     ("futur", r"\b(?:sera|seront|devra|devront|pourra|pourront|fera|feront|aura|auront|ira|iront)\b"
@@ -133,6 +140,7 @@ SANCTION = re.compile(
 AMENDEMENT = re.compile(r"^\s*(?:AMENDEMENT\b|EXPOSÉ SOMMAIRE\b)", re.M)
 CHAPEAU = re.compile(r"\b(?:[Ss]upprimer|[Rr]édiger ainsi|[Ss]ubstituer|[Rr]emplacer|[Ii]nsérer|[Cc]ompléter|[Rr]établir)\b"
                      r"|^\s*Alinéas? \d+")
+NOTICE = re.compile(r"^(?:Publics? concernés?|Objet|Entrée en vigueur|Notice|Références|Application)\s*:")
 PUBLICATION = re.compile(r"\bsera publiée? (?:au|dans le) (?:Journal officiel|JORF|J\.\s?O\.|bulletin officiel|recueil des actes)", re.I)
 
 # Passages cités d'un texte existant : « les mots : « … » », « la phrase : « … » », etc., sauf après « par ».
@@ -180,6 +188,8 @@ def lint(text):
         is_heading = bool(stripped) and stripped == stripped.upper() and len(stripped) > 3
         for rid, pattern, message, fiche, grav, opts in RULES:
             if opts.get("skip_visas") and is_visa:
+                continue
+            if opts.get("skip_notice") and NOTICE.match(stripped):
                 continue
             flags = re.M if pattern.startswith("^") else 0
             if rid not in CASE_SENSITIVE:

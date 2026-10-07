@@ -256,6 +256,41 @@
         "L'exposé sommaire est réécrit pour donner les raisons de l'amendement sans paraphraser le dispositif",
         "Aucun numéro d'amendement, nom d'auteur ou date n'est inventé"
       ]
+    },
+    {
+      "id": 16,
+      "name": "analyse-decret-niveau-et-normativite",
+      "prompt": "Le cabinet veut savoir si ce projet de décret tient la route : est-il légal, nécessaire, au bon niveau de norme, cohérent ? Je ne te demande pas de le réécrire, juste ton analyse.\n\nDécret n° … du … relatif à la propreté des trottoirs\n\nLe Premier ministre,\nSur le rapport du ministre de l'intérieur,\nVu la Constitution ;\nVu le code général des collectivités territoriales ;\nDécrète :\n\nArticle 1er\nLa propreté des trottoirs est une priorité nationale. L'Etat encourage les communes à agir en ce sens.\n\nArticle 2\nLes riverains nettoient le trottoir situé devant leur habitation au moins une fois par semaine.\n\nArticle 3\nLe fait de ne pas respecter l'obligation prévue à l'article 2 est puni de six mois d'emprisonnement et de 7 500 euros d'amende.\n\nArticle 4\nUne taxe annuelle de vingt euros par mètre linéaire de façade est instituée au profit des communes pour financer le nettoyage des trottoirs.\n\nArticle 5\nL'obligation prévue à l'article 2 incombe au propriétaire de l'immeuble.\n\nArticle 6\nUn arrêté du ministre de l'intérieur fixe les modalités d'application du présent décret.\n\nArticle 7\nLe ministre de l'intérieur est chargé de l'exécution du présent décret, qui sera publié au Journal officiel de la République française.",
+      "expected_output": "Une analyse (fonction C) et non une réécriture : synthèse avec un tableau d'appréciation par question, puis les cinq questions. Caractère normatif : l'article 1er (priorité nationale, l'Etat encourage) n'a pas de portée normative. Niveau de norme : l'article 3 crée un délit (emprisonnement) que seule la loi peut créer, un décret ne pouvant prévoir que des contraventions ; l'article 4 institue une imposition, qui relève de la loi (article 34) ; ces deux points sont bloquants. Cohérence : l'article 2 vise les riverains, l'article 5 les propriétaires (contradiction interne) ; l'article 6 renvoie à un arrêté « les modalités d'application » sans encadrement. Conformité : principe de libre administration et compétences communales, police municipale existante à vérifier, proportionnalité de l'obligation hebdomadaire. Nécessité : les pouvoirs de police du maire permettent peut-être déjà d'imposer le nettoyage (à vérifier) ; solution non normative possible. Chaque conclusion porte un statut (établi, vérifié, risque, à vérifier) ; aucune conformité affirmée sans vérification.",
+      "files": [],
+      "expectations": [
+        "La réponse est une analyse et non une réécriture complète : elle comporte une synthèse avec une appréciation par question, puis une section par question (caractère normatif, niveau de norme, conformité, cohérence, nécessité)",
+        "L'article 1er est relevé comme dépourvu de portée normative, avec la recommandation de le supprimer ou de le reporter dans la notice",
+        "L'article 3 est relevé comme bloquant : un décret ne peut pas créer un délit puni d'emprisonnement, qui relève de la loi ; seules des contraventions peuvent être prévues par décret",
+        "L'article 4 est relevé comme bloquant : l'institution d'une imposition relève de la loi (article 34 de la Constitution)",
+        "La contradiction entre l'article 2 (riverains) et l'article 5 (propriétaire) est relevée",
+        "Le renvoi de l'article 6 à un arrêté fixant « les modalités d'application » est relevé comme non encadré",
+        "La réponse s'interroge sur la nécessité du texte au regard des pouvoirs existants (police municipale, compétences des communes) en présentant ce point comme à vérifier, sans affirmer de règle non vérifiée",
+        "Chaque conclusion porte un statut distinguant ce qui est établi par le texte de ce qui reste à vérifier, et la réponse ne déclare pas le texte « conforme » sans vérification",
+        "Toute référence juridique que l'agent introduit lui-même (numéro d'article de code, numéro ou date d'un texte, intitulé exact d'un texte, décision de justice, acte européen) sans qu'elle figure dans la demande est soit vérifiée avec une source indiquée (Légifrance, ou fiche du guide qui la cite), soit laissée en blanc ou marquée explicitement comme à vérifier ; les articles de la Constitution sont exemptés"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "analyse-proposition-de-loi",
+      "prompt": "Analyse cette proposition de loi : les dispositions sont-elles normatives, au bon niveau, conformes au droit et cohérentes avec ce qui existe déjà ?\n\nArticle 1er\nLa Nation reconnaît le droit de chaque enfant à un environnement numérique sain.\n\nArticle 2\nLes fabricants de téléphones mobiles mis sur le marché en France installent un dispositif de contrôle parental activé par défaut. Un décret fixe les sanctions applicables en cas de manquement.\n\nArticle 3\nLe dispositif de contrôle parental peut être désactivé par l'utilisateur au moyen d'un code à quatre chiffres transmis par lettre recommandée avec demande d'avis de réception.",
+      "expected_output": "Une analyse (fonction C). Article 1er : proclamation sans portée normative, exposée à la censure du Conseil constitutionnel (jurisprudence citée par la fiche 1.2.1). Article 2 : le renvoi au décret pour fixer les sanctions relève de l'incompétence négative (la loi doit définir les éléments essentiels de la sanction ; un délit relève de la loi) — bloquant. Article 3 : détail de nature réglementaire dans une loi, qui le fige (non inconstitutionnel) — recommandé. Droit de l'Union : une règle technique sur des produits doit être notifiée à la Commission européenne (directive (UE) 2015/1535, fiche 2.1.4) et peut se heurter à la libre circulation des marchandises ou à une harmonisation européenne — à vérifier. Cohérence : vérifier l'existence d'un régime de contrôle parental déjà en vigueur (doublon possible) sans inventer de référence. Nécessité : question de l'existence d'un dispositif équivalent et de l'effectivité (contrôle, autorité compétente non désignée).",
+      "files": [],
+      "expectations": [
+        "L'article 1er est relevé comme une proclamation dépourvue de portée normative, exposée à la censure dans une loi",
+        "Le renvoi au décret pour fixer les sanctions (article 2) est relevé comme une incompétence négative ou une méconnaissance par le législateur de sa compétence, au niveau bloquant",
+        "L'article 3 est relevé comme un détail de nature réglementaire figé dans la loi, sans être qualifié d'inconstitutionnel",
+        "La réponse signale l'obligation probable de notifier cette règle technique à la Commission européenne ou un risque au regard du droit de l'Union (libre circulation, harmonisation), en le présentant comme à vérifier",
+        "La réponse invite à vérifier l'existence d'un régime de contrôle parental déjà en vigueur (risque de doublon ou de contradiction) sans inventer de référence",
+        "La réponse relève l'absence d'autorité chargée du contrôle ou d'autres conditions d'effectivité",
+        "Chaque conclusion porte un statut (établi, vérifié, risque, à vérifier)",
+        "Toute référence juridique que l'agent introduit lui-même (numéro d'article de code, numéro ou date d'un texte, intitulé exact d'un texte, décision de justice, acte européen) sans qu'elle figure dans la demande est soit vérifiée avec une source indiquée (Légifrance, ou fiche du guide qui la cite), soit laissée en blanc ou marquée explicitement comme à vérifier ; les articles de la Constitution sont exemptés"
+      ]
     }
   ]
 }

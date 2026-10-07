@@ -20,11 +20,11 @@ loi · ordonnance · décret · arrêté · article de code
 ## En bref
 
 `legistique-fr` apprend à un agent IA les règles d'écriture du **Guide de légistique** (Conseil d'Etat
-et secrétariat général du Gouvernement, 4e édition mise à jour en 2026). La skill fait deux choses :
+et secrétariat général du Gouvernement, 4e édition mise à jour en 2026). La skill fait trois choses :
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### ✍️ A. Rédiger
 
@@ -34,7 +34,7 @@ Vous recevez **un projet de texte en articles**, présenté comme au Journal off
 **tableau qui explique chaque transformation** et de la liste des **points à arbitrer**.
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### 🔍 B. Corriger
 
@@ -42,6 +42,17 @@ Vous donnez **un projet de loi, de décret, d'arrêté ou un amendement** déjà
 
 Vous recevez **un diagnostic, le texte corrigé en entier** et **un tableau de commentaires
 numérotés**, classés *Bloquant*, *Recommandé* ou *Style*, avec le renvoi à la fiche du guide.
+
+</td>
+<td width="33%" valign="top">
+
+### ⚖️ C. Analyser
+
+Vous donnez **un projet ou un texte en vigueur** et demandez un avis.
+
+Vous recevez **une analyse en cinq questions** : le texte est-il **normatif**, au **bon niveau de
+norme** (loi ou règlement), **conforme** aux normes supérieures, **cohérent** avec le droit existant,
+**nécessaire** ? Chaque conclusion dit si elle est établie, vérifiée, un risque ou à vérifier.
 
 </td>
 </tr>
@@ -229,6 +240,7 @@ Claude Code ou Cursor.
 | « Quelles consultations pour ce projet de décret ? » · « Fais la trame de l'étude d'impact » | **repère** les consultations obligatoires et **rédige** exposé des motifs, étude ou fiche d'impact |
 | « Relis ce projet d'arrêté et dis-moi ce qui ne va pas : … » | **corrige** (fonction B) |
 | « Réécris proprement ce décret » | **corrige**, puis **rédige** les parties à reprendre |
+| « Ce projet de décret est-il légal ? Ne relève-t-il pas de la loi ? » · « Analyse la cohérence de ce texte avec le droit existant » | **analyse** (fonction C) |
 | « Dans quel ordre mettre les visas ? » · « Comment abroger un alinéa ? » | **répond** directement |
 
 ### Pour de meilleurs résultats
@@ -247,6 +259,7 @@ Claude Code ou Cursor.
 <tr>
 <th>Fonction A : rédaction</th>
 <th>Fonction B : correction</th>
+<th>Fonction C : analyse</th>
 </tr>
 <tr>
 <td valign="top">
@@ -269,6 +282,18 @@ Pour un amendement : l'amendement et son exposé sommaire, puis une section **Re
 3. **Commentaires** numérotés avec niveau et fiche
 4. **Questions au rédacteur**
 5. **Références citées** : ce qui a été vérifié, ce qui reste à vérifier
+
+</td>
+<td valign="top">
+
+1. **Synthèse** : appréciation par question
+2. **Caractère normatif**
+3. **Niveau de norme et compétence**
+4. **Conformité aux normes supérieures**
+5. **Cohérence**
+6. **Nécessité et proportionnalité**
+7. **Recommandations** et **points à vérifier**
+8. **Références citées**
 
 </td>
 </tr>
@@ -353,6 +378,8 @@ flowchart LR
     Q -->|texte en articles| B1[Relire avec la grille]
     B1 --> B2[Corriger avec économie<br/>Bloquant · Recommandé · Style]
     B2 --> B3[/Diagnostic + texte corrigé<br/>+ commentaires/]
+    Q -->|demande d'avis| C1[Normatif ? Niveau de norme ?<br/>Conforme ? Cohérent ? Nécessaire ?]
+    C1 --> C2[/Analyse avec statut<br/>de chaque conclusion/]
 ```
 
 La skill suit la méthode du guide : **on qualifie d'abord le texte**, car presque toutes les règles en
@@ -370,6 +397,7 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté ; visas ; entrée en vigueur ; notice |
 | [`typographie.md`](legistique-fr/references/typographie.md) | Règles typographiques du Journal officiel |
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
+| [`analyse.md`](legistique-fr/references/analyse.md) | Analyse d'un texte : caractère normatif, niveau de norme, conformité, cohérence, nécessité |
 | [`amendements.md`](legistique-fr/references/amendements.md) | Amendements : chapeau (Assemblée, Sénat), pastillage, recevabilité, exposé sommaire, gage |
 | [`procedure-et-documents.md`](legistique-fr/references/procedure-et-documents.md) | Parcours selon la nature du texte, consultations obligatoires, trames d'étude et de fiche d'impact, exposé des motifs |
 | [`legifrance.md`](legistique-fr/references/legifrance.md) | Option : vérification du droit en vigueur, si l'agent a accès à Légifrance |
