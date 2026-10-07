@@ -40,6 +40,10 @@
     "doit_declencher": true
   },
   {
+    "requete": "Est-ce opportun d'adopter ce projet d'arrêté maintenant, alors que la directive européenne sur le sujet est encore en négociation ?",
+    "doit_declencher": true
+  },
+  {
     "requete": "Mon propriétaire refuse de me rendre ma caution, quels sont mes recours ?",
     "doit_declencher": false
   },

@@ -8,7 +8,7 @@ Sources : Guide de légistique, fiches 1.1.1 (questions préalables), 1.1.2 (év
 (sanctions), 5.10 (expérimentation).
 
 L'analyse ne corrige pas la rédaction : elle rend un **avis** sur le texte, comme le ferait un service
-juridique ou la section administrative qui l'examine. Elle répond à cinq questions, dans cet ordre,
+juridique ou la section administrative qui l'examine. Elle répond à six questions, dans cet ordre,
 parce que chacune conditionne la suivante :
 
 1. **Le texte est-il normatif ?** Un énoncé sans portée normative n'a pas à être examiné plus loin.
@@ -16,6 +16,8 @@ parce que chacune conditionne la suivante :
 3. **Est-il conforme aux normes supérieures ?**
 4. **Est-il cohérent avec le droit existant, et cohérent en lui-même ?**
 5. **Est-il nécessaire et proportionné ?**
+6. **Est-il opportun ?** Un texte légal et nécessaire peut rester un mauvais choix : mauvais moyen,
+   mauvais moment, coût excessif.
 
 Les défauts de rédaction relevés au passage (temps, vocabulaire, typographie) ne sont pas l'objet de
 l'analyse : les signaler en une ligne et proposer la fonction B.
@@ -164,9 +166,9 @@ incohérences de structure (renvois, numérotation, article modifié deux fois),
 
 ## 5. Nécessité et proportionnalité (fiches 1.1.1, 1.1.2, 1.2.1)
 
-Le guide demande, pour tout projet, un examen de nécessité et de proportionnalité. L'analyse porte sur
-la **nécessité juridique**, pas sur l'opportunité politique, qui revient au rédacteur et à l'autorité :
-formuler les doutes comme des questions.
+Le guide demande, pour tout projet, un examen de nécessité et de proportionnalité. Cette section porte
+sur la **nécessité juridique** : faut-il un texte, et celui-ci ? Le jugement d'ensemble sur le choix
+fait revient à la section 6.
 
 | Question | Indices |
 |---|---|
@@ -178,7 +180,58 @@ formuler les doutes comme des questions.
 | Le texte sera-t-il effectif ? | Service chargé de l'appliquer et moyens, contrôle, sanction adaptée, textes d'application identifiés, information des usagers (fiches 1.1.1, 1.2.1) |
 | Une expérimentation serait-elle plus adaptée ? | Article 37-1 de la Constitution, fiche 5.10 |
 
-## 6. Livrer
+## 6. Opportunité (fiches 1.1.1, 1.1.2, 1.2.1, 3.8.1)
+
+La question n'est plus « le texte est-il permis ? » mais « est-ce une bonne décision de l'adopter, sous
+cette forme et maintenant ? ». L'analyse rend sur ce point un **jugement motivé**, explicitement
+présenté comme une appréciation.
+
+**Deux plans à séparer.**
+
+- **Le texte au regard de son objectif** : le moyen choisi est-il bon ? Ici, l'analyse **tranche**.
+  L'objectif se lit dans l'exposé des motifs, la notice ou la demande ; s'il n'est écrit nulle part, le
+  déduire, le dire, et juger par rapport à cette hypothèse.
+- **L'objectif lui-même**, c'est-à-dire le choix politique (protéger tel public, imposer telle charge,
+  arbitrer entre deux intérêts) : il appartient à l'autorité qui édicte le texte. L'analyse n'y prend
+  pas parti ; elle expose ce que ce choix implique, ses coûts et ses risques, et les arguments en
+  présence, de façon équilibrée. Elle peut en revanche dire qu'un texte ne sert pas son propre objectif,
+  ou qu'il en poursuit un autre.
+
+**Critères.** Les passer en revue ; ne développer que ceux qui pèsent.
+
+| Critère | Questions |
+|---|---|
+| Adéquation au but | Le dispositif produit-il l'effet recherché ? Peut-il être contourné ? Risque-t-il des effets indésirables (report vers d'autres publics, effets de seuil, renoncement aux droits) ? |
+| Bilan coûts et avantages | Charge pour les destinataires (formalités, coûts de mise en conformité), pour l'administration (instruction, contrôle) et pour les collectivités, au regard du gain attendu ; la fiche ou l'étude d'impact doit le montrer (fiche 1.1.2) |
+| Moment | Une réforme voisine en cours, un texte européen en négociation, une évaluation à venir ? Le droit en cause a-t-il été modifié récemment (la modification incessante des normes nuit à leur efficacité, fiches 1.1.1 et 1.2.1) ? Le délai laissé aux destinataires pour s'adapter est-il suffisant (fiche 3.8.1) ? |
+| Effectivité | Services, moyens, contrôles, sanctions et textes d'application prévus (section 5) ; un texte inappliqué affaiblit la norme |
+| Lisibilité et qualité du droit | Le texte simplifie-t-il ou ajoute-t-il une couche ? Disperse-t-il une matière qu'un code rassemble ? |
+| Acceptabilité et concertation | Les intéressés ont-ils été consultés ; le texte est-il compréhensible par ceux qui l'appliquent ; quel risque de contentieux ? |
+| Meilleure option | Une modification ciblée d'un texte existant, une expérimentation, une incitation, du droit souple atteindraient-elles mieux l'objectif (fiche 1.1.1) ? |
+
+**Verdict**, sur une échelle à quatre degrés :
+
+| Verdict | Sens |
+|---|---|
+| **Opportun** | Bon moyen pour l'objectif, au bon moment, à un coût proportionné |
+| **Opportun sous réserves** | Le principe est bon ; des ajustements précis (calendrier, champ, charge, effectivité) le rendraient pleinement opportun |
+| **Discutable** | Les inconvénients balancent les avantages, ou une autre option paraît meilleure ; dire laquelle |
+| **Inopportun en l'état** | Le texte ne sert pas son objectif, arrive au mauvais moment ou coûte manifestement plus qu'il ne rapporte |
+
+Règles du jugement :
+
+- Le motiver par les critères ci-dessus, en citant les articles en cause ; un verdict sans raisons
+  n'aide personne.
+- Fonder les faits sur le texte et la demande. Aucun chiffre inventé : un coût, un nombre de
+  destinataires ou un effet attendu qui n'est pas fourni devient une **hypothèse** énoncée comme
+  telle, et le verdict dit ce qui le ferait changer (« discutable si le nombre d'entreprises
+  concernées dépasse … »).
+- Un texte illégal ou non normatif (sections 1 à 3) n'est pas « opportun » en l'état : le verdict
+  porte alors sur le texte une fois corrigé, et le dit.
+- Ne pas substituer ses préférences à l'objectif de l'autorité : « inopportun » vise le moyen, le
+  moment ou le coût, pas la valeur politique de l'objectif.
+
+## 7. Livrer
 
 ```
 ## Synthèse
@@ -190,13 +243,16 @@ formuler les doutes comme des questions.
 | Conformité aux normes supérieures | … | … |
 | Cohérence | … | … |
 | Nécessité et proportionnalité | … | … |
+| Opportunité | Opportun / Opportun sous réserves / Discutable / Inopportun en l'état | … |
 
 ## 1. Caractère normatif
 ## 2. Niveau de norme et compétence
 ## 3. Conformité aux normes supérieures
 ## 4. Cohérence
 ## 5. Nécessité et proportionnalité
-(dans chaque section, constats numérotés :
+## 6. Opportunité
+(objectif retenu et sa source ; critères qui pèsent ; verdict motivé ; ce qui le ferait changer)
+(dans les sections 1 à 5, constats numérotés :
 | N° | Article | Constat | Fondement (fiche) | Statut | Gravité | Recommandation |
 Statut = Établi / Vérifié / Risque / À vérifier ; Gravité = Bloquant / Recommandé / Style)
 
