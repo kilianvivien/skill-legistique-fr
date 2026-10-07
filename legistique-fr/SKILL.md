@@ -6,8 +6,9 @@ description: >-
   d'Etat et du SGG. Trois fonctions : (1) transformer une description en prose en projet de texte en
   articles, avec un tableau expliquant chaque transformation ; (2) relire un projet et le corriger avec
   commentaires (structure, formules de modification, visas, entrée en vigueur, vocabulaire,
-  typographie) ; (3) analyser un texte : caractère normatif, niveau de norme (loi ou règlement),
-  conformité au droit, cohérence avec le droit existant, nécessité, opportunité, qualité rédactionnelle. Couvre aussi l'exposé des motifs,
+  typographie) ; (3) analyser un texte selon sa nécessité (opportunité comprise), son niveau (loi ou
+  règlement, conformité au droit) et sa portée (caractère normatif, champ, cohérence, qualité
+  rédactionnelle). Couvre aussi l'exposé des motifs,
   les études et fiches d'impact et les consultations obligatoires. À utiliser dès qu'on demande de
   rédiger, relire, corriger, analyser ou « mettre en forme juridique » un texte normatif, même sans le
   mot « légistique ». French legislative and regulatory drafting and review (legistics).
@@ -20,8 +21,8 @@ metadata:
 
 Cette skill fait d'un agent un légiste : il transforme une intention en prose en texte normatif
 français conforme aux usages du Journal officiel, il relit un projet de texte et le corrige en
-expliquant chaque correction, ou il analyse un texte pour dire s'il est normatif, au bon niveau de
-norme, conforme au droit, cohérent, nécessaire et opportun, et ce que vaut sa rédaction. Les règles viennent du Guide de légistique (4e édition, mise à jour 2026,
+expliquant chaque correction, ou il analyse un texte selon sa nécessité, son niveau et sa portée : est-il
+nécessaire et opportun, au bon niveau de norme et conforme au droit, normatif, cohérent et bien rédigé ? Les règles viennent du Guide de légistique (4e édition, mise à jour 2026,
 Conseil d'Etat et secrétariat général du Gouvernement) et d'un cours de légistique qui en reprend
 l'essentiel. Les fiches du guide sont citées sous la forme « fiche 3.4.1 » pour que le lecteur puisse
 vérifier.
@@ -233,43 +234,49 @@ chaque commentaire. Ne jamais livrer les commentaires sans le texte corrigé, ni
 ## Fonction C : analyse d'un texte normatif
 
 Lire `references/analyse.md`, qui détaille la méthode, les signes d'alerte et le format de sortie.
-L'analyse rend un **avis** ; elle ne réécrit pas le texte. Elle répond à sept questions ; les six
-premières viennent dans cet ordre parce que chacune conditionne la suivante :
+L'analyse rend un **avis** ; elle ne réécrit pas le texte. Elle est construite sur les trois questions
+préalables de la légistique, **nécessité, niveau, portée**, dans cet ordre (fiche 1.1.1) :
 
-1. **Caractère normatif** (fiche 1.2.1) : chaque disposition crée-t-elle une obligation, une
-   interdiction, un droit, une compétence, une procédure ou une sanction ? Objectifs, proclamations,
-   « l'Etat favorise », facultés qui existaient déjà, renvoi à une loi ultérieure et paraphrases d'une
-   norme existante n'en ont pas ; dans une loi, ils encourent la censure.
-2. **Niveau de norme et compétence** (fiches 1.3.2, 1.3.3, 1.3.6) : loi ou règlement (articles 34 et
-   37 de la Constitution, dérogation à un principe général du droit) ; loi organique ou ordinaire ;
-   décret en Conseil d'Etat, simple, en conseil des ministres ; arrêté fondé sur une délégation
-   encadrée ; ordonnance dans le champ de l'habilitation.
-3. **Conformité aux normes supérieures** (fiche 1.3.1) : base légale, Constitution et droits
-   fondamentaux, droit de l'Union, légalité des délits et des peines, non-rétroactivité et sécurité
-   juridique, intelligibilité, procédure (consultations).
-4. **Cohérence** : avec le droit existant (contradiction, doublon, mauvais support, notions définies
-   autrement, renvois morts, abrogations oubliées) et en interne (mêmes mots pour les mêmes notions,
-   renvois exacts, sanctions rattachées à des obligations).
-5. **Nécessité et proportionnalité** (fiches 1.1.1, 1.1.2) : problème identifié, droit existant
-   insuffisant, absence de solution non normative, contrainte proportionnée, effectivité.
-6. **Opportunité**, sur trois plans, chacun avec un verdict motivé (*Opportun*, *Opportun sous
-   réserves*, *Discutable*, *Inopportun en l'état*), puis un verdict d'ensemble :
-   - **juridique** : caractère dérogatoire (écart au droit commun ou à un principe justifié, limité,
-     encadré ? exceptions qui vident la règle ? régime spécial de trop ?), stabilité, risque
-     contentieux, lisibilité, précédent ;
-   - **matérielle** : moyens, coûts et charges, faisabilité et calendrier, effectivité, effets pervers ;
-   - **politique** : adéquation à l'objectif affiché, cohérence avec l'action de l'autorité, gagnants
-     et perdants, acceptabilité, signal et précédent, moment, réversibilité.
+1. **Nécessité : faut-il ce texte ?**
+   - *Nécessité et proportionnalité* (fiches 1.1.1, 1.1.2) : problème identifié, droit existant
+     insuffisant, absence de solution non normative, contrainte proportionnée, effectivité.
+   - *Opportunité*, sur trois plans, chacun avec un verdict motivé (*Opportun*, *Opportun sous
+     réserves*, *Discutable*, *Inopportun en l'état*), puis un verdict d'ensemble :
+     **juridique** (caractère dérogatoire : écart au droit commun ou à un principe justifié, limité,
+     encadré ? exceptions qui vident la règle ? régime spécial de trop ? ; stabilité, risque
+     contentieux, précédent), **matérielle** (moyens, coûts et charges, faisabilité et calendrier,
+     effectivité, effets pervers), **politique** (adéquation à l'objectif affiché, cohérence avec
+     l'action de l'autorité, gagnants et perdants, acceptabilité, signal et précédent, moment,
+     réversibilité). Le jugement politique se fonde sur ces critères, non sur une préférence
+     partisane : il éclaire l'autorité, qui décide. Pas de chiffre ni de fait inventé : les données
+     manquantes deviennent des hypothèses, et le verdict dit ce qui le ferait changer.
+2. **Niveau : le bon niveau, la bonne autorité, les normes supérieures.**
+   - *Niveau de norme et compétence* (fiches 1.3.2, 1.3.3, 1.3.6) : loi ou règlement (articles 34
+     et 37 de la Constitution, dérogation à un principe général du droit) ; loi organique ou
+     ordinaire ; décret en Conseil d'Etat, simple, en conseil des ministres ; arrêté fondé sur une
+     délégation encadrée ; ordonnance dans le champ de l'habilitation.
+   - *Conformité aux normes supérieures* (fiche 1.3.1) : base légale, Constitution et droits
+     fondamentaux, droit de l'Union, légalité des délits et des peines, non-rétroactivité et
+     sécurité juridique, intelligibilité, procédure (consultations).
+3. **Portée : ce que produit le texte.**
+   - *Caractère normatif* (fiche 1.2.1) : chaque disposition crée-t-elle une obligation, une
+     interdiction, un droit, une compétence, une procédure ou une sanction ? Objectifs,
+     proclamations, « l'Etat favorise », facultés qui existaient déjà, renvoi à une loi ultérieure et
+     paraphrases d'une norme existante n'en ont pas ; dans une loi, ils encourent la censure.
+   - *Champ d'application* (fiches 1.2.2, 1.2.3) : personnes et situations visées, territoire
+     (outre-mer), temps (entrée en vigueur, situations en cours, mesures transitoires).
+   - *Cohérence* : avec le droit existant (contradiction, doublon, mauvais support, notions définies
+     autrement, renvois morts, abrogations oubliées) et en interne (mêmes mots pour les mêmes
+     notions, renvois exacts, sanctions rattachées à des obligations).
+   - *Qualité rédactionnelle* (fiches 3.2.1, 3.3.1, 3.3.2, 3.4.1) : appréciation d'ensemble
+     (*Satisfaisant*, *Réserves*, *Défaut sérieux*) sur la précision et l'univocité, le plan,
+     l'encadrement (intitulé, visas, formules), la technique de modification, la langue et la
+     typographie, d'après la grille de relecture. Les défauts sont pesés (une ambiguïté qui change
+     le sens est bloquante, une faute de typographie relève du style), illustrés par des exemples,
+     sans réécrire le texte ; la réponse dit si une correction complète (fonction B) est utile.
 
-   Le jugement politique se fonde sur ces critères, non sur une préférence partisane : il éclaire
-   l'autorité, qui décide. Pas de chiffre ni de fait inventé : les données manquantes deviennent des
-   hypothèses, et le verdict dit ce qui le ferait changer.
-7. **Qualité rédactionnelle** (fiches 3.2.1, 3.3.1, 3.3.2, 3.4.1) : appréciation d'ensemble
-   (*Satisfaisant*, *Réserves*, *Défaut sérieux*) sur la précision et l'univocité, le plan,
-   l'encadrement (intitulé, visas, formules), la technique de modification, la langue et la
-   typographie, d'après la grille de relecture. Les défauts sont pesés (une ambiguïté qui change le
-   sens est bloquante, une faute de typographie relève du style), illustrés par des exemples, sans
-   réécrire le texte ; la réponse dit si une correction complète (fonction B) est utile.
+Les constats se répondent d'une partie à l'autre (un délit créé par décret rend le texte inopportun en
+l'état) : dire le lien d'une ligne plutôt que répéter le constat.
 
 Chaque conclusion porte un **statut** : *Établi* (se lit dans le texte ou découle d'une fiche citée),
 *Vérifié* (texte en vigueur effectivement lu), *Risque* (appréciation dont le raisonnement est exposé),
@@ -278,11 +285,10 @@ sans vérification : « aucun motif d'illégalité relevé dans les éléments e
 Si l'agent peut exécuter Python, le contrôle automatique repère les formules sans portée normative
 probable et les incohérences de structure ; ses constats se reprennent dans l'analyse.
 
-Structure de réponse : Synthèse (avec un tableau d'appréciation par question et le verdict
-d'opportunité), une section par question avec des constats numérotés (article, constat, fondement,
-statut, gravité, recommandation), la section Opportunité avec son verdict motivé, la section Qualité
-rédactionnelle avec son appréciation, Recommandations,
-Points à vérifier, Références citées.
+Structure de réponse : Synthèse (une phrase de conclusion par partie, puis un tableau d'appréciation
+par question, avec le verdict d'opportunité), puis trois parties, **Nécessité**, **Niveau**,
+**Portée**, chacune divisée par question avec des constats numérotés (article, constat, fondement,
+statut, gravité, recommandation), Recommandations, Points à vérifier, Références citées.
 
 ## Références citées (fonctions A, B et C)
 
@@ -386,7 +392,7 @@ toujours par ces fiches de synthèse.
 | `references/formules-et-modeles.md` | Intitulé, squelettes complets de loi, ordonnance, décret, arrêté ; visas (quoi viser, ordre, rédaction) ; article d'exécution ; entrée en vigueur ; situations en cours ; abrogations ; renvois au règlement ; notice explicative | Fonction A étape 3, fonction B points 3 et 5 |
 | `references/typographie.md` | Règles typographiques du Journal officiel | Mise au propre finale, fonction B point 7 |
 | `references/grille-de-relecture.md` | Liste de contrôle ordonnée avec niveaux de gravité | Fonction B, et autocontrôle en fin de fonction A |
-| `references/analyse.md` | Analyse d'un texte : caractère normatif, niveau de norme et compétence, conformité aux normes supérieures, cohérence, nécessité, opportunité (critères et verdict), qualité rédactionnelle ; statuts des conclusions ; format de l'avis | Fonction C |
+| `references/analyse.md` | Analyse d'un texte, articulée en nécessité (nécessité, opportunité avec verdict), niveau (niveau de norme et compétence, conformité) et portée (caractère normatif, champ d'application, cohérence, qualité rédactionnelle) ; statuts des conclusions ; format de l'avis | Fonction C |
 | `references/amendements.md` | Amendements et sous-amendements : qualification, chapeau (formules Assemblée et Sénat, pastillage), texte proposé, recevabilité (articles 38, 40, 41, 45, 46), exposé sommaire, gage | Toute demande d'amendement |
 | `references/procedure-et-documents.md` | Parcours selon la nature du texte, repérage des consultations obligatoires, trames d'étude d'impact, de fiche d'impact, d'exposé des motifs et de rapport de présentation | Texte nouveau (fin de fonction A) ; demande de document d'accompagnement ou de procédure |
 | `references/legifrance.md` | Vérification du droit en vigueur sur Légifrance : API (serveur MCP), navigateur piloté par l'agent ou recherche web limitée au site | **Seulement si l'agent dispose de l'un de ces accès** : texte modificatif, visas, renvois, point précis à éclaircir |
