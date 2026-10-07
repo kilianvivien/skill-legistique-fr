@@ -511,7 +511,7 @@ Les retours de légistes et de rédacteurs sont les bienvenus : ouvrez une
 obtenue et la règle qui n'a pas été respectée (avec la fiche du guide si possible).
 
 Avant de proposer une modification, lancez les tests (Python 3.8 ou plus, sans dépendance ; ils
-tournent aussi à chaque push) :
+tournent aussi à chaque push qui ne modifie pas que la documentation) :
 
 ```bash
 python3 -m unittest discover tests
@@ -545,7 +545,8 @@ Pour reconstruire les archives après une modification :
 Pour publier une version : mettez à jour `version` dans `legistique-fr/SKILL.md`, rédigez
 `distribution/notes/vX.Y.Z.md` (première ligne `# titre de la release`, puis les notes), fusionnez dans
 `main`, puis poussez l'étiquette. Le workflow `release.yml` vérifie que l'étiquette correspond à la
-version, lance les tests, construit les deux archives et publie la release.
+version, construit les deux archives et publie la release. Il ne relance pas les tests : attendez
+qu'ils passent sur `main` avant de pousser l'étiquette.
 
 ```bash
 git tag vX.Y.Z && git push origin vX.Y.Z

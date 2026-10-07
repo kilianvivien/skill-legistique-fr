@@ -2,7 +2,8 @@ name: Release
 
 # Publier une version : mettre à jour la version dans legistique-fr/SKILL.md, écrire
 # distribution/notes/vX.Y.Z.md (première ligne « # titre », puis les notes), fusionner dans main,
-# puis pousser l'étiquette : git tag vX.Y.Z && git push origin vX.Y.Z
+# attendre que les tests passent sur main (ils ne sont pas relancés ici), puis pousser l'étiquette :
+# git tag vX.Y.Z && git push origin vX.Y.Z
 on:
   push:
     tags: ["v*"]
@@ -14,11 +15,9 @@ jobs:
   release:
     name: Publier la release
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
       - name: L'étiquette correspond à la version de la skill
         run: |
           version="$(sed -n 's/^ *version: "\(.*\)"$/\1/p' legistique-fr/SKILL.md | head -1)"
@@ -26,8 +25,6 @@ jobs:
             echo "::error::Étiquette $GITHUB_REF_NAME, mais SKILL.md annonce la version $version"
             exit 1
           fi
-      - name: Tests
-        run: python -m unittest discover -v tests
       - name: Construire les archives
         run: bash scripts/build-zip.sh
       - name: Publier
