@@ -44,6 +44,10 @@
     "doit_declencher": true
   },
   {
+    "requete": "Que vaut la rédaction de ce projet d'arrêté au regard du guide de légistique ? Pas besoin de le corriger, dis-moi juste s'il est bien écrit.",
+    "doit_declencher": true
+  },
+  {
     "requete": "Mon propriétaire refuse de me rendre ma caution, quels sont mes recours ?",
     "doit_declencher": false
   },

@@ -3,13 +3,15 @@
 Sources : Guide de légistique, fiches 1.1.1 (questions préalables), 1.1.2 (évaluation préalable), 1.2.1
 (concevoir une réglementation), 1.2.2 (application dans le temps), 1.3.1 (différentes normes), 1.3.2
 (domaine de la loi et du règlement), 1.3.3 (catégories de décrets), 1.3.6 (arrêtés), 2.1.3
-(consultations), 3.4.1 et 3.4.2 (modifications, renvois), 3.5.1 et 3.5.3 (renvois au règlement), 3.8.1
+(consultations), 3.1.3 et 3.1.5 (intitulé, visas), 3.2.1 et 3.2.2 (plan, divisions), 3.3.1 et 3.3.2
+(syntaxe, vocabulaire), 3.4.1 et 3.4.2 (modifications, renvois), 3.5.1 et 3.5.3 (renvois au règlement), 3.8.1
 à 3.8.3 (entrée en vigueur, situations en cours, abrogations), 4.1.3 (droit de l'Union), 5.6
 (sanctions), 5.10 (expérimentation).
 
 L'analyse ne corrige pas la rédaction : elle rend un **avis** sur le texte, comme le ferait un service
-juridique ou la section administrative qui l'examine. Elle répond à six questions, dans cet ordre,
-parce que chacune conditionne la suivante :
+juridique ou la section administrative qui l'examine. Elle répond à sept questions. Les six
+premières viennent dans cet ordre parce que chacune conditionne la suivante ; la septième s'apprécie
+à part :
 
 1. **Le texte est-il normatif ?** Un énoncé sans portée normative n'a pas à être examiné plus loin.
 2. **Est-il au bon niveau de norme, et pris par la bonne autorité ?**
@@ -18,9 +20,12 @@ parce que chacune conditionne la suivante :
 5. **Est-il nécessaire et proportionné ?**
 6. **Est-il opportun**, juridiquement, matériellement et politiquement ? Un texte légal et
    nécessaire peut rester un mauvais choix : trop dérogatoire, inapplicable, coûteux, mal venu.
+7. **Quelle est sa qualité rédactionnelle ?** Plan, encadrement, technique de modification, langue,
+   typographie : le texte est-il écrit selon les règles du guide, et sa rédaction sert-elle ou
+   dessert-elle la règle ?
 
-Les défauts de rédaction relevés au passage (temps, vocabulaire, typographie) ne sont pas l'objet de
-l'analyse : les signaler en une ligne et proposer la fonction B.
+L'analyse **apprécie** la rédaction, elle ne la corrige pas : elle dit ce qui va et ce qui ne va pas,
+avec des exemples, et renvoie à la fonction B pour un texte corrigé.
 
 ## Statut de chaque conclusion
 
@@ -255,7 +260,50 @@ Règles du jugement :
   l'autorité, qui garde le dernier mot. Présenter, quand l'enjeu est disputé, l'argument principal en
   faveur du texte avant de conclure.
 
-## 7. Livrer
+## 7. Qualité rédactionnelle (fiches 3.1.3, 3.1.5, 3.2.1, 3.2.2, 3.3.1, 3.3.2, 3.4.1, 3.4.2)
+
+Un texte peut être légal, nécessaire et opportun, et mal écrit : il sera mal appliqué, contesté, ou
+devra être repris. Cette section rend une **appréciation d'ensemble** de la rédaction, fondée sur la
+grille de relecture (`references/grille-de-relecture.md`) et les fiches de synthèse, sans réécrire le
+texte.
+
+| Critère | Ce qu'on apprécie | Fiche de synthèse |
+|---|---|---|
+| **Précision et univocité** | Chaque disposition n'a qu'un sens ; destinataire, obligation, délai et conséquence identifiables ; pas de « et/ou », « le ou les », « notamment » dans une interdiction ou une sanction ; termes juridiques exacts (conformité / compatibilité, suspendre / interrompre, après avis / sur proposition) | `references/langue-et-style.md`, sections 2, 5 et 8 |
+| **Plan et structure** | Plan consacré ou logique, ordre des rubriques, divisions proportionnées, un article par idée, alinéas et énumérations maniables, numérotation continue | `references/structure-et-plan.md` |
+| **Encadrement** | Intitulé fidèle à l'objet ; visas utiles, exacts et ordonnés (pas dans une loi) ; article d'exécution et entrée en vigueur rédigés selon les formules | `references/formules-et-modeles.md` |
+| **Technique de modification** | Formules de modification exactes et cohérentes (« est ainsi modifié », « est remplacé par les dispositions suivantes »), localisation précise (article, alinéa, mots), pas d'article modifié deux fois | `references/modifications-insertions.md` |
+| **Langue** | Présent de l'indicatif, phrases simples, vocabulaire juridique sans latin ni anglicisme, pas de mots passe-partout (« concerné », « dans le cadre de »), sigles et parenthèses évités, autorités désignées selon l'usage | `references/langue-et-style.md` |
+| **Typographie** | Règles du Journal officiel (majuscules, nombres, guillemets, abréviations) | `references/typographie.md` |
+
+Méthode :
+
+- **Peser plutôt que recenser.** Un défaut qui change le sens ou ouvre une ambiguïté (sujet d'une
+  obligation incertain, « notamment » dans une incrimination, renvoi imprécis) est **Bloquant** ; un
+  écart aux règles du guide sans effet sur le sens est **Recommandé** ; la typographie et les mots
+  passe-partout relèvent du **Style**. Une faute répétée compte une fois, avec le nombre
+  d'occurrences et un exemple.
+- **Citer des exemples.** Chaque constat cite le passage en cause (article, mots) et la règle (fiche) ;
+  une proposition de rédaction courte est bienvenue pour un défaut bloquant, pas pour tous.
+- **Ne pas redire les sections précédentes.** Une imprécision qui empêche l'application relève déjà
+  de l'intelligibilité (section 3) ; un renvoi faux, de la cohérence (section 4) : y renvoyer d'une
+  ligne. La section 7 apprécie la facture du texte.
+- **Contrôle automatique.** Si l'agent peut exécuter Python, `scripts/lint_legistique.py` repère les
+  fautes mécaniques (temps, mots proscrits, typographie, numérotation) : en reprendre la synthèse,
+  vérifier chaque constat avant de le retenir.
+
+Appréciation, sur l'échelle de la synthèse :
+
+| Appréciation | Sens |
+|---|---|
+| **Satisfaisant** | Rédaction conforme aux usages ; au plus quelques fautes de style |
+| **Réserves** | Écarts répétés aux règles du guide (temps, vocabulaire, formules, plan), sans ambiguïté sur le sens ; une relecture suffit |
+| **Défaut sérieux** | Au moins une ambiguïté ou imprécision qui change le sens, ou une facture si éloignée des usages (plan, formules de modification) que le texte doit être repris |
+
+Conclure en disant si une correction complète (fonction B) est utile, et sur quels points porter
+l'effort d'abord.
+
+## 8. Livrer
 
 ```
 ## Synthèse
@@ -271,6 +319,7 @@ Règles du jugement :
 | Opportunité matérielle | … | … |
 | Opportunité politique | … | … |
 | **Opportunité d'ensemble** | … | … |
+| Qualité rédactionnelle | Satisfaisant / Réserves / Défaut sérieux | … |
 
 ## 1. Caractère normatif
 ## 2. Niveau de norme et compétence
@@ -280,7 +329,9 @@ Règles du jugement :
 ## 6. Opportunité
 (objectif retenu et sa source ; pour chaque plan, juridique, matériel et politique, les critères qui
 pèsent et un verdict motivé ; verdict d'ensemble ; ce qui le ferait changer)
-(dans les sections 1 à 5, constats numérotés :
+## 7. Qualité rédactionnelle
+(appréciation motivée ; constats par critère, avec exemples ; fonction B utile ou non)
+(dans les sections 1 à 5 et 7, constats numérotés :
 | N° | Article | Constat | Fondement (fiche) | Statut | Gravité | Recommandation |
 Statut = Établi / Vérifié / Risque / À vérifier ; Gravité = Bloquant / Recommandé / Style)
 

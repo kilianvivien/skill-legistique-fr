@@ -7,7 +7,7 @@ description: >-
   articles, avec un tableau expliquant chaque transformation ; (2) relire un projet et le corriger avec
   commentaires (structure, formules de modification, visas, entrée en vigueur, vocabulaire,
   typographie) ; (3) analyser un texte : caractère normatif, niveau de norme (loi ou règlement),
-  conformité au droit, cohérence avec le droit existant, nécessité, opportunité. Couvre aussi l'exposé des motifs,
+  conformité au droit, cohérence avec le droit existant, nécessité, opportunité, qualité rédactionnelle. Couvre aussi l'exposé des motifs,
   les études et fiches d'impact et les consultations obligatoires. À utiliser dès qu'on demande de
   rédiger, relire, corriger, analyser ou « mettre en forme juridique » un texte normatif, même sans le
   mot « légistique ». French legislative and regulatory drafting and review (legistics).
@@ -21,7 +21,7 @@ metadata:
 Cette skill fait d'un agent un légiste : il transforme une intention en prose en texte normatif
 français conforme aux usages du Journal officiel, il relit un projet de texte et le corrige en
 expliquant chaque correction, ou il analyse un texte pour dire s'il est normatif, au bon niveau de
-norme, conforme au droit, cohérent, nécessaire et opportun. Les règles viennent du Guide de légistique (4e édition, mise à jour 2026,
+norme, conforme au droit, cohérent, nécessaire et opportun, et ce que vaut sa rédaction. Les règles viennent du Guide de légistique (4e édition, mise à jour 2026,
 Conseil d'Etat et secrétariat général du Gouvernement) et d'un cours de légistique qui en reprend
 l'essentiel. Les fiches du guide sont citées sous la forme « fiche 3.4.1 » pour que le lecteur puisse
 vérifier.
@@ -38,7 +38,7 @@ modifier sans le casser. Chaque règle ci-dessous protège l'un de ces trois lec
 | L'utilisateur fournit de la prose (note, description, liste de mesures, idée) et veut un texte normatif | **A. Rédaction** |
 | L'utilisateur fournit un projet déjà rédigé en articles et veut une relecture, une correction, un avis | **B. Correction** |
 | L'utilisateur fournit un texte déjà rédigé mais demande de le « réécrire » ou « refaire » | B, puis A pour les parties à reprendre entièrement |
-| L'utilisateur demande un **avis** sur un texte (projet ou texte en vigueur) : est-il légal, conforme, nécessaire, opportun, au bon niveau (loi ou règlement), cohérent avec le droit existant, vraiment normatif ? | **C. Analyse** |
+| L'utilisateur demande un **avis** sur un texte (projet ou texte en vigueur) : est-il légal, conforme, nécessaire, opportun, au bon niveau (loi ou règlement), cohérent avec le droit existant, vraiment normatif, bien rédigé ? | **C. Analyse** |
 | L'utilisateur demande à la fois un avis et une correction | C, puis B si l'analyse ne conclut pas à abandonner ou à changer de niveau de norme |
 | L'utilisateur veut un **amendement** ou un sous-amendement (ou en fait relire un) | A ou B, avec `references/amendements.md` : chapeau, recevabilité, exposé sommaire |
 | L'utilisateur demande l'exposé des motifs, l'étude ou la fiche d'impact, ou « quelles consultations » | `references/procedure-et-documents.md`, en complément de A ou seul |
@@ -233,8 +233,8 @@ chaque commentaire. Ne jamais livrer les commentaires sans le texte corrigé, ni
 ## Fonction C : analyse d'un texte normatif
 
 Lire `references/analyse.md`, qui détaille la méthode, les signes d'alerte et le format de sortie.
-L'analyse rend un **avis** ; elle ne réécrit pas le texte. Elle répond à six questions, dans cet
-ordre, parce que chacune conditionne la suivante :
+L'analyse rend un **avis** ; elle ne réécrit pas le texte. Elle répond à sept questions ; les six
+premières viennent dans cet ordre parce que chacune conditionne la suivante :
 
 1. **Caractère normatif** (fiche 1.2.1) : chaque disposition crée-t-elle une obligation, une
    interdiction, un droit, une compétence, une procédure ou une sanction ? Objectifs, proclamations,
@@ -264,6 +264,12 @@ ordre, parce que chacune conditionne la suivante :
    Le jugement politique se fonde sur ces critères, non sur une préférence partisane : il éclaire
    l'autorité, qui décide. Pas de chiffre ni de fait inventé : les données manquantes deviennent des
    hypothèses, et le verdict dit ce qui le ferait changer.
+7. **Qualité rédactionnelle** (fiches 3.2.1, 3.3.1, 3.3.2, 3.4.1) : appréciation d'ensemble
+   (*Satisfaisant*, *Réserves*, *Défaut sérieux*) sur la précision et l'univocité, le plan,
+   l'encadrement (intitulé, visas, formules), la technique de modification, la langue et la
+   typographie, d'après la grille de relecture. Les défauts sont pesés (une ambiguïté qui change le
+   sens est bloquante, une faute de typographie relève du style), illustrés par des exemples, sans
+   réécrire le texte ; la réponse dit si une correction complète (fonction B) est utile.
 
 Chaque conclusion porte un **statut** : *Établi* (se lit dans le texte ou découle d'une fiche citée),
 *Vérifié* (texte en vigueur effectivement lu), *Risque* (appréciation dont le raisonnement est exposé),
@@ -274,7 +280,8 @@ probable et les incohérences de structure ; ses constats se reprennent dans l'a
 
 Structure de réponse : Synthèse (avec un tableau d'appréciation par question et le verdict
 d'opportunité), une section par question avec des constats numérotés (article, constat, fondement,
-statut, gravité, recommandation), la section Opportunité avec son verdict motivé, Recommandations,
+statut, gravité, recommandation), la section Opportunité avec son verdict motivé, la section Qualité
+rédactionnelle avec son appréciation, Recommandations,
 Points à vérifier, Références citées.
 
 ## Références citées (fonctions A, B et C)
@@ -379,7 +386,7 @@ toujours par ces fiches de synthèse.
 | `references/formules-et-modeles.md` | Intitulé, squelettes complets de loi, ordonnance, décret, arrêté ; visas (quoi viser, ordre, rédaction) ; article d'exécution ; entrée en vigueur ; situations en cours ; abrogations ; renvois au règlement ; notice explicative | Fonction A étape 3, fonction B points 3 et 5 |
 | `references/typographie.md` | Règles typographiques du Journal officiel | Mise au propre finale, fonction B point 7 |
 | `references/grille-de-relecture.md` | Liste de contrôle ordonnée avec niveaux de gravité | Fonction B, et autocontrôle en fin de fonction A |
-| `references/analyse.md` | Analyse d'un texte : caractère normatif, niveau de norme et compétence, conformité aux normes supérieures, cohérence, nécessité, opportunité (critères et verdict) ; statuts des conclusions ; format de l'avis | Fonction C |
+| `references/analyse.md` | Analyse d'un texte : caractère normatif, niveau de norme et compétence, conformité aux normes supérieures, cohérence, nécessité, opportunité (critères et verdict), qualité rédactionnelle ; statuts des conclusions ; format de l'avis | Fonction C |
 | `references/amendements.md` | Amendements et sous-amendements : qualification, chapeau (formules Assemblée et Sénat, pastillage), texte proposé, recevabilité (articles 38, 40, 41, 45, 46), exposé sommaire, gage | Toute demande d'amendement |
 | `references/procedure-et-documents.md` | Parcours selon la nature du texte, repérage des consultations obligatoires, trames d'étude d'impact, de fiche d'impact, d'exposé des motifs et de rapport de présentation | Texte nouveau (fin de fonction A) ; demande de document d'accompagnement ou de procédure |
 | `references/legifrance.md` | Vérification du droit en vigueur sur Légifrance : API (serveur MCP), navigateur piloté par l'agent ou recherche web limitée au site | **Seulement si l'agent dispose de l'un de ces accès** : texte modificatif, visas, renvois, point précis à éclaircir |
