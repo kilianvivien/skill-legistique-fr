@@ -8,6 +8,9 @@ Source/
 # Espace de travail des tests (les sorties utiles sont copiées dans exemples/)
 legistique-fr-workspace/
 
+# Évaluations manuelles (réponses et rapports, non publiés)
+outputs/
+
 # macOS
 .DS_Store
 
