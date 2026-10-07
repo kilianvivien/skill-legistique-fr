@@ -50,10 +50,11 @@ numérotés**, classés *Bloquant*, *Recommandé* ou *Style*, avec le renvoi à 
 
 Vous donnez **un projet ou un texte en vigueur** et demandez un avis.
 
-Vous recevez **une analyse en six questions** : le texte est-il **normatif**, au **bon niveau de
-norme** (loi ou règlement), **conforme** aux normes supérieures, **cohérent** avec le droit existant,
-**nécessaire**, **opportun** juridiquement (le texte est-il trop dérogatoire ?), matériellement et
-politiquement ? Chaque conclusion dit si elle est établie, vérifiée, un risque ou à vérifier ;
+Vous recevez **une analyse en trois parties, nécessité, niveau, portée** : le texte est-il
+**nécessaire** et **opportun** juridiquement (est-il trop dérogatoire ?), matériellement et
+politiquement ? Est-il au **bon niveau de norme** (loi ou règlement) et **conforme** aux normes
+supérieures ? Quelle est sa **portée** : est-il **normatif**, son champ est-il bien délimité, est-il
+**cohérent** avec le droit existant et **bien rédigé** ? Chaque conclusion dit si elle est établie, vérifiée, un risque ou à vérifier ;
 l'opportunité reçoit un verdict motivé sur chaque plan.
 
 </td>
@@ -242,7 +243,7 @@ Claude Code ou Cursor.
 | « Quelles consultations pour ce projet de décret ? » · « Fais la trame de l'étude d'impact » | **repère** les consultations obligatoires et **rédige** exposé des motifs, étude ou fiche d'impact |
 | « Relis ce projet d'arrêté et dis-moi ce qui ne va pas : … » | **corrige** (fonction B) |
 | « Réécris proprement ce décret » | **corrige**, puis **rédige** les parties à reprendre |
-| « Ce projet de décret est-il légal ? Ne relève-t-il pas de la loi ? » · « Ce texte est-il opportun ? » · « Analyse la cohérence de ce texte avec le droit existant » | **analyse** (fonction C) |
+| « Ce projet de décret est-il légal ? Ne relève-t-il pas de la loi ? » · « Ce texte est-il opportun ? » · « Ce projet est-il bien rédigé ? » · « Analyse la cohérence de ce texte avec le droit existant » | **analyse** (fonction C) |
 | « Dans quel ordre mettre les visas ? » · « Comment abroger un alinéa ? » | **répond** directement |
 
 ### Pour de meilleurs résultats
@@ -288,15 +289,13 @@ Pour un amendement : l'amendement et son exposé sommaire, puis une section **Re
 </td>
 <td valign="top">
 
-1. **Synthèse** : appréciation par question
-2. **Caractère normatif**
-3. **Niveau de norme et compétence**
-4. **Conformité aux normes supérieures**
-5. **Cohérence**
-6. **Nécessité et proportionnalité**
-7. **Opportunité** juridique, matérielle et politique : verdicts motivés
-8. **Recommandations** et **points à vérifier**
-9. **Références citées**
+1. **Synthèse** : conclusion par partie, appréciation par question
+2. **Nécessité** : nécessité et proportionnalité ; opportunité juridique, matérielle et politique,
+   avec verdicts motivés
+3. **Niveau** : niveau de norme et compétence ; conformité aux normes supérieures
+4. **Portée** : caractère normatif ; champ d'application ; cohérence ; qualité rédactionnelle
+5. **Recommandations** et **points à vérifier**
+6. **Références citées**
 
 </td>
 </tr>
@@ -381,7 +380,7 @@ flowchart LR
     Q -->|texte en articles| B1[Relire avec la grille]
     B1 --> B2[Corriger avec économie<br/>Bloquant · Recommandé · Style]
     B2 --> B3[/Diagnostic + texte corrigé<br/>+ commentaires/]
-    Q -->|demande d'avis| C1[Normatif ? Niveau de norme ?<br/>Conforme ? Cohérent ?<br/>Nécessaire ? Opportun ?]
+    Q -->|demande d'avis| C1[Nécessité : nécessaire ? opportun ?<br/>Niveau : bon niveau ? conforme ?<br/>Portée : normatif ? champ ?<br/>cohérent ? bien rédigé ?]
     C1 --> C2[/Analyse avec statut<br/>de chaque conclusion/]
 ```
 
@@ -400,7 +399,7 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté ; visas ; entrée en vigueur ; notice |
 | [`typographie.md`](legistique-fr/references/typographie.md) | Règles typographiques du Journal officiel |
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
-| [`analyse.md`](legistique-fr/references/analyse.md) | Analyse d'un texte : caractère normatif, niveau de norme, conformité, cohérence, nécessité, opportunité |
+| [`analyse.md`](legistique-fr/references/analyse.md) | Analyse d'un texte en trois parties : nécessité (dont opportunité), niveau (norme, compétence, conformité), portée (caractère normatif, champ, cohérence, qualité rédactionnelle) |
 | [`amendements.md`](legistique-fr/references/amendements.md) | Amendements : chapeau (Assemblée, Sénat), pastillage, recevabilité, exposé sommaire, gage |
 | [`procedure-et-documents.md`](legistique-fr/references/procedure-et-documents.md) | Parcours selon la nature du texte, consultations obligatoires, trames d'étude et de fiche d'impact, exposé des motifs |
 | [`legifrance.md`](legistique-fr/references/legifrance.md) | Option : vérification du droit en vigueur, si l'agent a accès à Légifrance |
