@@ -139,8 +139,10 @@ Art. 13. – Sont abrogés :
 
 - Abroger explicitement, après recensement exhaustif. **Proscrire** « toutes dispositions contraires
   sont abrogées » : sans effet juridique propre, cette formule trahit une analyse insuffisante du droit
-  en vigueur. Tolérance quand le recensement est incertain : « Sont abrogées toutes les dispositions
-  contraires à la présente loi, notamment l'article … du code …, les articles … de la loi n° … ».
+  en vigueur. La formule nue reste un constat Bloquant en relecture. Seule tolérance, à ne proposer
+  qu'en dernier recours et dans une loi : quand un recensement complet est impossible, citer tout ce
+  qui a été identifié (« Sont abrogées toutes les dispositions contraires à la présente loi, notamment
+  l'article … du code …, les articles … de la loi n° … ») et le signaler dans les points à arbitrer.
 - Abroger le texte A dans sa rédaction actuelle, non le texte B qui l'a modifié (abroger B ne fait pas
   revivre A). Pour revenir sur B, corriger A ou écrire « l'article A est rétabli dans sa rédaction
   antérieure à la loi n° … » (moins lisible).

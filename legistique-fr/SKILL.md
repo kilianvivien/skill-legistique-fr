@@ -129,7 +129,10 @@ rentables :
   contravention, seuil, date) se rédige quand même, avec le seul paramètre entre crochets
   (« contraventions de la [quatrième] classe ») et une ligne dans les points à arbitrer. Ne pas
   retirer la mesure du dispositif ni mettre un article entier entre crochets : le rédacteur a besoin
-  d'un texte qu'il peut amender, pas d'une liste de questions.
+  d'un texte qu'il peut amender, pas d'une liste de questions. Cas type, « les contrevenants
+  pourront être sanctionnés » dans un projet de décret : rédiger une contravention (classe entre
+  crochets), viser l'article R. 610-1 du code pénal, passer en décret en Conseil d'Etat, et dire dans
+  les points à arbitrer qu'une amende administrative ou un délit relèverait de la loi.
 
 ### Étape 4 : livrer
 
@@ -251,6 +254,13 @@ l'article) ; ne pas remplacer la disposition par des crochets vides. Quand l'acc
 d'abord : une désignation d'alinéa fausse ou des mots cités inexacts sont les erreurs les plus graves
 d'un texte modificatif, et aucune lecture du seul projet ne les révèle.
 
+Si la vérification montre que le texte modifié n'est pas celui que le projet désigne (numéro, date
+ou intitulé faux), le dire en tête du diagnostic, au niveau Bloquant. Corriger alors tout ce qui ne
+dépend pas du texte modifié (encadrement, formules, langue, typographie), laisser telles quelles et
+marquées « [à vérifier] » les désignations d'articles, d'alinéas et de mots, et donner dans les
+questions la liste exacte de ce qu'il faut fournir. Le texte corrigé reste intégral : aucun passage
+n'est remplacé par une mention « à rédiger ».
+
 ## Fonction C : analyse d'un texte normatif
 
 Lire `references/analyse.md`, qui détaille la méthode, les signes d'alerte et le format de sortie.
@@ -298,7 +308,8 @@ préalables de la légistique, **nécessité, niveau, portée**, dans cet ordre 
 Les constats se répondent d'une partie à l'autre (un délit créé par décret rend le texte inopportun en
 l'état) : dire le lien d'une ligne plutôt que répéter le constat.
 
-Chaque conclusion porte un **statut** : *Établi* (se lit dans le texte ou découle d'une fiche citée),
+Chaque conclusion porte un **statut**, constats numérotés, verdicts d'opportunité et appréciation de la
+qualité rédactionnelle compris : *Établi* (se lit dans le texte ou découle d'une fiche citée),
 *Vérifié* (texte en vigueur effectivement lu), *Risque* (appréciation dont le raisonnement est exposé),
 *À vérifier* (dépend d'un texte ou d'une jurisprudence non lus). Une conformité n'est jamais affirmée
 sans vérification : « aucun motif d'illégalité relevé dans les éléments examinés » n'est pas « conforme ».
@@ -347,7 +358,8 @@ recopie depuis un exemple.
   marque survive au copier-coller du projet sans le tableau.
 - Si aucune référence n'a été ajoutée ni vérifiée, écrire une ligne : « Aucune référence ajoutée. »
 - Le script `scripts/lint_legistique.py --refs --source <demande>` liste les références du projet et
-  signale celles qui ne figurent pas dans la demande (voir « Contrôle automatique »).
+  signale celles qui ne figurent pas dans la demande (voir « Contrôle automatique »). C'est une passe
+  distincte : avec `--refs`, le script ne fait pas le contrôle des fautes.
 
 ## Livrables complémentaires
 

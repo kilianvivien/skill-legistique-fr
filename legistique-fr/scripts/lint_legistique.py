@@ -140,8 +140,11 @@ NOT_SIGLES = {
     "PRELIMINAIRE", "PRÉLIMINAIRE", "UNIQUE", "RF", "ER",
     # en-têtes d'amendement et de documents d'accompagnement
     "PROJET", "PROPOSITION", "DE", "LOI", "AMENDEMENT", "SOUS-AMENDEMENT", "ARTICLE", "ADDITIONNEL", "AVANT",
-    "SOMMAIRE", "DES", "MOTIFS", "IMPACT", "RAPPORT",
+    "SOMMAIRE", "DES", "MOTIFS", "IMPACT", "RAPPORT", "APRES", "EXPOSE",
 }
+# Dans l'exposé sommaire d'un amendement, prose explicative : pas de contrôle du temps ni du style.
+EXPOSE_IGNORE = {"doit", "futur", "renfort", "parentheses", "notamment", "et-notamment", "concerne", "passe-partout",
+                 "sigle", "non-normatif", "renvoi-relatif"}
 # Mots en -ra / -ront qui ne sont pas des futurs.
 FUTUR_EXCLUS = {
     "front", "affront", "opéra", "caméra", "choléra", "extra", "ultra", "intra", "contra", "mantra", "cobra",
@@ -198,11 +201,18 @@ def lint(text):
     amendement = bool(AMENDEMENT.search(text))
     lines = text.split("\n")
     offset = 0
+    expose = False  # l'exposé sommaire d'un amendement explique : il n'est pas du dispositif
     for lineno, line in enumerate(lines, 1):
         stripped = line.strip()
+        if re.match(r"^EXPOSÉ (?:SOMMAIRE|DES MOTIFS)\b", stripped):
+            expose = True
+        elif re.match(r"^(?:AMENDEMENT|SOUS-AMENDEMENT|PROJET DE LOI|PROPOSITION DE LOI|ARTICLE)\b", stripped):
+            expose = False
         is_visa = bool(re.match(r"^[«\s]*Vu\b", stripped))
         is_heading = bool(stripped) and stripped == stripped.upper() and len(stripped) > 3
         for rid, pattern, message, fiche, grav, opts in RULES:
+            if expose and rid in EXPOSE_IGNORE:
+                continue
             if opts.get("skip_visas") and is_visa:
                 continue
             if opts.get("skip_notice") and NOTICE.match(stripped):

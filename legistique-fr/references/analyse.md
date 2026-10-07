@@ -49,6 +49,13 @@ vérification rassure à tort. Chaque appréciation porte donc un **statut** :
 | **Risque** | Le constat repose sur une appréciation (proportionnalité, différence de traitement, lien avec l'objectif) : exposer le raisonnement, ne pas conclure à la place du juge |
 | **À vérifier** | Le constat dépend d'un texte ou d'une jurisprudence non lus : dire précisément quoi vérifier |
 
+Portent un statut : chaque constat numéroté (colonne « Statut »), mais aussi chaque **verdict
+d'opportunité** et l'**appréciation de la qualité rédactionnelle**, qui sont des conclusions comme les
+autres. Un verdict est le plus souvent un « Risque » (appréciation raisonnée) ou repose sur une
+hypothèse « À vérifier » ; l'écrire à la suite du verdict : « Matérielle : Discutable (Risque ; à
+vérifier : moyens des services) ». Dans le tableau de synthèse, le statut dominant figure dans la
+colonne « Principaux constats ».
+
 Ne jamais citer de mémoire une décision, un article ou un texte pour fonder une conclusion : les
 décisions citées dans cette fiche viennent du guide et se présentent comme « (citée par la fiche
 1.2.1) ». Toute autre référence suit la règle de la section « Références citées » de `SKILL.md`.
@@ -363,7 +370,7 @@ niveau, portée ; puis le tableau)
 ### 1.1 Nécessité et proportionnalité
 ### 1.2 Opportunité
 (objectif retenu et sa source ; pour chaque plan, juridique, matériel et politique, les critères qui
-pèsent et un verdict motivé ; verdict d'ensemble ; ce qui le ferait changer)
+pèsent et un verdict motivé suivi de son statut ; verdict d'ensemble ; ce qui le ferait changer)
 ## 2. Niveau
 ### 2.1 Niveau de norme et compétence
 ### 2.2 Conformité aux normes supérieures
@@ -372,7 +379,8 @@ pèsent et un verdict motivé ; verdict d'ensemble ; ce qui le ferait changer)
 ### 3.2 Champ d'application
 ### 3.3 Cohérence
 ### 3.4 Qualité rédactionnelle
-(appréciation motivée ; constats par critère, avec exemples ; fonction B utile ou non)
+(appréciation motivée, suivie de son statut ; constats par critère, avec exemples ; fonction B utile
+ou non)
 (hors opportunité, constats numérotés en continu d'une partie à l'autre :
 | N° | Article | Constat | Fondement (fiche) | Statut | Gravité | Recommandation |
 Statut = Établi / Vérifié / Risque / À vérifier ; Gravité = Bloquant / Recommandé / Style)

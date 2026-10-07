@@ -56,6 +56,9 @@ demande n'appelle pas.
   vigueur », pas « n'a jamais existé », et chercher le dernier article de la série.
 - Avant d'insérer un article « après l'article X », chercher X-1, X-2 : le numéro voulu est souvent
   déjà pris par un article intercalaire.
+- Versions divergentes (la liste de résultats annonce une version récente, la page ouverte en montre
+  une autre) : relever les deux dates, rouvrir la page de l'article depuis le sommaire du code, et si
+  l'écart demeure, donner les deux constats et classer la référence « à vérifier ».
 - Relever le préfixe exact de l'article : « R. » (décret en Conseil d'Etat), « R*. » (décret en
   Conseil d'Etat délibéré en conseil des ministres), « D. » (décret simple). Un projet qui cite
   « R. 423-… » pour un article « R*. » se trompe aussi sur le niveau du texte qui peut le modifier ou

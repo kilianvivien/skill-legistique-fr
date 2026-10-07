@@ -300,6 +300,12 @@ class Amendement(unittest.TestCase):
         self.assertEqual(L.lint(text) + L.structure(text), [])
 
 
+    def test_expose_sommaire_hors_controle(self):
+        text = ("AMENDEMENT n° …\n\nARTICLE 3\n\nSupprimer cet article.\n\nEXPOSÉ SOMMAIRE\n"
+                "Cet article devra être repris (voir l'étude) : il doit être supprimé.")
+        self.assertEqual(L.lint(text), [])
+
+
 class Markdown(unittest.TestCase):
 
     def test_blocs_de_code(self):
