@@ -14,7 +14,7 @@ description: >-
   mot « légistique ». French legislative and regulatory drafting and review (legistics).
 license: MIT
 metadata:
-  version: "0.5.1"
+  version: "0.5.2"
 ---
 
 # Légistique française
@@ -55,8 +55,22 @@ Dans toutes les fonctions, commencer par qualifier le texte, car presque toutes 
    règlement écrit « est remplacé par les dispositions suivantes ». Deux indices fixent le niveau d'un
    décret sans que l'utilisateur le dise : un article de code en « R. » se crée et se modifie par
    décret en Conseil d'Etat, un article en « D. » par décret simple (fiche 3.6.1) ; une contravention
-   ne peut être créée que par décret en Conseil d'Etat (fiche 5.6). Dans ces cas, écrire « Le Conseil
-   d'Etat (section …) entendu, » et le dire dans les hypothèses.
+   ne peut être créée que par décret en Conseil d'Etat (fiche 5.6). Relever le préfixe de **chaque**
+   article touché, puis choisir la mention Conseil d'Etat parmi trois cas, et le dire dans les
+   hypothèses :
+   - consultation obligatoire (un article en « R. », une contravention, un renvoi de la loi au
+     « décret en Conseil d'Etat », un décret modifié pris « le Conseil d'Etat entendu ») : « Le Conseil
+     d'Etat (section …) entendu, » ;
+   - décret simple (que des articles en « D. », aucun texte n'impose le Conseil d'Etat) soumis au
+     Conseil d'Etat sans y être tenu : « Après avis du Conseil d'Etat (section …), ». Ne jamais écrire
+     « Le Conseil d'Etat entendu » dans ce cas : cette seule mention ferait du texte un décret en
+     Conseil d'Etat, modifiable seulement par un tel décret (fiche 1.3.3). Pas besoin non plus
+     d'article « Le présent décret peut être modifié par décret » : il ne sert qu'à contrer
+     l'effet de « Le Conseil d'Etat entendu » ;
+   - décret simple non soumis au Conseil d'Etat : aucune mention.
+   Si un même décret touche des articles en « R. » et en « D. », il est pris en Conseil d'Etat et la
+   mention « entendu » vaut pour tout le texte, sans changer le niveau des articles en « D. »
+   (fiches 1.3.3 et 3.1.5).
 2. **Texte autonome ou modificatif** : avant de créer un texte nouveau, chercher le support existant
    (code, loi ou décret traitant de la même matière) où insérer les règles (fiche 3.4.1). Un texte
    modificatif obéit à une grammaire propre, voir `references/modifications-insertions.md`.

@@ -98,6 +98,8 @@ Vu la loi n° … du … relative à …, notamment son article … ;
 Vu le décret n° … du … modifié relatif à … ;
 Vu l'avis du … en date du … ;                     [« , » si c'est la dernière ligne avant « Décrète : »]
 Le Conseil d'Etat (section …) entendu,            [décret en Conseil d'Etat seulement]
+                                                  [décret simple soumis au CE sans obligation :
+                                                   « Après avis du Conseil d'Etat (section …), »]
 Décrète :
 
 Article 1er
@@ -119,6 +121,10 @@ Le ministre de …,
   modification d'un article de code en « R. » (un article en « D. » relève du décret simple) ; création
   d'une contravention (article R. 610-1 du code pénal, fiche 5.6) ; renvoi de la loi à « un décret en
   Conseil d'Etat » ; modification d'un décret pris « le Conseil d'Etat entendu ».
+- Décret simple (articles en « D. » seulement, aucun texte n'impose le Conseil d'Etat) soumis au Conseil
+  d'Etat sans y être tenu : « Après avis du Conseil d'Etat (section …), », jamais « Le Conseil d'Etat
+  entendu, », qui l'érigerait en décret en Conseil d'Etat ; il reste modifiable par décret simple, sans
+  article « peut être modifié par décret » (fiche 1.3.3).
 - Ministres rapporteurs (« Sur le rapport de ») : seulement le ou les ministres qui ont piloté le texte,
   un suffit, jamais plus de trois, avec leur titre officiel exact, au féminin s'il y a lieu ; pas de
   ministres délégués ni de secrétaires d'Etat rattachés. Quand un texte impose le rapport d'un ministre

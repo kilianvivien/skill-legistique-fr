@@ -15,7 +15,7 @@ sanctionnée).
 | Aucun renvoi à un texte de niveau inférieur ou de procédure différente sans figer la version | B | 3.4.2 |
 | Une loi ne désigne pas un ministre pour une décision non réglementaire (« l'autorité administrative ») | R | 3.3.2 |
 | Sanctions : contraventions seulement par décret en Conseil d'Etat (et visa de l'article R. 610-1 du code pénal) ; délits et sanctions administratives par la loi ; éléments constitutifs énoncés sans « notamment » | B | 3.3.2, 5.6 |
-| Articles de code en « R. » créés ou modifiés par décret en Conseil d'Etat (« Le Conseil d'Etat entendu, »), en « D. » par décret simple ; un décret en Conseil d'Etat n'est modifié que par un décret de même niveau | B | 3.6.1, 3.1.5 |
+| Articles de code en « R. » créés ou modifiés par décret en Conseil d'Etat (« Le Conseil d'Etat entendu, »), en « D. » par décret simple ; un décret en Conseil d'Etat n'est modifié que par un décret de même niveau ; décret simple soumis au Conseil d'Etat sans obligation : « Après avis du Conseil d'Etat (section …), » et non « entendu » (sinon il devient décret en Conseil d'Etat) | B | 3.6.1, 3.1.5, 1.3.3 |
 | Chaque désignation du texte modifié (article, alinéa, mots cités, bornes d'un renvoi) a été lue dans la version en vigueur ; sinon elle est marquée « [à vérifier] », pas validée ni effacée | B | 3.4.1, legifrance.md |
 | Le texte modifié fourni est bien la version consolidée en vigueur | B | 3.4.1 |
 | Toute référence précise (article, numéro, date, intitulé de texte) ajoutée par le rédacteur ou le relecteur est vérifiée ou marquée « [à vérifier] » ; aucune n'est complétée de mémoire | B | SKILL.md, legifrance.md |
