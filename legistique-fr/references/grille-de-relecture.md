@@ -1,21 +1,29 @@
 # Grille de relecture d'un texte normatif
 
 À parcourir dans l'ordre pour la fonction B (correction commentée) et comme autocontrôle en fin de
-fonction A. Chaque ligne indique la gravité par défaut : **B** bloquant (illégalité ou
-inintelligibilité probable), **R** recommandé (règle du guide non respectée), **S** style. La gravité
-peut monter si le contexte l'exige (un « notamment » anodin devient bloquant dans une interdiction
-sanctionnée).
+fonction A. Chaque ligne indique la gravité par défaut : **B** bloquant (illégalité certaine, ou
+formule qui ne peut pas s'appliquer : mauvais article, alinéa, phrase ou mots cités, décompte
+faux), **R** recommandé (règle du guide non respectée), **S** style. Un choix légal mais perfectible
+n'est jamais bloquant. La gravité peut monter si le contexte l'exige (un « notamment » anodin devient
+bloquant dans une interdiction sanctionnée).
+
+La gravité ne dit pas qui décide. En relecture, un constat de forme se corrige dans le texte ; un
+constat qui touche au fond (portée, procédure, compétence, choix politique) devient une **question**
+avec une rédaction alternative, le texte gardant la rédaction des rédacteurs, quelle que soit sa
+gravité (SKILL.md, fonction B, étape 2).
 
 ## 1. Qualification et compétence
 
 | Contrôle | Gravité | Fiche |
 |---|---|---|
 | La nature du texte (loi, ordonnance, décret simple / CE / CM, arrêté) est cohérente avec la matière (art. 34 et 37 de la Constitution) et avec le renvoi opéré par la norme supérieure (« décret en Conseil d'Etat » impose ce niveau) | B | 1.3.2, 1.3.3 |
-| Aucune disposition ne renvoie vers le bas sans encadrement (loi → ministre ; décret → arrêté « pour fixer les modalités d'application ») | B | 3.5.1, 3.5.3 |
+| Aucune disposition ne renvoie vers le bas sans encadrement (loi → ministre ; décret → arrêté « pour fixer les modalités d'application ») ; préciser le renvoi est un choix de fond : question avec rédaction proposée | R | 3.5.1, 3.5.3 |
 | Aucun renvoi à un texte de niveau inférieur ou de procédure différente sans figer la version | B | 3.4.2 |
 | Une loi ne désigne pas un ministre pour une décision non réglementaire (« l'autorité administrative ») | R | 3.3.2 |
 | Sanctions : contraventions seulement par décret en Conseil d'Etat (et visa de l'article R. 610-1 du code pénal) ; délits et sanctions administratives par la loi ; éléments constitutifs énoncés sans « notamment » | B | 3.3.2, 5.6 |
-| Articles de code en « R. » créés ou modifiés par décret en Conseil d'Etat (« Le Conseil d'Etat entendu, »), en « D. » par décret simple ; un décret en Conseil d'Etat n'est modifié que par un décret de même niveau ; décret simple soumis au Conseil d'Etat sans obligation : « Après avis du Conseil d'Etat (section …), » et non « entendu » (sinon il devient décret en Conseil d'Etat) | B | 3.6.1, 3.1.5, 1.3.3 |
+| Articles de code en « R. » créés ou modifiés par décret en Conseil d'Etat (« Le Conseil d'Etat entendu, »), en « D. » par décret simple ; un décret en Conseil d'Etat n'est modifié que par un décret de même niveau | B | 3.6.1, 1.3.3 |
+| Décret simple soumis au Conseil d'Etat sans obligation : « Après avis du Conseil d'Etat (section …), » et non « entendu » (sinon il devient décret en Conseil d'Etat) ; un article « peut être modifié par décret » déjà présent n'est pas supprimé d'office (question) | R | 3.1.5, 1.3.3 |
+| Choix de l'autorité (arrêté d'un ministre ou interministériel, signataires) : question au rédacteur, sauf si un texte supérieur impose l'autorité | R (B si un texte l'impose) | 3.5.3, 3.1.4 |
 | Chaque désignation du texte modifié (article, alinéa, mots cités, bornes d'un renvoi) a été lue dans la version en vigueur ; sinon elle est marquée « [à vérifier] », pas validée ni effacée | B | 3.4.1, legifrance.md |
 | Le texte modifié fourni est bien la version consolidée en vigueur | B | 3.4.1 |
 | Toute référence précise (article, numéro, date, intitulé de texte) ajoutée par le rédacteur ou le relecteur est vérifiée ou marquée « [à vérifier] » ; aucune n'est complétée de mémoire | B | SKILL.md, legifrance.md |
@@ -61,19 +69,19 @@ sanctionnée).
 | Aucun « susvisé » dans une disposition insérée dans un code ou dans un texte dont les visas d'origine ne mentionnent pas le texte désigné | B | 3.1.5, 3.4.1 |
 | Une seule technique de présentation (par article / article unique à 1°, 2° / article 1er « modifié conformément aux ») ; la troisième interdite dans une loi | R | 3.4.1 |
 | Conséquences en chaîne traitées (renvois aux alinéas décalés, nouveau nom d'organisme dans tout le texte) | B | 3.4.1 |
-| Pas de retouche de pure forme ou de ponctuation d'un texte ancien ; pas de réécriture totale pour des changements limités (et inversement, réécriture d'une phrase plutôt que trois retouches) | S | 3.4.1 |
-| Abrogations explicites et recensées ; pas de « toutes dispositions contraires sont abrogées » ; abrogation du texte A, non du texte B qui l'a modifié | B | 3.8.3 |
+| Pas de retouche de pure forme ou de ponctuation d'un texte ancien ; pas de réécriture totale pour des changements limités. En relecture, la technique des rédacteurs (insertion d'alinéa, retouches successives, ajout en fin d'énumération) se garde si elle s'applique : ne pas la remplacer par une réécriture | S | 3.4.1 |
+| Abrogations explicites et recensées ; pas de « toutes dispositions contraires sont abrogées » ; abrogation du texte A, non du texte B qui l'a modifié | R (B si l'abrogation vise le mauvais texte) | 3.8.3 |
 | Dispositions transitoires en articles distincts, à la fin, non incorporées au texte modifié | R | 3.4.1, 3.8.2 |
 
 ## 5. Entrée en vigueur et situations en cours
 
 | Contrôle | Gravité | Fiche |
 |---|---|---|
-| Une disposition d'entrée en vigueur existe si le texte touche de nombreux usagers, une organisation, une procédure, des compétences ou des contrats ; différé suffisant ; DCEV pour les entreprises | B (sécurité juridique) | 1.2.2, 3.8.1 |
+| Une disposition d'entrée en vigueur existe si le texte touche de nombreux usagers, une organisation, une procédure, des compétences ou des contrats ; différé suffisant ; DCEV pour les entreprises ; la date est un choix de fond (question) | R (B si l'application immédiate méconnaît certainement la sécurité juridique) | 1.2.2, 3.8.1 |
 | Formule au présent ; date fixe justifiée ou date mobile ; placée avant l'article d'exécution, pas dedans | R | 3.8.1 |
 | Loi : pas de renvoi à un décret pour la date sans « et au plus tard le … » (idem abrogation différée) | B | 3.8.1, 3.8.3 |
 | Pas de date postérieure au délai de transposition ; pas de différé excessif d'une mesure d'application | B | 3.8.1 |
-| Sort des situations en cours précisé (procédures engagées, mandats, contrats, actes antérieurs) par des critères objectifs | B ou R selon l'enjeu | 3.8.2 |
+| Sort des situations en cours précisé (procédures engagées, mandats, contrats, actes antérieurs) par des critères objectifs ; les mesures transitoires sont un choix de fond (question) | R (B si atteinte certaine à des contrats en cours) | 3.8.2 |
 | Le texte modifié n'a pas de clause d'entrée en vigueur qui s'appliquerait par accident aux dispositions insérées | R | 3.8.1 |
 | Mesures pénales plus douces : application immédiate non entravée | B | 3.8.1 |
 
@@ -86,13 +94,13 @@ sanctionnée).
 | Phrases simples ; pas d'« et/ou », « le ou les », doubles négations, périphrases, adverbes de renfort | R | 3.3.1 |
 | Pas d'abréviations, sigles, parenthèses, notes ; organismes en toutes lettres | R | 3.3.1 |
 | Pas de latin (in fine, a priori, supra) ; pas d'anglicismes (impacter, en charge de, générer) | R | 3.3.1 |
-| Termes juridiques exacts (autorité / tutelle ; conformité / compatibilité ; suspendre / interrompre ; dispositions / stipulations ; décision / arrêt / jugement ; sur proposition / après avis) | B si le sens change, sinon R | 3.3.2 |
+| Termes juridiques exacts (autorité / tutelle ; conformité / compatibilité ; suspendre / interrompre ; dispositions / stipulations ; décision / arrêt / jugement ; sur proposition / après avis) ; si le terme juste change le sens, question plutôt que correction | R | 3.3.2 |
 | « visé » réservé aux visas ; « mentionné », « prévu » pour les renvois ; « précité » seulement si cité ; pas de « de la présente loi » superflu ; « du même code » | R | 3.3.2 |
 | Ministre désigné par « chargé de … » (sauf justice, intérieur, défense, affaires étrangères) ; masculin générique dans le corps | R | 3.3.2 |
 | Pas de « ledit », « susdit », « susmentionné », « concerné », « effectuer », « décliner », « au niveau de », « dans le cadre de » | S | 3.3.2 |
 | « Notamment » justifié (précision non exhaustive) et absent des interdictions, sanctions, énumérations exhaustives et renvois au décret d'application | R (B dans une sanction) | 3.3.2 |
 | « Le cas échéant » employé au sens de « si les conditions sont réunies », non « éventuellement » | R | 3.3.2 |
-| Locutions d'articulation exactes : sous réserve (prééminence), sans préjudice (cumul, à éviter), par dérogation (ciblée), nonobstant (sans « toutes dispositions contraires »), toutefois ; sans réserves évidentes ni coordination fictive | R (B si contradiction laissée au juge) | 3.3.2 |
+| Locutions d'articulation exactes : sous réserve (prééminence), sans préjudice (cumul, à éviter), par dérogation (ciblée), nonobstant (sans « toutes dispositions contraires »), toutefois ; sans réserves évidentes ni coordination fictive ; choisir quelle règle prévaut est une question | R | 3.3.2 |
 | Ponctuation : virgules vérifiées autour des conjonctions et dans les énumérations d'adjectifs (le sens en dépend) | R | 3.3.1 |
 | Féminisation des fonctions dans les visas et l'article d'exécution ; pas d'écriture inclusive | S | 3.3.1 |
 
@@ -123,7 +131,10 @@ Détail : `references/amendements.md`.
 
 Pour chaque constat retenu : emplacement (article, alinéa), constat, correction proposée, règle et
 fiche, gravité. Regrouper les constats répétitifs (« futur employé aux articles 2, 4, 7 et 9 ») en une
-ligne. Les choix de fond que l'on ne partage pas (seuil, délai, autorité) ne sont pas des corrections :
-ils vont dans « Questions au rédacteur ». Une correction qui ferme une liste ouverte (« etc. »,
-« notamment ») ou lève une ambiguïté (lequel de deux délais est suspendu) touche au fond : la faire,
-et poser la question correspondante.
+ligne. Les choix de fond que l'on ne partage pas (seuil, délai, autorité, consultation, champ) ne
+sont pas des corrections : ils vont dans « Questions au rédacteur », avec une rédaction alternative,
+et le texte corrigé garde la rédaction des rédacteurs. Fermer une liste ouverte (« etc. »,
+« notamment ») ou lever une ambiguïté (lequel de deux délais est suspendu) touche au fond : proposer
+la rédaction en question ; si elle est faite dans le texte (ambiguïté qui rend la règle inapplicable,
+« notamment » dans une sanction), le commentaire l'annonce « changement de portée : … ». Avant de
+rendre, appliquer l'auto-vérification de SKILL.md (fonction B, étape 3).

@@ -256,6 +256,10 @@ justifient la compétence, éclairent le lecteur et attestent les procédures pr
   modalités. Proscrit : « Un arrêté du ministre chargé de … fixe les modalités d'application du présent
   décret » ou « précise en tant que de besoin ». Correct : « Un arrêté du ministre chargé de la santé
   fixe le modèle du formulaire mentionné à l'article 4 et la liste des pièces justificatives. »
+- Le choix entre un arrêté du ministre chargé de … et un arrêté interministériel (ou conjoint) est un
+  choix de répartition des compétences : en relecture, ne pas le défaire, sauf texte supérieur qui
+  impose un cosignataire ; poser la question en disant ce que chaque option implique (ministres dont
+  les services appliquent la mesure, contreseing).
 - Un décret ne peut renvoyer à un décret simple les dispositions relevant d'un décret en Conseil d'Etat
   que si la loi le permet. Une loi qui renvoie directement à un arrêté interdit toute subdélégation par
   le ministre.

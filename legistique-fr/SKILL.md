@@ -14,7 +14,7 @@ description: >-
   mot « légistique ». French legislative and regulatory drafting and review (legistics).
 license: MIT
 metadata:
-  version: "0.5.2"
+  version: "0.5.3"
 ---
 
 # Légistique française
@@ -66,7 +66,9 @@ Dans toutes les fonctions, commencer par qualifier le texte, car presque toutes 
      « Le Conseil d'Etat entendu » dans ce cas : cette seule mention ferait du texte un décret en
      Conseil d'Etat, modifiable seulement par un tel décret (fiche 1.3.3). Pas besoin non plus
      d'article « Le présent décret peut être modifié par décret » : il ne sert qu'à contrer
-     l'effet de « Le Conseil d'Etat entendu » ;
+     l'effet de « Le Conseil d'Etat entendu ». En relecture, la correction du visa est de niveau
+     Recommandé, jamais Bloquant, et un tel article présent dans le projet n'est pas supprimé
+     d'office (voir fonction B, étape 2) ;
    - décret simple non soumis au Conseil d'Etat : aucune mention.
    Si un même décret touche des articles en « R. » et en « D. », il est pris en Conseil d'Etat et la
    mention « entendu » vaut pour tout le texte, sans changer le niveau des articles en « D. »
@@ -222,36 +224,133 @@ car les erreurs de structure se corrigent avant celles de langue :
 7. **Typographie** : « Article 1er », 1° 2° a) b), guillemets français, « premier alinéa », nombres,
    ponctuation des énumérations, intitulés de divisions sans point final.
 
-### Étape 2 : corriger avec économie
+### Étape 2 : corriger la forme, interroger le fond
 
-Le guide impose un principe d'économie (fiche 3.4.1) : on ne réécrit pas ce qui fonctionne, on ne
-touche pas à la typographie ou à la ponctuation d'un texte ancien sans nécessité, et l'on ne modifie
-jamais un choix de fond (seuil, délai, autorité compétente) sans le signaler comme une question, pas
-comme une correction. Distinguer donc trois niveaux :
+Le relecteur n'est pas l'auteur du texte. Le guide impose un principe d'économie (fiche 3.4.1) : on ne
+réécrit pas ce qui fonctionne, on ne touche pas à la typographie ou à la ponctuation d'un texte ancien
+sans nécessité. Au-delà, la relecture suit une règle de retenue : **corriger la forme, interroger le
+fond.**
 
-- **Bloquant** : illégalité ou inintelligibilité probable (incompétence, renvoi interdit, date d'entrée
-  en vigueur laissée à un décret sans borne, « toutes dispositions contraires sont abrogées »,
-  « notamment » dans une interdiction sanctionnée, article modifié deux fois).
-- **Recommandé** : règle du guide non respectée, sans risque contentieux immédiat (futur, « doit »,
-  « ledit », sigle, alinéa désigné par un chiffre, ordre des visas).
+- **Se corrige directement dans le texte (forme, légistique pure)** : désignation des articles,
+  alinéas, phrases et mots ; formules de modification, d'insertion, d'abrogation ; ponctuation et
+  typographie ; ordre et rédaction des visas ; titres ministériels ; numérotation ; intitulé ; temps
+  et vocabulaire quand le sens ne bouge pas (« doit transmettre » devient « transmet »).
+- **Corriger une formule n'est pas changer de technique.** Les rédacteurs qui ajoutent un alinéa
+  (« Après le deuxième alinéa, il est inséré un alinéa ainsi rédigé : », « L'article … est complété
+  par un alinéa ainsi rédigé : »), qui procèdent par plusieurs retouches ponctuelles, qui insèrent un
+  élément d'énumération en ajustant la ponctuation, ou qui insèrent des articles un par un, ont choisi
+  une technique valable : la garder et n'en corriger que la lettre (verbe, emplacement, décompte,
+  guillemets). Ne pas la remplacer par une réécriture de l'article, de l'alinéa ou de l'énumération,
+  ni regrouper ou éclater les opérations : les préférences de `references/modifications-insertions.md`
+  (réécrire une phrase plutôt que trois retouches, insérer d'un seul mouvement) guident la rédaction,
+  pas la relecture. Changer de technique ne se justifie que si celle des rédacteurs ne peut pas
+  s'appliquer (alinéa désigné qui n'existe pas, modifications qui se contredisent, même article
+  touché deux fois) ou emploie une formule proscrite (« abrogé et remplacé ») ; sinon, une ligne de
+  Style au plus.
+- **Devient une question, sans toucher au texte (fond)** : tout ce qui change la portée normative
+  (champ des personnes, des lieux ou des situations, obligation ou faculté, liste fermée ou ouverte,
+  conditions, délais, seuils) ; la procédure (consultations, niveau du texte, Conseil d'Etat entendu
+  ou non) ; la répartition des compétences (autorité compétente, arrêté d'un ministre ou
+  interministériel, signataires) ; tout choix politique. Le texte corrigé garde la rédaction des
+  rédacteurs ; le commentaire, de type **Question**, dit le risque et propose une rédaction
+  alternative complète, que le rédacteur peut reprendre telle quelle.
+- **Les données de la consigne sont acquises.** Ce que l'énoncé fixe (transmission au Conseil d'Etat,
+  autorité signataire, choix d'un arrêté, date, niveau du texte) ne se remet pas en cause : la
+  relecture en tire les conséquences de forme (la bonne formule de visa pour une consultation
+  décidée, par exemple). Si ce choix paraît illégal, le dire dans une question, sans le défaire dans
+  le texte.
+- **La structure du projet est conservée** : articles, ordre des opérations, articles d'exécution et
+  d'entrée en vigueur restent où les rédacteurs les ont placés, sauf erreur légistique avérée
+  (article modifié deux fois, entrée en vigueur après l'article d'exécution, ordre contraire à celui
+  du texte modifié). On ne supprime pas un article des rédacteurs : on le corrige ou on l'interroge.
+
+Trois précisions évitent les excès inverses :
+
+- **Dans le doute, c'est du fond.** Une correction de forme qui oblige à choisir entre deux lectures
+  (quel alinéa les rédacteurs visaient, à quoi se rapporte un « ou ») tranche une question de fond :
+  garder la formule, la marquer « [à vérifier] » si besoin, et poser la question.
+- **Retenue n'est pas silence.** Chaque défaut de fond repéré figure dans les commentaires, avec sa
+  gravité et une rédaction alternative ; la relecture n'en devient pas plus courte, seulement moins
+  intrusive. Un projet dont les questions s'accumulent mérite une phrase dans le diagnostic.
+- **La demande peut élargir le mandat.** Si l'utilisateur demande de « réécrire », de « trancher » ou
+  de « proposer la meilleure version », les choix de fond peuvent passer dans le texte, mais chacun
+  reste signalé comme tel (« choix de fond : … ») et les données de la consigne restent acquises.
+
+Exemple : un décret qui ne touche que des articles en « D. », que la consigne dit transmis au Conseil
+d'Etat, porte « Le Conseil d'Etat (section …) entendu, » et un dernier article « Les dispositions
+modifiées par le présent décret peuvent être modifiées par décret simple ». La consultation est
+décidée : on ne la remet pas en cause. Le visa se corrige en « Après avis du Conseil d'Etat
+(section …), » (forme, Recommandé, fiche 1.3.3). L'article final, devenu inutile mais sans danger,
+reste dans le texte corrigé, ramené à « par décret » ; une question propose de le supprimer. Ni
+l'un ni l'autre n'est bloquant : le texte des rédacteurs était légal.
+
+**Traçabilité.** Toute reformulation qui modifie, même légèrement, le sens ou le champ d'une
+disposition le dit dans son commentaire, sous la forme « changement de portée : … » (« un
+établissement » devenu « les lieux où », suppression de « à tout moment », « peut » devenu un
+présent impératif). Un tel changement relève en principe du fond, donc d'une question ; s'il est
+fait dans le texte (pour lever une ambiguïté qui rend la règle inapplicable), il est annoncé, jamais
+silencieux.
+
+**Gravité**, qui se combine avec le type (Correction ou Question) :
+
+- **Bloquant** : réservé à une illégalité certaine (incompétence : délit ou sanction administrative
+  créés par décret, article en « R. » modifié par décret simple ; consultation obligatoire omise ;
+  « notamment » dans la définition d'une infraction ; date d'entrée en vigueur d'une loi renvoyée à un
+  décret sans borne) ou à une formule qui ne peut pas s'appliquer (mauvais article, mauvais alinéa,
+  mauvaise phrase, mots cités inexacts, décompte d'alinéas faux, numéro d'insertion déjà pris,
+  modifications contradictoires du même article). Un choix légal mais perfectible n'est jamais
+  bloquant.
+- **Recommandé** : règle du guide non respectée, sans illégalité certaine (futur, « doit », « ledit »,
+  sigle, alinéa désigné par un chiffre, ordre des visas, « toutes dispositions contraires sont
+  abrogées », renvoi général à un arrêté pour « fixer les modalités d'application », « Le Conseil d'Etat
+  entendu » dans un décret simple soumis au Conseil d'Etat sans obligation).
 - **Style** : améliorations facultatives.
 
-### Étape 3 : livrer
+Une question de fond porte la gravité du risque qu'elle signale : le plus souvent Recommandé, Bloquant
+seulement si le texte des rédacteurs est certainement illégal (un délit créé par décret : la question
+propose une contravention ou un passage par la loi, le choix reste aux rédacteurs).
+
+### Étape 3 : se relire avant de rendre
+
+Avant de livrer, reprendre le texte corrigé et le tableau des commentaires, ligne à ligne :
+
+1. **Forme ou fond ?** Pour chaque correction faite dans le texte, se demander si elle change ce que
+   la règle impose, à qui, où, quand ou par qui. Si oui, rétablir la rédaction des rédacteurs et
+   transformer le commentaire en Question avec la rédaction alternative ; si elle reste dans le
+   texte (mandat élargi, ambiguïté qui rend la règle inapplicable), vérifier que le commentaire dit
+   « changement de portée : … ».
+2. **Cohérence interne.** Aucune correction ne retombe dans un défaut que la relecture reproche
+   ailleurs : une rédaction proposée ne contient pas un renvoi général, un « notamment », un futur ou
+   un sigle que l'on critique dans un autre commentaire. Un défaut relevé mais laissé dans le texte
+   parce que sa correction relève du fond est dit tel quel dans son commentaire (« conservé : choix
+   des rédacteurs, voir question 2 »), jamais corrigé ici et conservé là.
+3. **Structure conservée.** Comparer le texte corrigé au projet : même nombre d'articles, même
+   ordre des opérations, mêmes dispositions finales. Tout écart correspond à une erreur légistique
+   avérée et nommée dans un commentaire.
+4. **Gravités.** Chaque « Bloquant » désigne une illégalité certaine ou une formule inapplicable ; les
+   autres descendent en Recommandé.
+5. **Consigne.** Aucune donnée fixée par l'énoncé n'a été défaite dans le texte.
+
+### Étape 4 : livrer
 
 ```
 ## Diagnostic
-(nature du texte, impression d'ensemble, 3 à 8 lignes, les points bloquants d'abord)
+(nature du texte, impression d'ensemble, 3 à 8 lignes, les points bloquants d'abord ; dire en une
+ligne ce qui a été corrigé directement et ce qui est laissé aux rédacteurs)
 
 ## Texte corrigé
 (texte intégral corrigé, présentation Journal officiel ; les passages modifiés peuvent être signalés
-en gras si l'utilisateur travaille en Markdown, sinon texte propre)
+en gras si l'utilisateur travaille en Markdown, sinon texte propre ; les points de fond gardent la
+rédaction des rédacteurs)
 
 ## Commentaires
-| N° | Emplacement | Constat | Correction | Règle (fiche) | Niveau |
-(numéroté, dans l'ordre du texte ; Niveau = Bloquant / Recommandé / Style)
+| N° | Emplacement | Constat | Correction ou rédaction proposée | Règle (fiche) | Type | Niveau |
+(numéroté, dans l'ordre du texte ; Type = Correction (faite dans le texte) / Question (texte
+inchangé, rédaction alternative proposée) ; Niveau = Bloquant / Recommandé / Style)
 
 ## Questions au rédacteur
-(choix de fond à confirmer, informations manquantes : dates, consultations, ministres rapporteurs)
+(une ligne par commentaire de type Question, avec son numéro, la décision attendue et la rédaction
+alternative ; puis les informations manquantes : dates, consultations, ministres rapporteurs)
 
 ## Références citées
 (voir ci-dessous)

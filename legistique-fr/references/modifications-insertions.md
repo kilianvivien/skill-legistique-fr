@@ -9,8 +9,8 @@ positif), 3.8.3 (abrogations), 3.6.1 (extension outre-mer) ; cours, leçons 1 et
   insertion et abrogation d'un support existant (code, à défaut loi ou décret de même matière).
   Avantages : regroupement des règles d'un domaine, moins d'erreurs et de doubles emplois.
 - **Économie.** Ne procéder qu'aux changements utiles au but poursuivi. Pas de reprise complète d'un
-  texte pour des changements limités ; mais réécriture d'ensemble d'une phrase ou d'un alinéa plutôt
-  que trois retouches ponctuelles. Pas d'améliorations de pure forme sur un texte ancien qui fonctionne,
+  texte pour des changements limités ; mais, en rédaction, réécriture d'ensemble d'une phrase ou d'un
+  alinéa plutôt que trois retouches ponctuelles. Pas d'améliorations de pure forme sur un texte ancien qui fonctionne,
   pas de retouche de typographie ou de ponctuation (Légifrance gère seul le point final après abrogation
   du dernier élément d'une énumération).
 - **Texte en vigueur.** On modifie toujours la version consolidée à jour du texte, jamais un texte
@@ -27,6 +27,12 @@ positif), 3.8.3 (abrogations), 3.6.1 (extension outre-mer) ; cours, leçons 1 et
   vise « le premier alinéa de l'article 1er » désigne toujours l'ancien premier alinéa. Si l'on doit se
   référer à l'état modifié, le dire : « tel qu'il résulte du 2° du présent article ». Formule de
   contournement admise : « Au deuxième alinéa, qui devient le troisième, … ».
+- **Préférences de rédaction, pas motifs de correction.** Les choix entre techniques également
+  correctes (réécrire ou retoucher, insérer un alinéa ou compléter l'article, une annonce groupée ou
+  des insertions successives, ajouter un élément d'énumération ou réécrire le dernier) se font en
+  rédigeant. En relecture, la technique des rédacteurs se conserve dès qu'elle s'applique au texte
+  en vigueur ; on ne corrige que la lettre de la formule (verbe, emplacement, décompte des alinéas,
+  mots cités, guillemets). Voir SKILL.md, fonction B, étape 2.
 - **Cohérence ex post.** Les dispositions nouvelles insérées doivent, elles, tenir compte des autres
   modifications (nouveau nom d'un organisme, décalage d'alinéas).
 
@@ -122,9 +128,11 @@ sans accès, laisser le numéro en blanc et écrire pourquoi.
 nouveau doit le suivre d'un point-virgule. Deux rédactions donnent un texte consolidé correct : réécrire
 le dernier élément avec le nouveau (« Le 3° est remplacé par les dispositions suivantes : / « 3° … ; /
 « 4° … . » »), ou insérer le 4° et ajuster la ponctuation du 3° (« A la fin du 3°, le signe : « . » est
-remplacé par le signe : « ; » »). La première ne touche qu'une fois à l'énumération. Le guide ne
-dispense de retoucher la ponctuation que pour l'abrogation du dernier élément. Dans tous les cas, le
-texte consolidé montré à l'utilisateur porte la ponctuation exacte.
+remplacé par le signe : « ; » »). La première ne touche qu'une fois à l'énumération ; la seconde est
+tout aussi correcte. Le guide ne dispense de retoucher la ponctuation que pour l'abrogation du dernier
+élément. Dans tous les cas, le texte consolidé montré à l'utilisateur porte la ponctuation exacte. En
+relecture, la rédaction choisie par les rédacteurs se garde : si la ponctuation du 3° n'est pas
+ajustée, ajouter ce seul ajustement, sans réécrire le 3°.
 
 ### Abrogation et suppression
 
