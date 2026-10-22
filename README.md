@@ -249,7 +249,12 @@ Claude Code ou Cursor.
 ### Pour de meilleurs résultats
 
 1. **Précisez la nature du texte** (loi, décret en Conseil d'Etat, arrêté…). Sinon, la skill la
-   déduit de la matière et l'annonce en tête de réponse.
+   déduit de la matière et l'annonce en tête de réponse. Lorsque plusieurs options légistiques sont
+   viables et que le choix change l'architecture du texte (loi ou décret, texte autonome ou insertion
+   dans un code, contravention ou amende administrative, entrée en vigueur différée…), la skill vous
+   pose d'abord une courte série de questions à choix, avec l'option recommandée en premier. Pour
+   l'éviter, demandez-lui de trancher : elle retient alors l'option recommandée et décrit l'autre dans
+   les points à arbitrer.
 2. **Fournissez le texte modifié en vigueur** quand vous modifiez un texte existant : c'est la seule
    façon de vérifier les désignations d'alinéas.
 3. **Donnez les dates et consultations** connues (avis, Conseil d'Etat, ministres rapporteurs).
