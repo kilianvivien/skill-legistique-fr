@@ -14,7 +14,7 @@ description: >-
   mot « légistique ». French legislative and regulatory drafting and review (legistics).
 license: MIT
 metadata:
-  version: "0.5.3"
+  version: "0.6.0"
 ---
 
 # Légistique française
@@ -79,6 +79,70 @@ Dans toutes les fonctions, commencer par qualifier le texte, car presque toutes 
 3. **Destinataires et situations en cours** : qui est touché, existe-t-il des procédures ou contrats en
    cours, une date commune d'entrée en vigueur s'impose-t-elle (textes applicables aux entreprises :
    1er janvier, avril, juillet, octobre).
+
+## Interroger l'utilisateur quand plusieurs options légistiques sont viables
+
+La qualification fait souvent apparaître plusieurs options également légales entre lesquelles la
+demande ne permet pas de choisir. Si l'option retenue change l'architecture du texte, une hypothèse
+erronée oblige à tout refaire. Dans ce cas, **poser la question avant de rédiger** plutôt que de
+choisir en silence.
+
+**Quand demander.** Une question n'est posée que si les trois conditions suivantes sont réunies :
+
+1. au moins deux options sont juridiquement viables : une option illégale ou proscrite par le guide
+   n'est pas une option (elle se signale, elle ne se propose pas) ;
+2. le choix est structurant : il change la nature ou le support du texte, son plan, sa procédure ou
+   le régime de la règle, et non une simple valeur ;
+3. ni la demande ni le contexte (texte fourni, consigne, échanges précédents) ne tranchent.
+
+Exemples de choix structurants :
+
+- **Nature et niveau** : loi ou décret quand la matière est à la frontière des articles 34 et 37 ;
+  décret en Conseil d'Etat ou décret simple ; décret ou arrêté ; arrêté d'un ministre ou
+  interministériel (fiches 1.3.2, 1.3.3, 1.3.6).
+- **Support** : texte autonome, ou insertion dans un code ou un texte existant ; et si plusieurs
+  codes ou textes pourraient accueillir les règles, lequel (fiche 3.4.1).
+- **Technique de modification** pour un texte modificatif d'ampleur (fonction A) : réécriture
+  d'ensemble d'un article ou modifications ponctuelles ; nouvelle division ou insertion d'articles.
+- **Régime de sanction** : contravention, amende administrative ou délit, chacun avec son niveau de
+  norme (fiche 5.6) ; régime d'autorisation, de déclaration ou d'enregistrement (fiche 5.5).
+- **Application dans le temps** : entrée en vigueur immédiate ou différée, mesures transitoires ou
+  application aux situations en cours (fiches 3.8.1, 3.8.2) ; expérimentation ou généralisation
+  (fiche 5.10).
+- **Application outre-mer** : application de plein droit, mention expresse d'applicabilité ou
+  adaptation (fiche 3.6.1).
+- **Fonction attendue**, quand la demande se prête à plusieurs lectures : correction de la forme
+  seule (fonction B) ou réécriture qui tranche le fond (mandat élargi), avis (fonction C) ou
+  correction.
+
+**Comment demander.**
+
+- Utiliser l'outil de question de l'agent s'il en dispose (questions à choix, par exemple
+  `AskUserQuestion`) ; sinon, poser la question en texte et s'arrêter là.
+- Une seule série de questions, au plus quatre, regroupées avant toute rédaction. Ne pas égrener les
+  questions au fil de la réponse.
+- Deux à quatre options par question, chacune décrite par sa conséquence concrète (« décret en
+  Conseil d'Etat : consultation obligatoire, délai de trois à quatre mois ; le texte ne pourra être
+  modifié que par un décret de même niveau »), avec la fiche du guide.
+- Placer en premier l'option que l'agent recommande, marquée « (recommandé) », avec la raison en une
+  ligne.
+- Ne pas poser de question dont la réponse se trouve dans les fichiers de la skill, sur Légifrance
+  ou dans le texte fourni : vérifier d'abord.
+
+**Quand ne pas demander.**
+
+- Le choix porte sur une valeur (seuil, montant, délai, classe de contravention, date) : rédiger
+  avec la valeur entre crochets et l'inscrire dans les points à arbitrer (fonction A, étape 3).
+- Une option est nettement préférable selon le guide : la retenir et l'annoncer dans les hypothèses.
+- La question porte sur le fond d'un projet relu (fonction B) : elle reste un commentaire de type
+  Question, car le texte des rédacteurs fait foi.
+- L'utilisateur a demandé de trancher, de ne pas poser de questions ou de livrer directement, ou
+  l'agent travaille sans interlocuteur (exécution non interactive, tâche automatisée).
+
+Dans tous ces cas, retenir l'option recommandée, l'énoncer dans les **hypothèses retenues** (ou le
+diagnostic) et décrire l'autre option dans les **points à arbitrer** (ou les questions au
+rédacteur), avec ce qu'elle changerait au texte. Une fois les réponses reçues, les reprendre comme
+données de la consigne : elles sont acquises et ne se rediscutent pas dans la réponse.
 
 ## Fonction A : de la prose au texte normatif
 
@@ -603,7 +667,8 @@ Méthode, pour ne pas saturer le contexte :
   seul ou omettre la précision. Chaque réponse se termine par la section « Références citées ».
 - Ne pas fabriquer de numéro NOR, de numéro de décret, de date de signature, de nom de ministre.
 - Ne pas trancher les questions de fond (seuils, montants, autorité compétente, sanctions) à la place
-  du rédacteur : proposer une rédaction complète, mettre entre crochets la seule valeur à arbitrer,
+  du rédacteur. Si le choix est structurant et que l'utilisateur peut répondre, lui poser la question
+  avant de rédiger (voir « Interroger l'utilisateur ») ; sinon, proposer une rédaction complète, mettre entre crochets la seule valeur à arbitrer,
   lister dans les points à arbitrer. La prudence porte sur les références et les choix de fond, pas
   sur la rédaction : un projet réduit à des blancs et qualifié de « maquette » ne rend pas service.
 - Le guide distingue lois et règlements sur plusieurs formules ; quand la nature du texte est
