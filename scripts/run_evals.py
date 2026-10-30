@@ -80,7 +80,10 @@ Pour chaque attente numérotée, dis si la réponse la respecte. Sois exigeant e
 n'est respectée que si la réponse y satisfait réellement, pas si elle s'en approche. Une attente qui \
 interdit quelque chose (« aucun numéro inventé ») est respectée si la réponse ne le fait nulle part. \
 Quand une attente porte sur le projet de texte, regarde le projet lui-même, pas les commentaires qui \
-l'accompagnent. La justification tient en une ou deux phrases et cite le passage décisif.
+l'accompagnent. Les formules consacrées ne sont pas des fautes : le futur de la formule de publication \
+(« qui sera publié au Journal officiel de la République française ») est l'usage, et ne contrevient pas \
+à une attente qui exige le présent dans le dispositif. La justification tient en une ou deux phrases et \
+cite le passage décisif.
 
 Réponds avec un verdict par attente, dans l'ordre, numérotés à partir de 1."""
 

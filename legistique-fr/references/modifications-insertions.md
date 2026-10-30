@@ -35,6 +35,19 @@ positif), 3.8.3 (abrogations), 3.6.1 (extension outre-mer) ; cours, leçons 1 et
   mots cités, guillemets). Voir SKILL.md, fonction B, étape 2.
 - **Cohérence ex post.** Les dispositions nouvelles insérées doivent, elles, tenir compte des autres
   modifications (nouveau nom d'un organisme, décalage d'alinéas).
+- **Ajouter des mots plutôt que remplacer la phrase.** Pour étendre une règle (« soumise à
+  autorisation » qui devient « soumise à déclaration préalable ou à autorisation »), insérer les seuls
+  mots nouveaux : « Au deuxième alinéa, après le mot : « soumise », sont insérés les mots : « à
+  déclaration préalable ou » ». Remplacer un passage plus long que nécessaire oblige à recopier des
+  mots du texte en vigueur, et chaque mot recopié est une occasion d'erreur.
+- **Coordinations, sans extension.** Une modification ou une abrogation oblige à relire tout ce qui
+  renvoie à la disposition touchée, partie réglementaire comprise : renvois à un alinéa qui change de
+  rang (« par le premier alinéa » qui devient « au troisième alinéa »), article en « R. » qui applique
+  un article en « L. » abrogé ou déclassé (« conformément à l'article L. … »), mot défini ailleurs
+  autrement. Ces coordinations sont nécessaires et vont dans le texte. Étendre la réforme à des
+  articles voisins que la commande ne vise pas (aligner une autre infraction, un autre régime) est en
+  revanche un choix de fond : le proposer dans les points à arbitrer, avec la rédaction, sans
+  l'intégrer d'office.
 
 ## 2. Vocabulaire des opérations
 

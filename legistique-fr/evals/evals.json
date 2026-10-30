@@ -32,7 +32,7 @@
         "L'ordre des visas est corrigé : Constitution en tête, code avant décret, avis après les textes",
         "« abrogé et remplacé » est corrigé : soit « est remplacé par les dispositions suivantes » (ou « est ainsi rédigé ») avec la tête « Art. 3. – » entre guillemets, soit une modification partielle de l'article 3 qui rend l'abrogation inutile",
         "La double modification de l'article 3 du décret de 2015 (réécrit par l'article 1er puis complété par l'article 3) est relevée comme une incohérence",
-        "« Toutes dispositions contraires au présent décret sont abrogées » est relevé et supprimé, au niveau Bloquant",
+        "« Toutes dispositions contraires au présent décret sont abrogées » est relevé comme une formule proscrite (fiche 3.8.3), au moins au niveau Recommandé, et sa suppression est faite dans le texte ou proposée",
         "L'entrée en vigueur renvoyée à un arrêté est relevée au niveau Bloquant et l'article d'entrée en vigueur est placé avant l'article d'exécution",
         "Les fautes de langue sont corrigées : futur et « devra / pourra », « Ledit », « 2 fois » en lettres, « en charge de » remplacé par « chargé de », « concernée »",
         "Les fautes de présentation sont corrigées : « Article 1er », « alinéa 2 » écrit « deuxième alinéa », « les mots : « … » » avec deux-points, « JORF » écrit en toutes lettres",
@@ -199,10 +199,10 @@
       "expected_output": "Un projet d'arrêté : intitulé « Arrêté du … fixant la liste des pièces … » sans numéro, « Le ministre de l'agriculture [intitulé exact à compléter], », visa du décret qui fonde la compétence (notamment son article 4), « Arrête : », « Article 1er » avec énumération en 1°, 2°, 3° et un cas conditionnel rédigé sans « éventuellement », article d'entrée en vigueur précisant l'application aux demandes déposées à compter du 1er mars 2027, article d'exécution confié au directeur général compétent (« est chargé de l'exécution du présent arrêté, qui sera publié au Journal officiel »), tableau des transformations, points à arbitrer.",
       "files": [],
       "expectations": [
-        "Le projet suit la présentation d'un arrêté : intitulé « Arrêté du … » sans numéro, ministre signataire en ouverture, visa du décret appliqué, « Arrête : », « Article 1er », article d'exécution en dernier",
+        "Le projet suit la présentation d'un arrêté : intitulé « Arrêté du … » sans numéro, ministre signataire en ouverture, visa du décret appliqué, « Arrête : », « Article 1er », et en dernier un article d'exécution ou, pour un arrêté signé par le ministre lui-même, l'article « Le présent arrêté sera publié au Journal officiel de la République française. »",
         "Les pièces sont énumérées en 1°, 2°, 3°, 4° avec la ponctuation des énumérations, et la pièce conditionnelle est rédigée par une condition précise (« lorsque le demandeur est locataire ») plutôt que par « éventuellement »",
-        "L'entrée en vigueur est rédigée par rapport aux demandes déposées à compter du 1er mars 2027, dans un article placé avant l'article d'exécution",
-        "L'article d'exécution confie l'exécution à un directeur d'administration centrale ou au ministre selon l'usage, et non à « les services »",
+        "L'entrée en vigueur est rédigée par rapport aux demandes déposées à compter du 1er mars 2027, dans un article placé avant le dernier article (exécution ou publication)",
+        "S'il y a un article d'exécution, il confie l'exécution à un directeur d'administration centrale ou au ministre selon l'usage, et non à « les services » ; un dernier article limité à la publication au Journal officiel est également correct",
         "Le dispositif est au présent, sans « doit », sans sigle (« RIB » écrit en toutes lettres)",
         "Le sigle ou l'intitulé du ministre n'est pas inventé : il est laissé à compléter ou marqué à vérifier",
         "Toute référence juridique que l'agent introduit lui-même (numéro d'article de code, numéro ou date d'un texte, intitulé exact d'un texte, décision de justice, acte européen) sans qu'elle figure dans la demande est soit vérifiée avec une source indiquée (Légifrance, ou fiche du guide qui la cite), soit laissée en blanc ou marquée explicitement comme à vérifier ; les articles de la Constitution sont exemptés"
@@ -356,6 +356,46 @@
         "L'alinéa inséré garde « Tout apiculteur peut à tout moment » ; toute reformulation qui en change la portée est annoncée dans un commentaire « changement de portée » ou posée en question",
         "Le renvoi général « fixe les modalités d'application » est relevé et une rédaction précise est proposée en question ; la relecture ne le critique pas tout en le laissant dans le texte sans le dire",
         "Aucun commentaire n'est classé « Bloquant » pour un choix légal des rédacteurs"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "contreseings-sobres",
+      "prompt": "Rédige l'article d'exécution et les visas d'un décret simple, pris sur le rapport du ministre de la transition écologique, qui modifie deux articles en « D. » du code de l'environnement pour permettre au préfet de suspendre par arrêté l'usage des bornes de recharge des stations de lavage en période de sécheresse. Le préfet instruit les demandes, les services de police constatent les manquements (sanctionnés par une contravention déjà prévue à l'article R. … du même code, inchangé), et les communes sont informées. Le décret ne comporte aucune disposition particulière à l'outre-mer. Le ministre délégué chargé de l'industrie, dont le décret d'attributions lui délègue la signature « de tous actes, arrêtés et décisions », souhaite figurer au texte.",
+      "expected_output": "Un décret simple sans « Le Conseil d'Etat entendu ». L'article d'exécution ne cite que le ministre rapporteur (transition écologique), seul chargé de mesures d'exécution : pas le ministre de l'intérieur du seul fait que le préfet et la police interviennent (le préfet représente chaque ministre), pas le ministre chargé des collectivités pour l'information des communes, pas le garde des sceaux puisque la contravention n'est ni créée ni modifiée, pas le ministre délégué dont le décret d'attributions ne prévoit pas qu'il contresigne. Chaque exclusion est justifiée d'une ligne avec la fiche 3.9.2, et la demande du ministre délégué devient une question, sans ajout dans le texte. Les visas ne comprennent aucun avis ajouté « par prudence ».",
+      "files": [],
+      "expectations": [
+        "L'article d'exécution ne cite que le ministre de la transition écologique (titre officiel ou laissé en blanc).",
+        "La réponse explique que l'intervention du préfet ou de la police n'appelle pas le contreseing du ministre de l'intérieur (fiche 3.9.2).",
+        "Le ministre délégué chargé de l'industrie ne figure pas dans l'article d'exécution, et la réponse dit qu'une délégation de signature « de tous actes » ne vaut pas habilitation à contresigner un décret.",
+        "Le garde des sceaux ne figure pas comme contresignataire, la contravention n'étant ni créée ni modifiée.",
+        "Les visas ne comportent pas « Le Conseil d'Etat entendu » et n'ajoutent pas de consultation sans texte qui l'impose."
+      ]
+    },
+    {
+      "id": 23,
+      "name": "necessite-mesure-de-gestion",
+      "prompt": "Chef du bureau de la réglementation d'un ministère, on me demande si les élèves dispensés par la loi de l'épreuve orale d'un examen national « en raison d'une incapacité définitive à la passer » peuvent, s'ils le souhaitent, suivre à distance la préparation à cette épreuve et recevoir l'attestation de réussite de l'oral. Précise les textes à modifier ou à créer et les consultations.",
+      "expected_output": "Une analyse de nécessité et de niveau avant toute rédaction, qui conclut qu'il n'est ni nécessaire ni prudent de créer un régime réglementaire : la loi dispense ces élèves parce qu'ils sont définitivement incapables de passer l'épreuve, et un règlement qui leur délivrerait l'attestation de réussite heurterait l'économie de la loi ; modifier la loi n'est sans doute pas réaliste. La réponse propose une mesure de gestion (offre facultative de préparation à distance, information des élèves par les services, éventuellement une attestation de suivi sans valeur d'attestation de réussite) organisée par circulaire ou instruction, en rappelant qu'une circulaire ne peut créer de règle nouvelle. Elle ne livre pas de projet de décret ; si elle mentionne la voie normative, c'est pour en dire la lourdeur (consultations, niveau) et le risque.",
+      "files": [],
+      "expectations": [
+        "La réponse examine d'abord si un texte est nécessaire et conclut qu'une mesure de gestion (circulaire, instruction, offre facultative) suffit ou est préférable.",
+        "La réponse relève que délivrer l'attestation de réussite à des élèves dispensés pour incapacité définitive heurterait l'économie de la loi.",
+        "La réponse ne contient pas de projet de décret ou d'arrêté rédigé en articles.",
+        "La réponse rappelle qu'une circulaire ne peut pas créer de règle nouvelle (fiche 1.3.7)."
+      ]
+    },
+    {
+      "id": 24,
+      "name": "delegalisation-inutile",
+      "prompt": "Le cabinet veut lever par décret, via la procédure de l'article 37, second alinéa, de la Constitution, l'interdiction de pêcher de nuit posée par l'article L. … du code de l'environnement (« La pêche n'est autorisée que de jour. Le jour s'entend du temps qui commence une demi-heure avant le lever du soleil et finit une demi-heure après son coucher. »). Un autre article législatif du même code punit de deux ans d'emprisonnement « le fait de pêcher pendant la nuit » avec certains engins. Étudie la faisabilité et prépare le décret.",
+      "expected_output": "Une analyse qui distingue la nature de la disposition et l'utilité du déclassement : l'interdiction de principe peut paraître réglementaire, mais le délit qui réprime la pêche « pendant la nuit » maintiendrait l'interdiction, et la définition du jour, qui fixe le champ d'application d'un délit, relève de la loi (légalité des délits). Le déclassement est donc inutile ou impossible ; une loi est nécessaire. La réponse ne rédige pas le décret de déclassement « au cas où » : une ligne dit qu'il n'y a pas de décret utile à préparer, et elle indique le vecteur législatif.",
+      "files": [],
+      "expectations": [
+        "La réponse relève que le délit réprimant la pêche « pendant la nuit » maintiendrait l'interdiction même après déclassement.",
+        "La réponse conclut que la définition du jour, qui fixe le champ d'un délit, relève de la loi.",
+        "La réponse ne contient pas de projet de décret autorisant la pêche de nuit.",
+        "La réponse indique qu'une loi est nécessaire et mentionne un vecteur (projet ou proposition de loi, amendement)."
       ]
     }
   ]

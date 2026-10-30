@@ -401,12 +401,13 @@ L'agent ne charge pas tout le guide d'un coup. Il lit la fiche de référence ut
 | [`structure-et-plan.md`](legistique-fr/references/structure-et-plan.md) | Plans, divisions, articles, alinéas, énumérations, numérotation |
 | [`langue-et-style.md`](legistique-fr/references/langue-et-style.md) | Temps, vocabulaire précis, mots proscrits, renvois, désignation des autorités |
 | [`modifications-insertions.md`](legistique-fr/references/modifications-insertions.md) | Formules de modification, d'insertion, d'abrogation ; « susvisé » |
-| [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté ; visas ; entrée en vigueur ; notice |
+| [`formules-et-modeles.md`](legistique-fr/references/formules-et-modeles.md) | Squelettes de loi, ordonnance, décret, arrêté (y compris préfectoral) ; visas ; contreseings ; entrée en vigueur ; notice |
 | [`typographie.md`](legistique-fr/references/typographie.md) | Règles typographiques du Journal officiel |
 | [`grille-de-relecture.md`](legistique-fr/references/grille-de-relecture.md) | Liste de contrôle ordonnée, avec niveaux de gravité |
 | [`analyse.md`](legistique-fr/references/analyse.md) | Analyse d'un texte en trois parties : nécessité (dont opportunité), niveau (norme, compétence, conformité), portée (caractère normatif, champ, cohérence, qualité rédactionnelle) |
 | [`amendements.md`](legistique-fr/references/amendements.md) | Amendements : chapeau (Assemblée, Sénat), pastillage, recevabilité, exposé sommaire, gage |
 | [`procedure-et-documents.md`](legistique-fr/references/procedure-et-documents.md) | Parcours selon la nature du texte, consultations obligatoires, trames d'étude et de fiche d'impact, exposé des motifs |
+| [`cas-types.md`](legistique-fr/references/cas-types.md) | Commandes récurrentes : conséquences d'une décision de justice, délégalisation, ordonnance, expérimentation, absence de texte nécessaire, commande sensible |
 | [`legifrance.md`](legistique-fr/references/legifrance.md) | Option : vérification du droit en vigueur, si l'agent a accès à Légifrance |
 | [`guide/`](legistique-fr/references/guide/index.md) | **Texte intégral du guide**, une fiche par fichier, avec un index : source subsidiaire |
 | [`lint_legistique.py`](legistique-fr/scripts/lint_legistique.py) | Script : repère les fautes mécaniques (futur, « doit », sigles, « Article 1 »…) et de structure (numérotation, article d'exécution, ordre des visas, « susvisé », article modifié deux fois) ; liste les références citées |
@@ -505,6 +506,7 @@ skill-legistique-fr/
 └── scripts/
     ├── build-zip.sh          construit legistique-fr.zip et legistique-fr.skill
     ├── run_evals.py          lance les evals et les fait noter par un juge
+    ├── evals_agents.py       evals par sous-agents Claude Code, notées par Codex
     └── convert-guide.py      régénère references/guide/ depuis le PDF du guide
 ```
 
@@ -539,6 +541,21 @@ python3 scripts/run_evals.py --declenchement            # la skill se déclenche
 ```
 
 Résultats et rapport dans `legistique-fr-workspace/evals/<horodatage>/` (non versionné).
+
+**Evals par agents.** Depuis Claude Code, une variante compare plusieurs versions de la skill sans
+`claude -p` ni clé API : des sous-agents (Sonnet par défaut) exécutent les cas, puis un modèle
+indépendant (GPT 6.1 Sol, via la CLI Codex) les note avec la même consigne de juge. La procédure
+est décrite dans la skill de projet `.claude/skills/evals-par-agents/` : demandez simplement à
+Claude Code de « lancer les evals par agents » sur quelques cas.
+
+```bash
+python3 scripts/evals_agents.py preparer --ids 1,2,16 --versions v0.5.3,courante   # copies, énoncés, consignes
+# … Claude Code lance un sous-agent par tâche de consignes.json …
+python3 scripts/evals_agents.py noter legistique-fr-workspace/evals-agents/<horodatage>
+```
+
+Le rapport (`rapport.md`) compare les scores par cas et par version, avec la justification du juge
+pour chaque attente manquée.
 
 Pour reconstruire les archives après une modification :
 

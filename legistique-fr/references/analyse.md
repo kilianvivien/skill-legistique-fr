@@ -72,8 +72,9 @@ fait revient à la section 1.2.
 |---|---|
 | Quel problème le texte résout-il, et découle-t-il d'une règle inadaptée ? | Si le problème vient des moyens, de l'organisation ou de la méconnaissance du droit, un texte nouveau n'y changera rien (fiche 1.1.1) |
 | La réforme est-elle juridiquement obligatoire ? | Mise en conformité avec une norme supérieure, transposition, exécution d'une décision de justice |
-| Le droit existant suffit-il déjà ? | Règle en vigueur, faculté déjà ouverte, régime voisin applicable |
-| Une solution non normative suffirait-elle ? | Droit souple, information, incitation, convention, organisation des services (fiche 1.1.1) |
+| Le droit existant suffit-il déjà ? | Règle en vigueur, faculté déjà ouverte, régime voisin applicable. L'existence de ce droit est elle-même un constat à statuer : sans lecture du texte, écrire « les pouvoirs de police du maire pourraient suffire (À vérifier : article … du code …) », jamais « les maires ont déjà ce pouvoir », ni dans le constat ni dans la synthèse |
+| Une solution non normative suffirait-elle ? | Droit souple, information, incitation, convention, organisation des services, circulaire ou mesure de gestion (fiche 1.1.1). Une offre de service facultative (formation en ligne, session d'information, accompagnement) se crée souvent sans texte |
+| Le texte envisagé heurte-t-il l'économie de la loi, même sans contredire sa lettre ? | Règlement qui fait participer à un dispositif des personnes que la loi en exempte parce qu'elles en sont « inaptes », qui rétablit une obligation que la loi a écartée, qui contourne une qualification légale : la voie réglementaire est alors périlleuse, et la loi n'est pas toujours réaliste. Chercher la mesure de gestion qui approche l'objectif sans créer de droit nouveau |
 | Le niveau de contrainte est-il proportionné ? | Seules les règles indispensables à l'objectif sont contraignantes ; exceptions et typologies en cascade (fiche 1.1.1) ; double compensation pour une contrainte nouvelle (fiche 1.1.2) |
 | Le texte sera-t-il effectif ? | Service chargé de l'appliquer et moyens, contrôle, sanction adaptée, textes d'application identifiés, information des usagers (fiches 1.1.1, 1.2.1) |
 | Une expérimentation serait-elle plus adaptée ? | Article 37-1 de la Constitution, fiche 5.10 |
@@ -179,6 +180,7 @@ Règles du jugement :
 | Règlement qui intervient dans le domaine de la loi sans renvoi précis d'une loi | Annulation pour incompétence (fiche 1.3.2) | B |
 | Loi qui renvoie au règlement un élément déterminant, ou reste imprécise sur une règle qui lui revient | Incompétence négative, censure possible (fiche 1.3.2) | B |
 | Loi qui contient des détails réglementaires | Pas inconstitutionnel, mais figé : modifiable seulement par une loi, sauf déclassement (fiche 2.4.5) | R |
+| Délégalisation (article 37, second alinéa) demandée pour atteindre un objectif | Examiner, disposition par disposition, si le déclassement est possible **et utile** : une règle réglementaire par nature peut rester sans effet si une disposition législative non déclassable (un délit qui la reprend, comme « chasser pendant la nuit ») maintient l'interdiction ; et le législateur doit fixer lui-même le champ d'application de la loi pénale (légalité des délits, article 34 de la Constitution) : un délit ne peut dépendre d'une définition laissée au règlement | R |
 | Disposition organique dans une loi ordinaire (ou l'inverse) | Censure ou déclassement (article 46) | B |
 | Disposition étrangère au domaine d'une loi de finances ou de financement de la sécurité sociale | Cavalier, censure (fiches 1.3.4, 1.3.5) | B |
 

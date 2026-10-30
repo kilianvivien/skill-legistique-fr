@@ -14,7 +14,7 @@ description: >-
   mot « légistique ». French legislative and regulatory drafting and review (legistics).
 license: MIT
 metadata:
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Légistique française
@@ -62,13 +62,14 @@ Dans toutes les fonctions, commencer par qualifier le texte, car presque toutes 
      « décret en Conseil d'Etat », un décret modifié pris « le Conseil d'Etat entendu ») : « Le Conseil
      d'Etat (section …) entendu, » ;
    - décret simple (que des articles en « D. », aucun texte n'impose le Conseil d'Etat) soumis au
-     Conseil d'Etat sans y être tenu : « Après avis du Conseil d'Etat (section …), ». Ne jamais écrire
-     « Le Conseil d'Etat entendu » dans ce cas : cette seule mention ferait du texte un décret en
-     Conseil d'Etat, modifiable seulement par un tel décret (fiche 1.3.3). Pas besoin non plus
-     d'article « Le présent décret peut être modifié par décret » : il ne sert qu'à contrer
-     l'effet de « Le Conseil d'Etat entendu ». En relecture, la correction du visa est de niveau
-     Recommandé, jamais Bloquant, et un tel article présent dans le projet n'est pas supprimé
-     d'office (voir fonction B, étape 2) ;
+     Conseil d'Etat sans y être tenu : « Après avis du Conseil d'Etat (section …), ». Ne pas écrire
+     « Le Conseil d'Etat entendu » dans ce cas : pour un décret non codifié, cette seule mention en
+     ferait un décret en Conseil d'Etat, modifiable seulement par un tel décret (fiche 1.3.3). Dans
+     un code moderne, la lettre « D. » suffit à maintenir l'article au niveau du décret simple, même
+     sous « Le Conseil d'Etat entendu » (fiches 1.3.3 et 1.4.2) : un article « Les dispositions
+     modifiées … peuvent être modifiées par décret simple » y est donc toujours inutile. En
+     relecture, la correction du visa est de niveau Recommandé, jamais Bloquant, et un tel article
+     présent dans le projet n'est pas supprimé d'office (voir fonction B, étape 2) ;
    - décret simple non soumis au Conseil d'Etat : aucune mention.
    Si un même décret touche des articles en « R. » et en « D. », il est pris en Conseil d'Etat et la
    mention « entendu » vaut pour tout le texte, sans changer le niveau des articles en « D. »
@@ -79,6 +80,40 @@ Dans toutes les fonctions, commencer par qualifier le texte, car presque toutes 
 3. **Destinataires et situations en cours** : qui est touché, existe-t-il des procédures ou contrats en
    cours, une date commune d'entrée en vigueur s'impose-t-elle (textes applicables aux entreprises :
    1er janvier, avril, juillet, octobre).
+4. **Cas type** : la commande consiste-t-elle à tirer les conséquences d'une décision de justice, à
+   délégaliser, à modifier une ordonnance, à proroger ou sortir d'une expérimentation, à dire si un
+   texte est nécessaire, ou à traduire une commande politique sensible ? Lire alors
+   `references/cas-types.md` avant de rédiger : l'outil et le périmètre se choisissent avant la
+   formule.
+
+## Sobriété : faire ce que la situation exige, pas davantage
+
+Une réponse légistique se juge aussi à ce qu'elle n'ajoute pas. Les corrigés de référence sont
+sobres : un ministre de trop dans l'article d'exécution, un avis visé « par prudence », un article
+réécrit au-delà de la commande ou un décret créé là où une mesure de gestion suffisait sont des
+fautes, pas des précautions. Dans toutes les fonctions :
+
+- **Le texte s'en tient à la commande et à ce qu'elle exige nécessairement.** Les coordinations
+  indispensables (renvois cassés, articles d'application qui citent la disposition modifiée) vont
+  dans le texte ; toute extension (autre article, autre public, autre régime, mesure complémentaire)
+  va dans les points à arbitrer, avec sa rédaction, jamais dans le dispositif.
+- **Chaque élément d'encadrement a un fondement que l'on peut nommer.** Un contreseing répond au
+  critère de la fiche 3.9.2 (le ministre devra prendre une mesure d'exécution) ; un avis visé répond
+  à un texte qui l'impose ; un visa répond à un texte que le projet applique, cite, modifie ou
+  écarte. Faute de fondement nommé, ne pas l'ajouter, même en blanc (« Vu l'avis de … »,
+  « le ministre de … [outre-mer] » « au cas où ») : poser la question. Voir
+  `references/formules-et-modeles.md` (« Qui contresigne », « Que viser »).
+- **Pas de texte sans nécessité.** Avant de rédiger, se demander si un texte est nécessaire et si
+  la voie réglementaire ne heurte pas l'économie de la loi (`references/analyse.md`, section 1.1 ;
+  `references/cas-types.md`, section 5). « Aucun texte : une mesure de gestion suffit » est une
+  réponse recevable, même quand la commande demande « les textes à modifier ou à créer ». Mais
+  conclure qu'un texte est inutile parce qu'un pouvoir ou un régime existant suffit, c'est affirmer
+  une règle de droit : si cette règle n'a pas été lue (texte fourni ou Légifrance), la présenter
+  comme une piste « À vérifier », y compris dans la synthèse, et ne pas en faire une certitude.
+- **Pas de rédaction pour une option écartée.** Si l'analyse conclut qu'une voie est impossible ou
+  illégale, une ligne le dit ; on ne rédige pas, « au cas où », le texte qu'elle permettrait.
+- **Une gravité à sa juste mesure.** Un doublon, une rédaction perfectible, un contreseing en trop
+  ne sont pas des illégalités : ils ne sont jamais Bloquants.
 
 ## Interroger l'utilisateur quand plusieurs options légistiques sont viables
 
@@ -155,6 +190,11 @@ dispositif. Ils alimentent l'exposé des motifs (loi) ou la notice explicative (
 proposer en fin de réponse. Un dispositif qui explique ou souhaite n'oblige personne et donne prise
 au contentieux.
 
+Si la commande demande d'abord s'il faut un texte, ou si un texte paraît superflu ou risqué (voir
+« Sobriété »), commencer par une courte analyse de nécessité et de niveau : elle peut conclure à une
+mesure de gestion ou à une circulaire, et la réponse devient alors une note qui le justifie, sans
+projet de texte.
+
 Relever les trous : autorité compétente non désignée, délai sans point de départ, sanction sans
 échelle, « etc. » ou « notamment » qui cachent une liste incomplète, régime transitoire absent. Ces
 trous deviennent des **points à arbitrer** dans la réponse, jamais des inventions silencieuses.
@@ -204,7 +244,10 @@ rentables :
   plus tard le… »).
 - **Formules d'encadrement** : intitulé, visas, « Décrète : », article d'exécution, selon
   `references/formules-et-modeles.md`. Ne pas inventer un numéro NOR ni un numéro de texte : laisser
-  « n° … du … ».
+  « n° … du … ». Les contresignataires sont les seuls ministres qui auront à prendre une mesure
+  d'exécution (fiche 3.9.2) : ni le ministre de l'intérieur parce que le préfet intervient, ni un
+  ministre parce que ses services ou opérateurs appliqueront le texte, ni un ministre délégué dont
+  le décret d'attributions ne prévoit pas le contreseing.
 - **Rédiger tout ce qui est demandé.** Une mesure dont un paramètre manque (classe de la
   contravention, seuil, date) se rédige quand même, avec le seul paramètre entre crochets
   (« contraventions de la [quatrième] classe ») et une ligne dans les points à arbitrer. Ne pas
@@ -275,7 +318,8 @@ car les erreurs de structure se corrigent avant celles de langue :
    transitoires et finales, article d'exécution en dernier.
 3. **Encadrement** : intitulé (objet essentiel, sans référence au texte modifié), visas (textes à
    viser, ordre hiérarchique puis chronologique, « modifié », consultations, Conseil d'Etat), formule
-   d'ouverture, article d'exécution.
+   d'ouverture, article d'exécution et contreseings (seuls les ministres chargés de l'exécution,
+   fiche 3.9.2).
 4. **Grammaire des modifications** (si texte modificatif) : « est remplacé par les dispositions
    suivantes », « ainsi rédigé » pour les insertions, « abrogé » pour un texte ou une division,
    « supprimé » pour un alinéa, une phrase ou des mots, désignation exacte des passages, ordre des
@@ -344,7 +388,7 @@ Exemple : un décret qui ne touche que des articles en « D. », que la consigne
 d'Etat, porte « Le Conseil d'Etat (section …) entendu, » et un dernier article « Les dispositions
 modifiées par le présent décret peuvent être modifiées par décret simple ». La consultation est
 décidée : on ne la remet pas en cause. Le visa se corrige en « Après avis du Conseil d'Etat
-(section …), » (forme, Recommandé, fiche 1.3.3). L'article final, devenu inutile mais sans danger,
+(section …), » (forme, Recommandé, fiche 1.3.3). L'article final, inutile (la lettre « D. » suffit à fixer le niveau, fiches 1.3.3 et 1.4.2) mais sans danger,
 reste dans le texte corrigé, ramené à « par décret » ; une question propose de le supprimer. Ni
 l'un ni l'autre n'est bloquant : le texte des rédacteurs était légal.
 
@@ -360,7 +404,7 @@ silencieux.
 - **Bloquant** : réservé à une illégalité certaine (incompétence : délit ou sanction administrative
   créés par décret, article en « R. » modifié par décret simple ; consultation obligatoire omise ;
   « notamment » dans la définition d'une infraction ; date d'entrée en vigueur d'une loi renvoyée à un
-  décret sans borne) ou à une formule qui ne peut pas s'appliquer (mauvais article, mauvais alinéa,
+  décret sans borne, ou d'un décret renvoyée sans borne à un arrêté, fiche 3.5.3) ou à une formule qui ne peut pas s'appliquer (mauvais article, mauvais alinéa,
   mauvaise phrase, mots cités inexacts, décompte d'alinéas faux, numéro d'insertion déjà pris,
   modifications contradictoires du même article). Un choix légal mais perfectible n'est jamais
   bloquant.
@@ -621,6 +665,7 @@ toujours par ces fiches de synthèse.
 | `references/analyse.md` | Analyse d'un texte, articulée en nécessité (nécessité, opportunité avec verdict), niveau (niveau de norme et compétence, conformité) et portée (caractère normatif, champ d'application, cohérence, qualité rédactionnelle) ; statuts des conclusions ; format de l'avis | Fonction C |
 | `references/amendements.md` | Amendements et sous-amendements : qualification, chapeau (formules Assemblée et Sénat, pastillage), texte proposé, recevabilité (articles 38, 40, 41, 45, 46), exposé sommaire, gage | Toute demande d'amendement |
 | `references/procedure-et-documents.md` | Parcours selon la nature du texte, repérage des consultations obligatoires, trames d'étude d'impact, de fiche d'impact, d'exposé des motifs et de rapport de présentation | Texte nouveau (fin de fonction A) ; demande de document d'accompagnement ou de procédure |
+| `references/cas-types.md` | Commandes récurrentes : tirer les conséquences d'une décision de justice (QPC, annulation « en tant que »), délégaliser (article 37, second alinéa), modifier une ordonnance, proroger ou sortir d'une expérimentation, conclure qu'aucun texte n'est nécessaire, commande politique sensible | Dès que la qualification révèle l'un de ces cas, avant de rédiger |
 | `references/legifrance.md` | Vérification du droit en vigueur sur Légifrance : API (serveur MCP), navigateur piloté par l'agent ou recherche web limitée au site | **Seulement si l'agent dispose de l'un de ces accès** : texte modificatif, visas, renvois, point précis à éclaircir |
 | `scripts/lint_legistique.py` | Contrôle automatique des fautes mécaniques et de structure ; liste des références citées (`--refs`) | Fonction B étape 1, fin de fonction A, section « Références citées » |
 | `scripts/redline_docx.py` | Fichier Word avec marques de révision (ou document propre) | Quand l'utilisateur demande un fichier Word |

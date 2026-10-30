@@ -125,6 +125,13 @@ Le ministre de …,
   d'Etat sans y être tenu : « Après avis du Conseil d'Etat (section …), », jamais « Le Conseil d'Etat
   entendu, », qui l'érigerait en décret en Conseil d'Etat ; il reste modifiable par décret simple, sans
   article « peut être modifié par décret » (fiche 1.3.3).
+- Code « moderne » (partie réglementaire approuvée avec la convention « R » / « D ») : la lettre de
+  l'article fixe seule son niveau. Un décret pris « Le Conseil d'Etat entendu » qui modifie ou insère
+  des articles en « D. » ne leur donne pas valeur de décret en Conseil d'Etat (fiches 1.3.3 et 1.4.2 ;
+  CE, 19 février 2010, Molline, cité par la fiche 1.4.2). Un article « Les dispositions modifiées par
+  le présent décret peuvent être modifiées par décret simple » y est donc toujours inutile. La bonne
+  formule reste « Après avis du Conseil d'Etat » si seuls des articles en « D. » sont touchés ;
+  l'effet de « cliquet » ne joue pleinement que pour un décret non codifié.
 - Ministres rapporteurs (« Sur le rapport de ») : seulement le ou les ministres qui ont piloté le texte,
   un suffit, jamais plus de trois, avec leur titre officiel exact, au féminin s'il y a lieu ; pas de
   ministres délégués ni de secrétaires d'Etat rattachés. Quand un texte impose le rapport d'un ministre
@@ -133,7 +140,43 @@ Le ministre de …,
   tournure réservée au dispositif.
 - Article d'exécution : un seul ministre : « Le ministre de … est chargé de l'exécution du présent
   décret, qui sera publié au Journal officiel de la République française. » Plusieurs : « sont chargés,
-  chacun en ce qui le concerne ». Il est toujours le dernier article et n'est jamais déplacé.
+  chacun en ce qui le concerne ». Il est toujours le dernier article et n'est jamais déplacé. Il
+  nomme exactement les contresignataires (voir ci-dessous), par leur titre officiel complet et dans
+  l'ordre protocolaire ; « le ministre chargé de … » y est proscrit.
+
+#### Qui contresigne (fiche 3.9.2)
+
+Les ministres « chargés de l'exécution » d'un décret du Premier ministre (article 22 de la
+Constitution) sont ceux qui seront compétents pour signer ou contresigner les mesures réglementaires
+ou individuelles que son exécution implique **nécessairement** (CE, Ass., 27 avril 1962, Sicard,
+cité par la fiche 3.9.2). Le critère est juridique, pas l'intérêt pour le sujet :
+
+- Le ou les ministres rapporteurs contresignent toujours.
+- Un ministre simplement intéressé, associé à la préparation, ou dont les services ou les opérateurs
+  appliqueront le texte (préfectures, police municipale, SNCF, établissements publics) ne contresigne
+  pas à ce seul titre. L'intervention du préfet n'appelle pas le contreseing du ministre de
+  l'intérieur : le préfet représente chaque ministre (CE, Ass., 12 avril 2002, Fédération des
+  industries de la parfumerie, citée par la fiche 3.9.2). Une incidence financière n'appelle pas celui
+  du ministre chargé du budget.
+- Ministre délégué ou « auprès » : jamais rapporteur ; il contresigne, en plus de son ministre de
+  rattachement et jamais à sa place, seulement si son décret d'attributions porte « il contresigne
+  … les décrets relevant de ses attributions ». « Reçoit délégation pour signer tous actes » ne suffit
+  pas. Son omission n'entache pas le décret d'illégalité.
+- Contreseings dus par usage : ministre chargé des outre-mer si le texte s'applique dans une
+  collectivité de l'article 74 ou en Nouvelle-Calédonie, ou s'il adapte ou exclut son application dans
+  une collectivité de l'article 73 ; garde des sceaux pour tout décret qui crée ou modifie une
+  contravention ; tout ministre qu'un texte supérieur désigne expressément.
+- Décret modificatif : seuls les ministres chargés de l'exécution des dispositions modifiées, sans
+  parallélisme avec le décret d'origine.
+- Décret qui n'appelle aucune mesure ministérielle : le seul ministre rapporteur, ou aucun
+  contreseing.
+
+En rédaction, s'en tenir aux ministres qui satisfont ce critère et justifier chacun d'une ligne
+(quelle mesure il devra prendre). Le guide admet des contreseings surnuméraires seulement quand les
+mesures d'exécution sont réellement impossibles à prévoir. En relecture, un contreseing superflu
+présent dans le projet n'est pas illégal : le signaler par une question de niveau Style ou
+Recommandé, sans le retirer d'office ; un contreseing manquant qui satisfait le critère est en
+revanche Bloquant.
 - Entrée en vigueur immédiate (urgence, article 1er du code civil, accord du SGG) : ajouter dans les
   visas « Vu le code civil, notamment son article 1er ; » et, tout à la fin, « Vu l'urgence, » ; l'article
   d'exécution devient « …, qui sera publié au Journal officiel de la République française et entrera en
@@ -180,6 +223,54 @@ même jour le fait à sa place. Un arrêté signé par le ministre lui-même peu
 article « Le présent arrêté sera publié au Journal officiel de la République française. » : cette
 formule est correcte et se conserve.
 
+### Arrêté préfectoral (mesure de police ou décision individuelle)
+
+```
+Arrêté n° … du … portant interdiction de …
+
+Le préfet de la région …, préfet de …,          [préfet du département chef-lieu de région ;
+                                                  sinon « Le préfet de … , »]
+Vu le code … , notamment ses articles … ;         [fondement de la compétence, puis des faits
+                                                  incriminés : infractions et peines visées]
+Vu le décret n° 2004-374 du 29 avril 2004 modifié relatif aux pouvoirs des préfets, à l'organisation
+et à l'action des services de l'Etat dans les régions et départements ;
+Vu le décret du … portant nomination de … ;      [et l'arrêté de délégation de signature si le
+                                                  signataire n'est pas le préfet]
+Considérant … ;                                   [motivation en fait : faits datés, précis, sourcés]
+Considérant … ;                                   [pourquoi une mesure moins contraignante ne suffit pas]
+Considérant l'urgence ;                           [ou autre motif écartant la procédure contradictoire]
+Arrête :
+
+Article 1er
+… est interdit le … sur le territoire de … .
+Article 2
+Le présent arrêté peut faire l'objet d'un recours devant le tribunal administratif de … dans un délai
+de deux mois à compter de sa notification [ou : de sa publication].
+Article 3
+Le … [directeur de cabinet, secrétaire général] et le … sont chargés, chacun en ce qui le concerne, de
+l'exécution du présent arrêté, qui sera notifié à … et publié au recueil des actes administratifs de
+la préfecture de … .
+Fait à …, le …
+```
+
+- **Compétence** d'abord : maire ou préfet (police d'Etat, mesure qui excède une commune, carence du
+  maire), compétence matérielle et territoriale ; un signataire autre que le préfet suppose le visa de
+  sa délégation.
+- **Motivation en droit et en fait** (articles L. 211-2 et L. 211-5 du code des relations entre le
+  public et l'administration) : viser précisément les textes, y compris les infractions, et décrire
+  les circonstances. Les considérants portent la décision : c'est sur eux que statue le juge du
+  référé.
+- **Proportionnalité** : une interdiction est un dernier recours ; un considérant dit pourquoi un
+  encadrement ne suffit pas (forces de l'ordre indisponibles, lieu inconnu), et la mesure est limitée
+  dans le temps et l'espace.
+- **Procédure contradictoire** (article L. 121-1 du même code) pour une décision individuelle : la
+  respecter ou dire pourquoi on y déroge (urgence, ordre public).
+- **Opposabilité** : notification à l'intéressé, publication au recueil des actes administratifs,
+  affichage s'il y a lieu ; voies et délais de recours, sans lesquels le délai de recours contentieux
+  ne court pas.
+- Un article qui rappelle les peines encourues n'a pas de portée normative propre mais est d'usage ;
+  le conserver en relecture.
+
 ## 3. Visas (fiche 3.1.5)
 
 Les visas n'ont pas de portée juridique propre (leur omission n'entache pas la légalité), mais ils
@@ -198,7 +289,12 @@ justifient la compétence, éclairent le lecteur et attestent les procédures pr
   (« Vu le code de l'environnement, notamment ses articles L. 123-1 et suivants ; »). On peut ajouter la
   loi récente qui a modifié le code : « notamment son article x dans sa rédaction résultant de l'article y
   de la loi n° … du … ».
-- Le règlement ou la directive de l'Union appliqué ou transposé, avec sa désignation exacte ; les
+- Le règlement ou la directive de l'Union que le texte lui-même applique ou transpose, avec sa
+  désignation exacte. Un décret qui applique une loi de transposition vise cette loi, pas la
+  directive, sauf s'il transpose lui-même certaines de ses dispositions. Traitement de données
+  personnelles : le règlement (UE) 2016/679 est visé dès qu'il s'applique, et la loi n° 78-17 du
+  6 janvier 1978 modifiée toujours, sans « notamment son titre … » (cet usage est abandonné) ; la
+  directive (UE) 2016/680, transposée par cette loi, ne se vise pas. Les
   traités de l'Union par leur seul intitulé ; les conventions internationales avec intitulé complet et
   date (et lieu) de signature, sans le texte d'approbation ni le décret de publication.
 - Dans un décret en Conseil d'Etat, pas de décret simple (sauf nécessité de compréhension) ; dans un
@@ -208,7 +304,15 @@ justifient la compétence, éclairent le lecteur et attestent les procédures pr
   prévue pour les contraventions de la … classe. »
 - Décret de déclassement : « Vu la Constitution, notamment le second alinéa de son article 37 ; » en
   tête, et « Vu la décision n° … L du … du Conseil constitutionnel ; ».
-- Décision de justice à exécuter par des dispositions rétroactives.
+- Décision de justice : obligatoire seulement si le texte l'exécute par des dispositions
+  rétroactives. Admise, sans être requise, quand le texte a pour seul objet d'en tirer les
+  conséquences (annulation « en tant que ne … pas ») ; la notice suffit sinon.
+- Seulement les consultations obligatoires : une consultation menée par prudence ou par bonne
+  administration ne se vise pas (sauf l'avis facultatif du Conseil d'Etat, avec « Après avis »). Ne
+  pas ajouter d'avis « par prudence » : soit le texte qui l'impose est identifié et cité, soit la
+  consultation reste une question dans les points à arbitrer. Pas de ligne générique « Vu l'avis
+  de … en date du … » laissée « au cas où » : chaque ligne d'avis nomme l'organisme dont un texte
+  identifié impose la consultation.
 
 ### Rédaction
 
@@ -344,6 +448,13 @@ Validation d'actes antérieurs :
 Les délégations accordées antérieurement à la publication de la présente ordonnance restent valables
 jusqu'à leur terme. Toutefois, leurs modalités d'exercice sont régies par les dispositions de la
 présente ordonnance dès son entrée en vigueur.
+
+Nouvelle formalité de procédure (garantie, information, délai) :
+Les dispositions du présent décret sont applicables aux procédures disciplinaires engagées à compter
+du lendemain de sa publication.
+[Appliquer une formalité nouvelle aux procédures déjà engagées rendrait irrégulières celles dont
+l'étape concernée est passée : on vise les procédures engagées après l'entrée en vigueur, sauf si
+une décision de justice impose déjà la garantie aux procédures en cours, ce qu'il faut alors dire.]
 
 Application immédiate aux situations en cours :
 Les dispositions du présent décret sont applicables aux demandes présentées avant sa date de

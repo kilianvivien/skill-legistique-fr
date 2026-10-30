@@ -52,7 +52,9 @@ gravité (SKILL.md, fonction B, étape 2).
 | Visas : ordre hiérarchique puis chronologique (Constitution, conventions, règlements puis directives UE, lois organiques, codes par ordre alphabétique, lois et ordonnances, décrets) ; consultations après les textes ; Conseil constitutionnel ; Conseil d'Etat ; conseil des ministres ; « Vu l'urgence, » en dernier | R | 3.1.5 |
 | Visas : rédaction (numéro, date, intitulé exact ; « notamment son article … » ; code par son seul intitulé, sans le décret ou l'ordonnance de codification ; point-virgule à la fin de chaque visa, virgule à la dernière ligne avant « Décrète : » ou « Arrête : ») | S | 3.1.5 |
 | Consultations obligatoires visées avec leur date ; lettre de saisine si pas d'avis ; formule Conseil d'Etat adaptée (entendu / section / après avis / avis conforme) ; repérage des consultations selon `procedure-et-documents.md`, section 2 | R (B si consultation obligatoire omise) | 3.1.5, 2.1.3 |
-| Ministres rapporteurs : ceux qui ont piloté, trois au plus, titre officiel exact (pas « le ministre chargé de … », réservé au dispositif) ; même titre dans l'article d'exécution, qui cite tous les ministres dont le texte appelle des mesures | R | 3.1.4, 3.9.2 |
+| Ministres rapporteurs : ceux qui ont piloté, trois au plus, titre officiel exact (pas « le ministre chargé de … », réservé au dispositif), jamais un ministre délégué ou « auprès » | R | 3.1.4 |
+| Contreseings : les seuls ministres qui auront à prendre une mesure réglementaire ou individuelle d'exécution, plus les rapporteurs et les contreseings d'usage (outre-mer, garde des sceaux pour une contravention) ; pas le ministre de l'intérieur du seul fait que le préfet intervient ; ministre délégué seulement si son décret d'attributions prévoit qu'il contresigne | B si un ministre chargé de l'exécution manque ; S ou R (question) si un contreseing est superflu | 3.9.2 |
+| Visas sobres : pas de directive quand le texte applique la loi qui la transpose ; pas d'avis facultatif (sauf Conseil d'Etat « après avis ») ; décision de justice visée seulement si le texte l'exécute rétroactivement ou n'a pas d'autre objet | R | 3.1.5 |
 | Entrée en vigueur immédiate : visa du code civil, « Vu l'urgence, », article d'exécution complété | R | 3.8.1 |
 
 ## 4. Grammaire des modifications (texte modificatif)
@@ -80,6 +82,7 @@ gravité (SKILL.md, fonction B, étape 2).
 | Une disposition d'entrée en vigueur existe si le texte touche de nombreux usagers, une organisation, une procédure, des compétences ou des contrats ; différé suffisant ; DCEV pour les entreprises ; la date est un choix de fond (question) | R (B si l'application immédiate méconnaît certainement la sécurité juridique) | 1.2.2, 3.8.1 |
 | Formule au présent ; date fixe justifiée ou date mobile ; placée avant l'article d'exécution, pas dedans | R | 3.8.1 |
 | Loi : pas de renvoi à un décret pour la date sans « et au plus tard le … » (idem abrogation différée) | B | 3.8.1, 3.8.3 |
+| Décret : pas de renvoi à un arrêté pour fixer sans borne la date de son entrée en vigueur (le Premier ministre ne peut se décharger de sa compétence sur un ministre, subdélégation irrégulière) | B | 3.5.3, 3.8.1 |
 | Pas de date postérieure au délai de transposition ; pas de différé excessif d'une mesure d'application | B | 3.8.1 |
 | Sort des situations en cours précisé (procédures engagées, mandats, contrats, actes antérieurs) par des critères objectifs ; les mesures transitoires sont un choix de fond (question) | R (B si atteinte certaine à des contrats en cours) | 3.8.2 |
 | Le texte modifié n'a pas de clause d'entrée en vigueur qui s'appliquerait par accident aux dispositions insérées | R | 3.8.1 |
